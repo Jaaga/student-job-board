@@ -1,56 +1,73 @@
 <!doctype html>
-<html lang='en'>
+<html>
 <head>
-<script language="javascript" type="text/javascript">
-        function mouseOverImage() {
-            document.getElementById('myimage1').src='images/yo.jpg';
- }
-        function mouseOutImage() {
-           document.getElementById('myimage1').src='images/yo2.jpg';
-        }
-    </script>   
-   
-<meta charset='utf-8'>
-<meta author='Yash and priyanka'>
-<title>
-Our Team
-</title>
+<meta charset="utf-8">
+    <!-- Stylesheets -->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css" />
+	<link rel="stylesheet" href="bootstrap/css/custom.css" />
+
+
+<title>Student Job Board</title>
 </head>
 
-<img src="images/logo.png" align="centre" width="1200" height="300">
 <body>
-<div id='header'>
-        <div class="logo"><a href="#">Student Job Board</a></div>
-        <div id='nav'>
-                <ul>
-                        <li><a href="#">Home<a></li>
-                        <li><a href="#">Jobs<a></li>
-                        <li><a href="#">Profile<a></li>
-                        <li><a href="#">Team<a></li>
-                </ul>
-        </div>
-</div>
-<div>
-<h1 align="center">Welcome to Student Job Portal</h1>
-</div>
-<div>
-<h2>About us:-</h2>
-</div>
-<div>
-<div>
-Are you a student???</br>
-Have some experience with programming ???</br>
-Want to earn some money?</br>
-Join are website and work on projects on hourly bases and earn up to $30 an hour.</br>
-You can scroll through are wide range of jobs and select the one you are capable of.
-
-</div>
-<div>
-<a href="#"
-
-onmouseover=mouseOverImage();
-onmouseout=mouseOutImage(); >
-<img src="images/yo.jpg" id="myimage1" align="center" width="500" height="500"></a>
-</div></div>
+<div class="navbar navbar-fixed-top">
+         <div class="navbar-inner">
+              <div class="container">
+                   <a href="#" class="brand">Student Job Board</a>
+                      <a data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      </a>
+                      <div class="collaspe nav-collaspe">
+                           <form action="" class="navbar-search pull-right">
+                                 <input type="button" class="btn btn-primary btn-small" value="Sign Up">
+                                 <input type="button" class="btn btn-success btn-small" value="Login">
+                           </form>
+                          
+                            <ul class="nav pull-right">
+                                  <li><a href="#">Home</a></li>
+                                  <li><a href="#">About Us</a></li>
+                                  <li><a href="#">Contact Us</a></li>
+                                  <li></li>
+                                  
+                            </ul>
+                      </div>
+                      
+              </div>
+         </div>
+    </div>
+	<div class="container">
+   
+       <div class="row">
+       	 <div class="col-md-12">
+                <h1>Student Job Board<br /><small>Where students get jobs</small></h1>
+                <hr> 
+          </div>
+       	</div>
+           
+       <div class="row">
+       		<div class="col-md-12">
+       			<img src="images/kids.jpg" style="height:200px;width:100%">
+       		</div>
+       </div>
+       
+       <div class="row">
+       		<div class="span6">
+       			<h3>Find Student Jobs Easily</h3>
+                <hr>
+                <p></p>
+       		</div>
+            <div class="span6">
+       			<h3>100% Genuine Jobs</h3>
+                <hr>
+       		</div>
+            
+       </div>            
+       
+    </div>
+    
 </body>
 </html>
