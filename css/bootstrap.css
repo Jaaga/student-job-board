@@ -303,7 +303,15 @@ html {
 }
 
 body {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+=======
   font-family: Ubuntu, sans-serif;
+>>>>>>> fbd7a01809e52eeebbc5f86e5d415dad08b6824d
+=======
+  font-family: Ubuntu, sans-serif;
+>>>>>>> 8b1046ffa23cc2cf8f4114aab50cd13f15631a30
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -397,8 +405,18 @@ h6,
 .h4,
 .h5,
 .h6 {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+=======
   font-family: Ubuntu, sans-serif;
   font-weight: 400;
+>>>>>>> fbd7a01809e52eeebbc5f86e5d415dad08b6824d
+=======
+  font-family: Ubuntu, sans-serif;
+  font-weight: 400;
+>>>>>>> 8b1046ffa23cc2cf8f4114aab50cd13f15631a30
   line-height: 1.1;
   color: inherit;
 }
