@@ -1,5 +1,5 @@
 <!doctype html>
-<html labg="en">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +7,53 @@
 		<meta name="description" content="Jobs for students">
 		<meta name="author" content="Prashant, Rahul">
 		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
 		<title>Create Job</title>
 	</head>
 	<body>
+		<div class=""><!-- Static navbar -->
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Student Job Board</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Your Jobs</a></li>
+            <li><a href="#">Offers</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="./">Default</a></li>
+            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
+            	<ul class="dropdown-menu">
+                <li><a href="#">Edit Profile</a></li>
+                <li><a href="#">Log Out</a></li>
+             </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+
 		<div class="container">
                 <div class="row">
                         <div class="col-lg-12">
@@ -55,14 +98,19 @@
                                           <button type="submit" class="btn btn-success ">Give Instruction For Clients</button>
                                         </div>
                                       </div>
-
+                                     </div>
                                 </div>
                             </form>
 
                         </div>
                         
                 </div>
-        </div>
+          <div id="footer">
+            <div class="container">
+            <p class="text-muted" align="center">&copy; Student Job Board.</p>
+            </div>
+          </div>
+        
 	</body>
 
 </html>
