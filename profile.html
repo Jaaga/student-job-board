@@ -22,8 +22,8 @@
 
 <body>
 
-<!-- Static navbar -->
-      <div class="navbar navbar-default" role="navigation">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -36,31 +36,44 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Notifications</a></li>
+          </ul>
+      <form class="navbar-form navbar-nav" role="search" action="searchresults.html">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-sm hidden">Search</button>
+    </form>
+          <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jobs<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Current Orders</a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><a href="#">History</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Earnings</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Add New Job</a></li>
+              </ul>
+            </li>
+             <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Edit Profile</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Logout</a></li>
               </ul>
             </li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="./">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-          </ul>
         </div><!--/.nav-collapse -->
       </div>
-        </div>
-        <div class="container">
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container well">
         
                 <div class="row">
                         <div class="col-md-12">
@@ -116,13 +129,19 @@
                             </div>
                 </div>
         
-        <div id="footer">
-<div class="container">
-<p class="text-muted" align="center">This is the master page.</p>
-</div>
-</div>
-</div>
-         <!-- Bootstrap core JavaScript
+  <div id="footer">
+      <p align="center">&copy; SJB </p>
+      <div align="center">
+        <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li class="mute"> . </li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li class="mute"> . </li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+  </div>
+ <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
