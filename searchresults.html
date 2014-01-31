@@ -1,16 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <!-- Stylesheets -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/navbar-fixed-top.css">
+    <link rel="stylesheet" href="css/sticky-footer-navbar.css">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
 		<link href="css/navbar-fixed-top.css" rel="stylesheet">
 		 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <title>Master page</title>
+		  <style>
+@font-face { font-family: JuneBug; src: url('fonts/File.otf'); } 
+h7 {
+font-family: JuneBug;
+font-size: 150%
+}
+</style>
+    <title>Student Browse</title>
+     <!-- Bootstrap core CSS -->
+   
+	
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+<title>Student Job Board</title>
+</head>
 
     <!-- Bootstrap core CSS -->
    
@@ -23,12 +45,11 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-  </head>
-
+  
   <body>
 
-   <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<!-- Fixed navbar -->
+ <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -37,26 +58,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Student Job Board</a>
+          <a class="navbar-brand" href="#"><h7>Student Job Board</h7></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
+            <li class=""><a href="index.html">Home</a></li>
+            <li class=""><a href="#">Sign In</a></li>
+            <li class=""><a href="sign_up.html">SignUp</a></li>
+            </ul>
+         
+        
           <form class="navbar-form navbar-right" role="search" action="searchresults.html">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Search">
@@ -66,37 +77,15 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-   <div class="container">
-    
-    <div class="row">
-         <div class="col-md-12">
-         <h1></h1>
-         </div>
-     </div>
-     <div class="row">
-         <div class="col-md-12">
-         <h1></h1>
-         </div>
-     </div>
-     <div class="row">
-         <div class="col-md-12">
-         <h1>Search results for</h1>
-         </div>
-     </div>
- </div>
+
  	<div class="container">
     <div class="row">
       
-      <div class="col-md-2">
-        <h3>Webpage designing</h3>
-        <img src="images/female_user.png" alt="" class="img-thumbnail">
-        <h4>
-          Rahul <br>
-          <small>Engg. Student, CET, Trivandrum</small>
-        </h4>
-      </div>
+      
 
-      <div class="col-md-2">
+      
+
+      <div class="col-md-3">
         <h3>Graphic designing</h3>
         <img src="images/female_user.png" alt="" class="img-thumbnail">
         <h4>
@@ -104,7 +93,7 @@
           <small>Engg. Student, CET, Trivandrum</small>
         </h4>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-3">
         <h3>CMS changes</h3>
         <img src="images/female_user.png" alt="" class="img-thumbnail">
         <h4>
@@ -113,16 +102,9 @@
         </h4>
       </div>
 
-      <div class="col-md-2">
-        <h3>Form validatons</h3>
-        <img src="images/female_user.png" alt="" class="img-thumbnail">
-        <h4>
-         Venati <br>
-          <small>Engg. Student, CET, Trivandrum</small>
-        </h4>
-      </div>
-      <div class="col-md-2">
-        <h3>database design</h3>
+      
+      <div class="col-md-3">
+        <h3>Database Design</h3>
         <img src="images/female_user.png" alt="" class="img-thumbnail">
         <h4>
           Ansal <br>
@@ -130,16 +112,20 @@
         </h4>
       </div>
 
-      <div class="col-md-2">
-        <h3>php scripting</h3>
+      <div class="col-md-3">
+        <h3>Php Scripting</h3>
         <img src="images/female_user.png" alt="" class="img-thumbnail">
         <h4>
           Yatin <br>
           <small>Engg. Student, CET, Trivandrum</small>
         </h4>
       </div>
-      <div class="col-md-2">
+
+      
+
+      <div class="col-md-3">
         <h3>I can act!!!</h3>
+
         <img src="images/female_user.png" alt="" class="img-thumbnail">
         <h4>
           Prasanth <br>
@@ -147,7 +133,7 @@
         </h4>
       </div>
 
-      <div class="col-md-2">
+      <div class="col-md-3">
         <h3>I can act!!!</h3>
         <img src="images/female_user.png" alt="" class="img-thumbnail">
         <h4>
@@ -155,7 +141,7 @@
           <small>Engg. Student, CET, Trivandrum</small>
         </h4>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-3">
         <h3>I can act!!!</h3>
         <img src="images/female_user.png" alt="" class="img-thumbnail">
         <h4>
@@ -164,7 +150,7 @@
         </h4>
       </div>
 
-      <div class="col-md-2">
+      <div class="col-md-3">
         <h3>I can act!!!</h3>
         <img src="images/female_user.png" alt="" class="img-thumbnail">
         <h4>
@@ -172,42 +158,62 @@
           <small>Engg. Student, CET, Trivandrum</small>
         </h4>
       </div>
-      <div class="col-md-2">
-        <h3>I can act!!!</h3>
+      <div class="col-md-3">
+        <h3>Form validatons</h3>
         <img src="images/female_user.png" alt="" class="img-thumbnail">
         <h4>
-          Nathalie Portman <br>
-          <small>Engg. Student, CET, Trivandrum</small>
-        </h4>
-      </div>
-
-      <div class="col-md-2">
-        <h3>I can act!!!</h3>
-        <img src="images/female_user.png" alt="" class="img-thumbnail">
-        <h4>
-          Nathalie Portman <br>
+         Venati <br>
           <small>Engg. Student, CET, Trivandrum</small>
         </h4>
       </div>
 
-      <div class="col-md-12">
+      <div class="col-md-3">
+        <h3>I can act!!!</h3>
+        <img src="images/female_user.png" alt="" class="img-thumbnail">
+        <h4>
+          Nathalie Portman <br>
+          <small>Engg. Student, CET, Trivandrum</small>
+        </h4>
+      </div>
+<div class="col-md-3">
+        <h3>I can act!!!</h3>
+        <img src="images/female_user.png" alt="" class="img-thumbnail">
+        <h4>
+          Nathalie Portman <br>
+          <small>Engg. Student, CET, Trivandrum</small>
+        </h4>
+      </div>
+      <div class="col-md-3">
+        <h3>I can act!!!</h3>
+        <img src="images/female_user.png" alt="" class="img-thumbnail">
+        <h4>
+          Nathalie Portman <br>
+          <small>Engg. Student, CET, Trivandrum</small>
+        </h4>
+      </div>
+      <div class="col-md-3">
         <hr>
       </div>
-       </div>
-       </div> 
- <div id="footer">
-      <div class="container">
-        <p class="text-muted" align="center">This is the footer.</p>
+
+     </div> 
+     </div>  
+
+<div id="footer">
+      <p align="center">&copy; SJB </p>
+      <div align="center">
+        <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li class="mute"> . </li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li class="mute"> . </li>
+            <li><a href="#">Blog</a></li>
+        </ul>
       </div>
-    </div>
-   
-
-    
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+  </div>
+ <!-- Bootstrap 
+    Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
   </body>
 </html>

@@ -7,13 +7,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
-
+ 
     <title>Master page</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/navbar-fixed-top.css">
     <link rel="stylesheet" href="css/sticky-footer-navbar.css">
+    <style>
+@font-face { font-family: JuneBug; src: url('fonts/File.otf'); } 
+h7 {
+font-family: JuneBug;
+font-size: 150%
+}
+</style>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -37,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Student Job Board</a>
+          <a class="navbar-brand" href="#"><h7>Student Job Board</h7></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -80,10 +87,18 @@
     </div> <!-- /container -->
         
  <div id="footer">
-      <div class="container">
-        <p class="text-muted" align="center">This is the footer.</p>
+      <p align="center">&copy; SJB </p>
+      <div align="center">
+        <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li class="mute"> . </li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li class="mute"> . </li>
+            <li><a href="#">Blog</a></li>
+        </ul>
       </div>
-    </div>
+     
+  </div>
     </div>
 
     <!-- Bootstrap core JavaScript

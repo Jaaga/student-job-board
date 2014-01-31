@@ -43,3 +43,16 @@ body {
 code {
   font-size: 80%;
 }
+/* Links in footer fixing 
+R: Prashant;
+-----------------------------------------------
+*/
+
+    .footer-links {
+    margin: 10px 0px;
+    padding-left: 0px;
+}
+.footer-links li {
+    display: inline;
+    padding: 0px 2px;
+}
