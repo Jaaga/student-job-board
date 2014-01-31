@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <!-- Stylesheets -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/navbar-fixed-top.css">
+    <link rel="stylesheet" href="css/sticky-footer-navbar.css">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+    <style>
+@font-face { font-family: JuneBug; src: url('fonts/File.otf'); } 
+h7 {
+font-family: JuneBug;
+font-size: 150%
+}
+</style>
+<title>Student Job Board</title>
+</head>
+
+<body>
+ <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><h7>Student Job Board</h7></a>
+        </div>
+        <div class="navbar-collapse collapse">
+        
+          <form class="navbar-form navbar-right" role="search" action="searchresults.html">
+          <div class="form-group">
+            <input type="text" class="form-control pull-left" placeholder="Search">
+          </div>
+                <button type="submit" class="btn btn-default hidden">Search</button>
+                <ul class="nav navbar-nav navbar-right" >
+                 <a href="job.html"><button type="button" class="btn btn-success">Login</button</a>
+               </ul>
+    </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+      <div class="jumbotron" style="background-image:url('images/stu1.jpg'); no-repeat center center fixed;
+          height:30%; width:100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: 0%">
+         
+
+          <div class="" >
+            
+               
+
+            <div style="z-index:100; text-align:center"><h1 style="color:#fff; text-shadow: 5px 2px 10px #000;  "><h7>Student Job Board</h7></div>
+
+            
+                <h3 class="lead" align="center"><h7 style="color:#fff;">Get Your Job Done!</h7></h3><br>
+                <div><button class="btn btn-outline-inverse btn-lg col-md-2 col-sm-offset-5" style="text-align:center" data-toggle="modal" data-target="#signupModal">Sign Up</button>&nbsp;
+                  </div>
+            </div>
+
+       </div>
+         
+     </div>
+	
+       <div class="container">
+     
+     <div class="row">
+         <div class="col-md-14">
+         <h3 style="color:black font-weight:bold;">
+          <ul class="nav nav-justified">
+            <li><button class="btn btn-success btn-lg">Web designing</button></li>
+            <li><button class="btn btn-success btn-lg">Web Development</button></li>
+            <li><button class="btn btn-success btn-lg">Wordpress</button></li>
+            <li><button class="btn btn-success btn-lg">Graphics</button></li>
+            <li><button class="btn btn-success btn-lg">Surveys</button></li>
+            <li><button class="btn btn-success btn-lg">App Dev</button></li>
+          </ul>
+     </div>
+ </div>
+ 
+    <div class="row jumbotron">
+      <div class="row">
+      <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+              <img src="images/wp_opt.jpg" alt="...">
+              <div class="caption">
+                <h4>I will make Wordpress Site</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+              <img src="images/graphicdesign.jpg" alt="...">
+              <div class="caption">
+                <h4>I make wonderful Graphics</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+              <img src="images/html_opt.jpg" alt="...">
+              <div class="caption">
+                <h4>Convert PSD to HTML5</h4>
+              </div>
+            </div>
+          </div>
+         
+          <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+              <img src="images/logo.png" alt="...">
+              <div class="caption divider">
+                <h4>Anything</h4>
+              </div>
+            </div>
+        </div>
+      
+      </div>
+      <div class="col-md-3">
+        <hr>
+      </div>
+     </div> 
+     </div>  
+
+
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Create Account</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <label for="name">Signup as</label>
+            <select class="form-control col-md-2" id="signupCategory" placeholder"You are?">
+                      
+                     <option>Student</option>
+                      <option>Buyer</option>
+
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword2">Confirm Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Create Account</button>
+      </div>
+    </div>
+  </div>
+    
+ </div>
+
+       <div class="container">
+       <div class="row">
+       
+       		<div class="col-md-6">
+       		<div class="well">
+       		<h1>Top rated students</h1>
+            <h3>Web development</h3>
+             <img src="images/female_user.png" alt="" class="img-thumbnail"></br>
+             <h4>Rahul venati</h4>
+             </div>
+            
+         </div>
+            <div class="col-md-6">
+            <div class="well"><h1>New & Noteworthy</h1>
+            <p>  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+       </div>            
+       </div>
+       </div>
+
+
+  
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted" align="center">This is the footer.</p>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
