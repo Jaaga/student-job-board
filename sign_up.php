@@ -5,7 +5,7 @@ if(isset($_POST['email'])){$email = $_POST["email"];}
 if(isset($_POST['pass'])){$pass =$_POST["pass"];}
 
 // Create connection
-$con=mysqli_connect("localhost","root","",'sjb1');
+$con=mysqli_connect("localhost","root","",'sjb');
 
 
 
