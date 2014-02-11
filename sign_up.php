@@ -1,47 +1,28 @@
 <?php
+
+if(isset($_POST['name'])){$name = $_POST["name"];}
+if(isset($_POST['email'])){$email = $_POST["email"];}
+if(isset($_POST['pass'])){$pass =$_POST["pass"];}
+
 // Create connection
-$con=mysqli_connect("localhost","root","","sjb1");
+$con=mysqli_connect("localhost","root","",'sjb1');
+
+
+
 // Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+if(!$con){
+	die ('Connect Error ('. mysqli_connect_errno() . ')'
+			. mysqli_connect_error());
+}
 
-function NewUser()
+$sql="INSERT INTO student(name, email ,pass ) VALUES ('$name','$email','$pass')";
+
+if(!mysqli_query($con,$sql))
 {
-    $username = $_POST['name'];
-    $email = $_POST['email'];
-    $password =  $_POST['pass'];
-    $query = "INSERT INTO student (name,email,pass) VALUES ('$username','$email','$password')";
-    $data = mysql_query ($query)or die(mysql_error());
-    if($data)
-    {
-    echo "YOUR REGISTRATION IS COMPLETED...";
-    }
-}
- 
-function SignUp()
-{
-if(!empty($_POST['user']))   //checking the 'user' name which is from Sign-Up.html, is it empty or have some text
-{
-    $query = mysql_query("SELECT * FROM student WHERE name = '$_POST[name]' AND pass = '$_POST[pass]'") or die(mysql_error());
- 
-    if(!$row = mysql_fetch_array($query) or die(mysql_error()))
-    {
-        newuser();
-    }
-    else
-    {
-        echo "SORRY...YOU ARE ALREADY REGISTERED USER...";
-    }
-}
-}
-if(isset($_POST['submit']))
-{	echo "it is working";
-    SignUp();
+	die ('Error: ' . mysqli_error($con));
 }
 
 
 
-mysqli_close($con);
+
 ?>
