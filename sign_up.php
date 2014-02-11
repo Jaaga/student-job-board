@@ -23,6 +23,6 @@ if(!mysqli_query($con,$sql))
 }
 
 
-
+mysql_close($con);
 
 ?>
