@@ -5,13 +5,13 @@ if(isset($_POST['email'])){$email = $_POST["email"];}
 if(isset($_POST['pass'])){$pass =$_POST["pass"];}
 
 // Create connection
-$con=mysqli_connect("localhost","root","",'sjb');
+$con=mysqli_connect("localhost","root","golny23!",'Student-job-board');
 
 
 
 // Check connection
 if(!$con){
-	die ('Connect Error ('. mysqli_connect_errno() . ')'
+	die ('Connect Error ('. mysqli_connect_errno() . '
 			. mysqli_connect_error());
 }
 
@@ -23,6 +23,6 @@ if(!mysqli_query($con,$sql))
 }
 
 
-mysql_close($con);
+mysqli_close($con);
 
 ?>
