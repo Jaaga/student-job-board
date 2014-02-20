@@ -1,0 +1,11 @@
+General Issues
+--------------
+  - Headers and Footers in most of the pages are still different.
+  - Remove all inline CSS and put it into another CSS file.
+  - Fix all broken markups. A lot of elements, especially divs are not closed properly causing a lot of rendering issues.
+
+Specific Issues
+---------------
+  - Login modal window is inconsistent in all pages. Either we have to come up with a single page or modal and use it in all pages.
+  - Account creation process should be a simple wizard like process. The current flow jumps from modal to page and then back to modal which is very confusing.
+  - Include pages in click-through that are still missing.
