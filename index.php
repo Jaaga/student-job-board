@@ -225,6 +225,7 @@ font-size: 150%;
       <div class="modal-body">
       
   <div class="form-group">
+  <form action="login-process.php" method="post">
     <label class="sr-only" for="exampleInputEmail2">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email" name="email">
   </div>
@@ -232,6 +233,7 @@ font-size: 150%;
     <label class="sr-only" for="exampleInputPassword2">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" name="pass">
   </div>
+  </form>
 <?php if(isset($msg)){echo "username and password is wrong";} ?>
       </div>
       <div class="modal-footer">

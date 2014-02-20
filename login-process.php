@@ -24,8 +24,3 @@ header("Location:student-profile.html");
 }
 
 ?>
-<?php if(isset($msg))
-{
-	echo "username and password are incorrect";
-}
-	?>

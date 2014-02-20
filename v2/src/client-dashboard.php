@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,12 +37,16 @@
       <div class="col-md-6">
         <h3>Your Orders</h3>
         <hr>
-        <ul>
-          <li><h4><a href="#">Wordpress Site</a></h4></li>
-          <li><h4><a href="#">Draw a Mockup</a></h4></li>
-          <li><h4><a href="#">Review My Site</a></h4></li>
-          <li><h4><a href="#">Create a Logo</a></h4></li>
-        </ul>
+        <ul>     
+        <?php
+		$con = mysql_connect("localhost","root","golny23!");
+		$db = mysql_select_db("sjb");
+		$query = mysql_query('select * from orders limit 5');
+		while($row = mysql_fetch_array($query)) {
+			echo '<li><h4><a href="#">' . $row['details'] . '</a></h4></li>';
+		}
+	?>
+	</ul>
       </div>
       <div class="col-md-6">
         <h3>Account Status</h3>
