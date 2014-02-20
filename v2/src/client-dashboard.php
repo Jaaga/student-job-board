@@ -27,6 +27,11 @@
         <li><a href="#">Offerings</a></li>
         <li><a href="#">Orders</a></li>
         <li><a href="#"> <img src="../img/yatin-avatar.jpg" class="img-circle" height="26px"> Yatin Taluja</a></li>
+        <li>
+          <form class="navbar-form navbar-right" role="form">
+            <button type="submit" class="btn btn-success">Logout</button>
+          </form>
+        </li>
       </ul>
       </div><!-- navbar-collapse -->
     </div><!-- container-fluid -->
@@ -43,7 +48,7 @@
 		$db = mysql_select_db("sjb");
 		$query = mysql_query('select * from orders limit 5');
 		while($row = mysql_fetch_array($query)) {
-			echo '<li><h4><a href="#">' . $row['details'] . '</a></h4></li>';
+			echo '<li><h4><a href="order.php">' . $row['details'] . '</a></h4></li>';
 		}
 	?>
 	</ul>

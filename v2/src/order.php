@@ -12,7 +12,7 @@
   
   <!-- Navigation Bar -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
+    <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#app-navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -27,10 +27,10 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">Find Services</a></li>
         <li><a href="#">Start Selling</a></li>
-        <li><a href="/login.html">Signin</a></li>
+        <li><a href="#"> <img src="../img/yatin-avatar.jpg" class="img-circle" height="26px"> Yatin Taluja</a></li>
         <li>
           <form class="navbar-form navbar-right" role="form">
-            <button type="submit" class="btn btn-success">Sign Up</button>
+            <button type="submit" class="btn btn-success">Logout</button>
           </form>
         </li>
       </ul>
@@ -38,13 +38,41 @@
     </div><!-- container-fluid -->
   </nav><!-- navbar -->
 
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       
       <div class="col-md-8">
-              <h2>I will sing a song <br>
-                <small>Order No: 12, On 12/3/2013 12:12</small>
-              </h2>        
+      <?php
+              $con = mysql_connect("localhost","root","golny23!");
+              $db = mysql_select_db("sjb");
+              $query = mysql_query('select * from orders where order_id = 1');
+              $row = mysql_fetch_array($query);
+              
+ 
+
+        ?>
+        
+              <h2> <?php echo $row['details'];   ?> <br>
+                <small>Order No: <?php echo $row['order_id'];   ?></small>
+              </h2>
+
+              <hr>
+              <h3>Messages</h3>
+              <hr>
+              <?php
+                $query = mysql_query('select * from message where student_id=1');
+                while($row = mysql_fetch_array($query)){
+                  echo '<blockquote>'.$row['message_info'].'</blockquote>';
+                }
+              
+              ?>
+              <hr>
+              <div class="form-group">
+                <textarea class="form-control" rows="3"></textarea>
+                <span class="pull-right"><button class="btn btn-primary">Post Message</button></span>
+              </div>
+                
+
         
       </div>
 

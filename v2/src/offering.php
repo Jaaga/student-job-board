@@ -48,7 +48,8 @@
               $db = mysql_select_db("sjb");
               $query = mysql_query('select * from offering where offer_id = 3');
               $row = mysql_fetch_array($query);
-              echo '<h2><a href="offering.php">' . $row['title'] . '</a></h2>';
+              echo '<h2><a href="offering.php">' . $row['title'] . '</a><br /><small>posted on ' .$row['date']. '</small></h2>';
+ 
 
         ?>
         
@@ -73,7 +74,7 @@
           <a href="#" class="btn btn-danger btn-xs">Fraud <span class="badge">0</span></a>
         </p>
         <hr>
-        <img src="../img/yatin-avatar.jpg" alt="" class="img-circle" height="48px">
+        <img src="../img/yatin-avatar.jpg" alt="" class="img-circle"`  height="48px">
         Posted By <a target="_blank" href="https://twitter.com/yatintaluja">Yatin Taluja</a>
       </div>
 
