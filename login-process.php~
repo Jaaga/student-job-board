@@ -18,7 +18,7 @@ header("Location:student-profile.html");
  }
  else 
  {
- header("Location:login.html");
+ header("Location:theme-1/login.html");
  }
 
 }
