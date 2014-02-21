@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Jobs for students">
+		<meta name="author" content="Prashant, Rahul">
+		
+     <style>
+@font-face { font-family: JuneBug; src: url('fonts/File.otf'); } 
+h7 {
+font-family: JuneBug;
+font-size: 150%
+}
+</style>
+    <script type="text/javascript">
+    
+
+
+</script>
+
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/navbar-fixed-top.css">
+    <link rel="stylesheet" href="css/sticky-footer-navbar.css">
+
+		<title>Create Job</title>
+	</head>
+	<body>
+		<!-- Fixed navbar -->
+   <!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><h7>in3Hrs</h7></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Notifications</a></li>
+          </ul>
+      <form class="navbar-form navbar-nav" role="search" action="searchresults.html">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-sm hidden">Search</button>
+    </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jobs<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Current Orders</a></li>
+                <li class="divider"></li>
+                <li><a href="#">History</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Earnings</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Add New Job</a></li>
+              </ul>
+            </li>
+             <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Edit Profile</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+		<div class="container">
+                <div class="row">
+                        <div class="col-lg-12">
+                             <h2>Create Your Job</h1><br>
+                        </div>
+                        <div id="job-form">
+                        	<form class="form-horizontal" role="form">
+                        		<div class="col-md-10 well">
+                                      <div class="form-group">
+                                        <label for="jobTitle" class="col-sm-2 control-label">Job Title</label>
+                                        <div class="col-sm-8">
+                                          <input type="text" class="form-control input-lg" id="jobTitle" placeholder="What Can You Do In 3 Hours For 20$">
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                      	<label for="jobCategory" class="col-sm-2 control-label">Category</label>
+                                        <div class="col-sm-3">
+                                          <select class="form-control" id="jobCategory">
+                                              <option>HTML</option>
+                                              <option>CSS</option>
+                                              <option>Wordpress</option>
+                                              <option>Design</option>
+                                              <option>JavaScript</option>
+                                          </select>
+                                        </div>
+                                      </div>
+									  <div class="form-group">
+                                        <label for="jobDescription" class="col-sm-2 control-label">Description</label>
+                                        <div class="col-sm-8">
+                                      		<textarea class="form-control input-lg" id="jobDescription" rows="3" placeholder="Describe What Will You Do And How Will You Do It?"></textarea>
+                                      	</div>
+                                      </div>
+                                      <div class="form-group">
+									    <label for="uploadFile" class="col-sm-2 control-label">Upload File</label>
+									    <div class="col-sm-3">
+										    <input type="file" id="uploadFile">
+										    
+										</div>
+									  </div>
+									  <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                          <button class="btn btn-primary btn-success" data-toggle="modal" data-target="#myModal">
+                                            Give Instructions for Client
+                                        </button>
+                                        </div>
+                                      </div>
+                                     </div>
+                                </div>
+                            </form>
+
+                        </div>
+                        
+                </div>
+           <div id="footer">
+      <p align="center">&copy; SJB </p>
+      <div align="center">
+        <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li class="mute"> . </li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li class="mute"> . </li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">What content you want from client:</h4>
+      </div>
+      <div class="modal-body">
+                        <div id="job-form">
+                          <form class="form-horizontal" role="form">
+                            <div class="col-md-10 well">
+                                      <div class="form-group">
+                                        <label for="jobTitle" class="col-sm-2 control-label">Requirement1</label>
+                                        <div class="col-sm-8">
+                                          <input type="text" class="form-control input-lg" id="requirement1" placeholder="Add your question.">
+                                        </div>
+                                      </div>
+                                       <div class="form-group">
+                                        <label for="jobTitle" class="col-sm-2 control-label">Requirement2</label>
+                                        <div class="col-sm-8">
+                                          <input type="text" class="form-control input-lg" id="requirement2" placeholder="Add your question.">
+                                        </div>
+                                      </div>
+                     <div class="form-group">
+                                        <label for="jobTitle" class="col-sm-2 control-label">Requirement3</label>
+                                        <div class="col-sm-8">
+                                          <input type="text" class="form-control input-lg" id="requirement3" placeholder="Add your question.">
+                                        </div>
+                                      </div>
+                    <div class="form-group">
+                                        <label for="jobDescription" class="col-sm-2 control-label">Instruction:</label>
+                                        <div class="col-sm-8">
+                                          <textarea class="form-control input-lg" id="instructions" rows="3" placeholder="Anything you want to tell to client."></textarea>
+                                        </div>
+                                      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <a href="details-entered.html" class="btn btn-primary">Save changes</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	</body>
+
+</html>
