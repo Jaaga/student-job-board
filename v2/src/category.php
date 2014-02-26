@@ -1,3 +1,10 @@
+<?php
+
+include('common.php'); 
+$sql = "SELECT distinct * FROM offering order by rand()";
+$result = mysql_query($sql) or die(mysql_error());  
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +19,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/category.css" rel="stylesheet">
 
-    <!-- Custom CSS for the '3 Col Portfolio' Template -->
-    <link href="css/3-col-portfolio.css" rel="stylesheet">
-</head>
+    </head>
 
 <body>
 
@@ -59,62 +65,32 @@
 
         </div>
 
-        <div class="row">
-
-            <div class="col-md-4 ">
+                
+                <?php while($row=mysql_fetch_array($result)){ ?>        
+        <div class="row">       
+            <div class="col-md-4 category-item">
                 <a href="#project-link">
-                    <img class="img-responsive" src="categoryfetch.php?picid=1">
+                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
                 </a>
-                <h3><a href="#project-link">Project Name</a>
+                <h3><a href="#project-link"><?php echo $row['title'];?></a>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
 
-            <div class="col-md-4 ">
+            <div class="col-md-4 category-item">
                 <a href="#project-link">
-                    <img class="img-responsive" src="categoryfetch.php?picid=2">
+                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
                 </a>
-                <h3><a href="#project-link">Project Name</a>
+                <h3><a href="#project-link"><?php echo $row['title'];?></a>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
 
-            <div class="col-md-4 ">
+            <div class="col-md-4 category-item">
                 <a href="#project-link">
-                    <img class="img-responsive" src="categoryfetch.php?picid=3">
+                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
                 </a>
-                <h3><a href="#project-link">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-4 ">
-                <a href="#project-link">
-                    <img class="img-responsive" src="categoryfetch.php?picid=4">
-                </a>
-                <h3><a href="#project-link">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-            <div class="col-md-4 portfolio-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="categoryfetch.php?picid=5">
-                </a>
-                <h3><a href="#project-link">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-            <div class="col-md-4 portfolio-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="categoryfetch.php?picid=6">
-                </a>
-                <h3><a href="#project-link">Project Name</a>
+                <h3><a href="#project-link"><?php echo $row['title'];?></a>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
@@ -123,29 +99,60 @@
 
         <div class="row">
 
-            <div class="col-md-4 ">
+            <div class="col-md-4 category-item">
                 <a href="#project-link">
-                    <img class="img-responsive" src="categoryfetch.php?picid=7" width="700" height="400">
+                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
                 </a>
-                <h3><a href="#project-link">Project Name</a>
+                <h3><a href="#project-link"><?php echo $row['title'];?></a>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
 
-            <div class="col-md-4 ">
+            <div class="col-md-4 category-item">
                 <a href="#project-link">
-                    <img class="img-responsive" src="categoryfetch.php?picid=8">
+                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
                 </a>
-                <h3><a href="#project-link">Project Name</a>
+                <h3><a href="#project-link"><?php echo $row['title'];?></a>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
 
-            <div class="col-md-4 ">
+            <div class="col-md-4 category-item">
                 <a href="#project-link">
-                    <img class="img-responsive" src="categoryfetch.php?picid=9">
+                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
                 </a>
-                <h3><a href="#project-link">Project Name</a>
+                <h3><a href="#project-link"><?php echo $row['title'];?></a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4 category-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="<?php echo $row['picture'];?>" >
+                </a>
+                <h3><a href="#project-link"><?php echo $row['title'];?></a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+
+            <div class="col-md-4 category-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
+                </a>
+                <h3><a href="#project-link"><?php echo $row['title'];?></a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+
+            <div class="col-md-4 category-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
+                </a>
+                <h3><a href="#project-link"><?php echo $row['title'];} ?></a>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
@@ -196,8 +203,8 @@
     <!-- /.container -->
 
     <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/bootstrap.js"></script>
 
 </body>
 
