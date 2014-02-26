@@ -1,4 +1,3 @@
-
 <?php
 try
 {
@@ -20,7 +19,7 @@ exit();
 	<body>
 		<h1>
 		<?php	try{
-				$sql='SELECT * FROM user WHERE user_id=1';
+				$sql='SELECT * FROM client WHERE client_id=1';
 				$result=$pdo->query($sql);
 				while ($row = $result->fetch())
 					{
@@ -37,7 +36,7 @@ exit();
 		 <br><br><br>
 		 <table>
 		 		<tr><td><?php try{
-				$sql='SELECT * FROM orders WHERE user_id=1';
+				$sql='SELECT * FROM orders WHERE client_id=1';
 				$result=$pdo->query($sql);
 				
 				while ($row = $result->fetch())
