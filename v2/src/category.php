@@ -53,115 +53,50 @@ $result = mysql_query($sql) or die(mysql_error());
         <!-- /.container -->
     </nav>
 
-    <div class="container">
+    <img border="0" src="../img/Untitled-1 copy.jpg"alt="Pulpit rock" width="1365" height="230">
 
-        <div class="row">
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+  <li><a href="#">Item two</a></li>
+<li><a href="#">Item three</a></li>
+<li><a href="#">Item four</a></li>
+<li><a href="#">Item five</a></li>
+<li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+  <li><a href="#">Item two</a></li>
+<li><a href="#">Item three</a></li>
+<li><a href="#">Item four</a></li>
+<li><a href="#">Item five</a></li>
+<li><a href="#">Item three</a></li>
 
-            <div class="col-lg-12">
-                <h1 class="page-header">3 Col Portfolio
-                    <small>Showcase Your Work</small>
-                </h1>
+</ul>
+</br></br>
+                <div class="container">
+            
+        <div class="row">    
+                                    <?php while($row=mysql_fetch_array($result)){ ?>      
+
+            <div class="col-md-3 category-item">
+                        
+                <a href="#project-link">
+                    <img class="img-responsive" src="<?php echo $row['picture'];?>" height="200px" width="200px" align="center">
+                </a>
+                <h3><a href="#project-link"><?php echo $row['title'];?></a>
+                </h3>
             </div>
+            <?php  }?>
+
 
         </div>
-
-                
-                <?php while($row=mysql_fetch_array($result)){ ?>        
-        <div class="row">       
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
+        
         </div>
-
-        <div class="row">
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>" >
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];} ?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-        </div>
+    </div>
 
         <hr>
 
-        <div class="row text-center">s
+        <div class="row text-center">
 
             <div class="col-lg-12">
                 <ul class="pagination">
