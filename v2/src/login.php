@@ -1,4 +1,34 @@
+<?php
+include('common.php');
+if(isset($_POST['emaill']))
+{
 
+  $email1=$_POST['emaill'];
+}
+if (isset($_POST['passs'])) {
+  # code...
+$pass2=$_POST['passs'];
+}
+$tab=mysql_query("select * from user where email='".$email1."' AND pass ='".$pass2."'");
+
+$row=mysql_fetch_array($tab);
+
+if(isset($row['name']))
+{
+ $_SESSION["username"]=$row['name'];
+ $_SESSION["studentid"]=$row['user_id'];
+header("Location:profile.php");
+ }
+ else 
+ {
+  
+ $msg="invalid user";
+ }
+
+
+
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -40,7 +70,7 @@
   <div class="row">
     
     <div class="col-md-offset-4">
-      <form class="form-signin mg-btm" method="post">
+      <form class="form-signin mg-btm" method="post" action="login.php">
       <h3 class="heading-desc">
     Login to in3Hrs.com</h3>
     <div class="social-box">
@@ -61,8 +91,8 @@
     </div>
     <div class="main">  
         
-    <input type="text" class="form-control" placeholder="Email" autofocus name="email">
-        <input type="password" class="form-control" placeholder="Password" name="pass">
+    <input type="text" class="form-control" placeholder="Email" autofocus name="emaill">
+        <input type="password" class="form-control" placeholder="Password" name="passs">
      
         
     <span class="clearfix"></span>  
