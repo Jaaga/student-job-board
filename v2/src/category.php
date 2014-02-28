@@ -1,7 +1,7 @@
 <?php
 
 include('common.php'); 
-$sql = "SELECT distinct * FROM offering order by rand()";
+$sql = "SELECT distinct * FROM offering order by rand() ";
 $result = mysql_query($sql) or die(mysql_error());  
 
 ?>
@@ -73,26 +73,22 @@ $result = mysql_query($sql) or die(mysql_error());
 
 </ul>
 </br></br>
-                <div class="container">
-            
-        <div class="row">    
-                                    <?php while($row=mysql_fetch_array($result)){ ?>      
+               
+    
+<div class="container">
 
-            <div class="col-md-3 category-item">
-                        
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>" height="200px" width="200px" align="center">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-            </div>
-            <?php  }?>
+    <div class="row">
+                     <?php          
+
+                      while($row2=mysql_fetch_array($result)){ ?>
+  
+        <div class="col-md-3 col-sm-4 col-xs-6"><p><?php echo $row2['title']; ?></p><img class="img-responsive" src="<?php echo $row2['picture']; ?>" /></div>
+                
+              <?php } ?>
 
 
-        </div>
-        
-        </div>
     </div>
+</div>
 
         <hr>
 
@@ -119,7 +115,7 @@ $result = mysql_query($sql) or die(mysql_error());
 
         </div>
 
-    </div>
+    
     <!-- /.container -->
 
     <div class="container">
@@ -138,8 +134,9 @@ $result = mysql_query($sql) or die(mysql_error());
     <!-- /.container -->
 
     <!-- JavaScript -->
-    <script src="../js/jquery-1.10.2.js"></script>
-    <script src="../js/bootstrap.js"></script>
+    
+    <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
 
 </body>
 
