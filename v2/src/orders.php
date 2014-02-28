@@ -41,10 +41,10 @@ exit();
 				
 				while ($row = $result->fetch())
 					{
-						?><tr><td><?php $orderNo= $row['order_id']; echo $orderNo; ?></td> &nbsp; <td><?php
+						?><tr><td><?php $orderNo= $row['order_id']; echo $orderNo; ?></td> &nbsp; <td><a href="order.php"><?php
 						$detail= $row['details'];
 						echo $detail;
-						?></td> &nbsp; <td><?php $status=$row['status']; echo $status; ?></td></tr><?php
+						?></a></td> &nbsp; <td><?php $status=$row['status']; echo $status; ?></td></tr><?php
 
 					}
 					
