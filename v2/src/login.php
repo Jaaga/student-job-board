@@ -1,4 +1,4 @@
-<?php
+`                           <?php
 include('common.php');
 if(isset($_POST['emaill']))
 {
@@ -17,7 +17,7 @@ if(isset($row['name']))
 {
  $_SESSION["username"]=$row['name'];
  $_SESSION["studentid"]=$row['user_id'];
-header("Location:profile.php");
+header("Location:user-dashboard.php");
  }
  else 
  {
@@ -35,8 +35,9 @@ header("Location:profile.php");
 <head>
   <meta charset="UTF-8">
   <title>Jaaga Student Job Board</title>
-  <link rel="stylesheet" href="../css/lib/bootstrap.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
   <link rel="stylesheet" href="../css/lib/styles.css">
+  <link rel="stylesheet" href="../css/team1.css">
 </head>
 <body>
   
@@ -53,12 +54,12 @@ header("Location:profile.php");
         <a class="navbar-brand" href="/">in3Hrs.com</a>
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Find Services</a></li>
-        <li><a href="#">Start Selling</a></li>
-        <li><a href="#">Signin</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="category.php">Find Services</a></li>
+        <li><a href="catupload.php">Start Selling</a></li>
+        <li><a href="login.php">Signin</a></li>
         <li>
-          <form class="navbar-form navbar-right" role="form">
+          <form class="navbar-form navbar-right" role="form" action="signup.php">
             <button type="submit" class="btn btn-success">Sign Up</button>
           </form>
         </li>
@@ -93,10 +94,13 @@ header("Location:profile.php");
         
     <input type="text" class="form-control" placeholder="Email" autofocus name="emaill">
         <input type="password" class="form-control" placeholder="Password" name="passs">
-     
+           <h4>
+           
+          </h4>
         
     <span class="clearfix"></span>  
         </div>
+
     <div class="login-footer">
     <div class="row">
                         <div class="col-xs-6 col-md-6">
@@ -105,8 +109,17 @@ header("Location:profile.php");
                 <a href="">Sign up now</a>
               </div>
                         </div>
+
+                      
+
+
                         <div class="col-xs-6 col-md-6 pull-right">
                             <button type="submit" name ="submit" class="btn btn-large btn-success pull-right">Login</button>
+
+
+
+
+
                         </div>
                     </div>
     

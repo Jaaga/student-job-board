@@ -44,9 +44,9 @@
       <div class="col-md-8">
        
         <?php
-              $con = mysql_connect("localhost","root","golny23!");
+              $con = mysql_connect("localhost","root","");
               $db = mysql_select_db("sjb");
-              $query = mysql_query('select * from offering where offer_id = 3');
+              $query = mysql_query('select * from offering where user_id = 1');
               $row = mysql_fetch_array($query);
               echo '<h2><a href="offering.php">' . $row['title'] . '</a><br /><small>posted on ' .$row['date']. '</small></h2>';
  

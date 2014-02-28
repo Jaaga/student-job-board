@@ -23,9 +23,9 @@
         </a>
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Find Services</a></li>
-        <li><a href="#">Start Selling</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="category.php">Find Services</a></li>
+        <li><a href="catupload.php">Start Selling</a></li>
         <li><a href="login.php">Signin</a></li>
         <li>
           <form class="navbar-form navbar-right" role="form" action="signup.php">
@@ -41,7 +41,7 @@
     <div class="container">
       <h1>in3Hrs.com</h1>
       <p>Get your job done in 3 Hours!!!</p>
-      <p><a class="btn btn-zoomshift btn-lg" role="button">Get Started Now!</a></p>
+      <p><a class="btn btn-zoomshift btn-lg" role="button" href="signup.php">Get Started Now!</a></p>
       <a href="#">How this works?</a>
     </div>
   </div>

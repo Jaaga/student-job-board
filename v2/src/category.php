@@ -24,39 +24,34 @@ $result = mysql_query($sql) or die(mysql_error());
     </head>
 
 <body>
-
-    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="">in3h</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a>
-                    </li>
-                    <li><a href="#services">Services</a>
-                    </li>
-                    <li><a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">in3Hrs.com</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="category.php">Find Services</a></li>
+        <li><a href="catupload.php">Start Selling</a></li>
+        <li><a href="login.php">Signin</a></li>
+        <li>
+          <form class="navbar-form navbar-right" role="form" action="signup.php">
+            <button type="submit" class="btn btn-success">Sign Up</button>
+          </form>
+        </li>
+      </ul>
+    </div> <!-- container -->
+  </div> 
     <img border="0" src="../img/Untitled-1 copy.jpg"alt="Pulpit rock" width="1365" height="230">
 
 <ul class="nav nav-tabs">
-  <li class="active"><a href="#">Home</a></li>
+  <li class="active"><a href="index.php">Home</a></li>
   <li><a href="#">Profile</a></li>
   <li><a href="#">Messages</a></li>
   <li><a href="#">Item two</a></li>
