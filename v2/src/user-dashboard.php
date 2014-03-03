@@ -113,7 +113,11 @@
 
 
 	</div>
+   <p><a class="btn btn-primary" role="button" href="offering.php">Check Offerings</a></p>
+
 </div>
+
+ 
 <div class="container">
 <h1>Orders:</h1>
   
@@ -131,8 +135,13 @@
       </div>
               <?php } ?>
 
+ </div>
+  <p><a class="btn btn-primary" role="button" href="orders.php">Check Orders</a></p>
+
 </div>
 </div>
+
+ 
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
 </body>

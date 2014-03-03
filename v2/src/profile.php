@@ -67,7 +67,7 @@ $query=mysql_query("update user set about='".$about1."',linkedin='".$linke."',na
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
-     <link href="css/student.css" rel="stylesheet">
+     <link href="../css/student.css" rel="stylesheet">
     <title>Student Profile</title>
 
     <!-- Bootstrap core CSS -->

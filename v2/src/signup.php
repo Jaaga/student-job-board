@@ -1,22 +1,24 @@
 <?php
 include('common.php');
+function make_safe($variable) {
+    $variable = mysql_real_escape_string(trim($variable));
+    return $variable;
+}
 if(isset($_POST['submit']))
 {
 
 $fname=make_safe($_POST['fname']);
-echo $fname;
+//echo $fname;
 $lname=make_safe($_POST['lname']);
 $email=make_safe($_POST['email']);
 $pw=make_safe($_POST['pw']);
 //$pw1=sha1($pw);
 
 $query=mysql_query("insert into user (name,email,pass) values ('".$fname."','".$email."','".$pw."')") or die(mysql_error());
+header("Location:login.php");
+}
 
-}
-function make_safe($variable) {
-    $variable = mysql_real_escape_string(trim($variable));
-    return $variable;
-}
+
 
 
 ?>
@@ -52,12 +54,12 @@ function make_safe($variable) {
       </div> <!-- navbar-header -->
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Find Services</a></li>
-        <li><a href="#">Start Selling</a></li>
-        <li><a href="/login.html">Signin</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="category.php">Find Services</a></li>
+        <li><a href="offering/offer.html.php">Start Selling</a></li>
+        <li><a href="login.php">Signin</a></li>
         <li>
-          <form class="navbar-form navbar-right" role="form">
+          <form class="navbar-form navbar-right" role="form" action="signup.php">
             <button type="submit" class="btn btn-success">Sign Up</button>
           </form>
         </li>

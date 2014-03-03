@@ -23,7 +23,7 @@ $about1= $_POST['title'];
   $pic="images/".$_FILES['image']['name'];
   move_uploaded_file($temp,$pic);
   $query=mysql_query("insert into offering (title,picture) values ( '".$about1."','".$pic."')") or die(mysql_error());
- 
+  header('Location:login.php');
 }
 //select values from table
 	
@@ -90,15 +90,15 @@ font-size: 150%
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.php">Home</a></li>
-        <li><a href="#">Find Services</a></li>
-        <li><a href="#">Start Selling</a></li>
+        <li><a href="category.php">Find Services</a></li>
+        <li><a href="catupload.php">Start Selling</a></li>
         <li><a href="logout.php">Logout</a></li>
         
       </ul>
     </div> <!-- container -->
   </div> <!-- navbar div -->
 
-     
+     <br><Br><br>
  <div class="container">
      
        
@@ -106,32 +106,29 @@ font-size: 150%
      
 	
     <div class="row">
-		<div class="col-md-12 well">
-         <h3>User Profile</h3> </br>
+	<div class="col-md-12 well">
+         	<h3>Add Your Offering</h3> <hr>
              
-			 <form class="form-horizontal"  method="post" role="form" enctype="multipart/form-data">
-              
-              <div class="form-group">
-                   <label for="about" class="col-sm-2 control-label">About</label>
-                          <div class="col-sm-4">
-                                <textarea class="form-control" rows="3" name="title"></textarea>
-                           </div>
-               </div>
-               <div class="form-group">
-                    <label class="col-sm-2 control-label">Image</label>
-                           <div class="col-sm-10">
-                                 <img src="" width="80px" height="80px"/></br> <input type="file" id="exampleInputFile" name="image"/>
-                           </div>
-               </div>
-               <div class="form-group">
-                     <label  class="col-sm-2 control-label"></label>
-                              <div class="col-sm-4">
-                                   <input type="submit" name="save" value="saveandchanges" class="myButton"/>
-                              </div>
-                </div>
+		<form  method="post" role="form" enctype="multipart/form-data">
+              		<div class="form-group">
+                   		<label for="title">Title</label>
+                                <input type="name" class="form-control" name="title">
+			</div>
   
+              		<div class="form-group">
+                   		<label for="about">Description</label>
+                                <textarea class="form-control" rows="3" name="about"></textarea>
+                        </div>
+               		<div class="form-group">
+                    		<label>Image</label>
+				<br>
+                                <img src="" width="80px" height="80px"/> <input type="file" id="exampleInputFile" name="image"/>
+                        </div>
   
-</form>
+               		<div class="form-group">
+                                <input type="submit"  value="Save" class="myButton" class="btn btn-primary">
+                	</div>
+		</form>
         </div>	 
      </div>	
      

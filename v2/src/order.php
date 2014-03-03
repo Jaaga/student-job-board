@@ -43,7 +43,7 @@
       
       <div class="col-md-8">
       <?php
-              $con = mysql_connect("localhost","root","golny23!");
+              $con = mysql_connect("localhost","root","");
               $db = mysql_select_db("sjb");
               $query = mysql_query('select * from orders where order_id = 1');
               $row = mysql_fetch_array($query);
@@ -60,7 +60,7 @@
               <h3>Messages</h3>
               <hr>
               <?php
-                $query = mysql_query('select * from message where student_id=1');
+                $query = mysql_query('select * from message where user_id=1');
                 while($row = mysql_fetch_array($query)){
                   echo '<blockquote>'.$row['message_info'].'</blockquote>';
                 }
