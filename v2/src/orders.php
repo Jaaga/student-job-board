@@ -28,7 +28,7 @@ exit();
 					echo $name;
 			}
 			catch (PDOException $e)
-			{
+			{ user_id = $userid'
 				$error = 'Error fetching data ' . $e->getMessage();
 				exit();
 			}
