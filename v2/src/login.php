@@ -1,14 +1,13 @@
-`                           <?php
+<?php
 include('common.php');
-if(isset($_POST['emaill']))
+if(isset($_POST['submit']))
 {
 
   $email1=$_POST['emaill'];
-}
-if (isset($_POST['passs'])) {
+
   # code...
 $pass2=$_POST['passs'];
-}
+
 $tab=mysql_query("select * from user where email='".$email1."' AND pass ='".$pass2."'");
 
 $row=mysql_fetch_array($tab);
@@ -16,7 +15,7 @@ $row=mysql_fetch_array($tab);
 if(isset($row['name']))
 {
  $_SESSION["username"]=$row['name'];
- $_SESSION["studentid"]=$row['user_id'];
+ $_SESSION["userid"]=$row['user_id'];
 header("Location:user-dashboard.php");
  }
  else 
@@ -25,7 +24,7 @@ header("Location:user-dashboard.php");
  $msg="invalid user";
  }
 
-
+}
 
 
 ?>
@@ -113,7 +112,12 @@ header("Location:user-dashboard.php");
                       
 
 
-                        <div class="col-xs-6 col-md-6 pull-right">
+                      <?php if(isset($msg))
+                      {
+                        echo "email or password are incorrect";
+                      } 
+
+                      ?> <div class="col-xs-6 col-md-6 pull-right">
                             <button type="submit" name ="submit" class="btn btn-large btn-success pull-right">Login</button>
 
 
