@@ -9,28 +9,33 @@
 	$sql=mysql_query('SELECT * FROM orders WHERE user_id = $userid')or die(mysql_error());
 	
 	//fetching orders from Database
-	function fetch_order_details(){
+	function get_orders(){
 	
 	$order_array = array();
-	//display orders
+
+	//display orders database
 	
 	while($row=mysql_fetch_array($sql))
 		{
 			
-			$order_array[] = $row['details'];
-			//Displaying Status of Orders
+			$order_array[] = $row;
+
 			
 		}
 			return $order_array;
-	}
-	
-?>
-//example to call
 
-<!--<html>
+	}
+
+?>
+
+<!--example to call
+
+<html>
 <body>
 	
-	<?php fetch_order_details();
+	<?php 
+	 //$orders=get_orders();
+	 //echo $array[0]['username'];
     ?>
 	
 
