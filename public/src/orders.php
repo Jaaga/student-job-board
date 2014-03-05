@@ -35,7 +35,7 @@
 	
 	<?php 
 	 //$orders=get_orders();
-	 //echo $array[0]['username'];
+	 //echo $orders[0]['username'];
     ?>
 	
 
