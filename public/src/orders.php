@@ -10,17 +10,20 @@
 	
 	//fetching orders from Database
 	function fetch_order_details(){
-		'<ul>'
+	
+	$order_array = array();
 	//display orders
+	
 	while($row=mysql_fetch_array($sql))
 		{
-			echo '<li>' . $row['details'] . '</li>';
+			
+			$order_array[] = $row['details'];
+			//Displaying Status of Orders
+			
 		}
-		'</ul>'
-}
-
-
-
+			return $order_array;
+	}
+	
 ?>
 //example to call
 

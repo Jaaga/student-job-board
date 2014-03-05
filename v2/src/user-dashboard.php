@@ -108,7 +108,7 @@
                       while($row2=mysql_fetch_array($sql_result)){ ?>
   
 		<div class="col-md-3 col-sm-4 col-xs-6"><p><?php echo $row2['title']; ?></p><img class="img-responsive" src="<?php echo $row2['picture']; ?>" /></div>
-                
+              <a href="offering.php?id=<?php echo $row2['offer_id'] ?>">Link</a>  
               <?php } } ?>
 
 
@@ -127,11 +127,13 @@
 
 
     <div class="row">
-                           <?php while($row3=mysql_fetch_array($query_result)){ ?>
+                         <a href="oferring.php" > <?php while($row3=mysql_fetch_array($query_result)){ ?></a>
 
     	<div class="col-md-3 col-sm-4 col-xs-6"><p><?php echo $row3['details'];
                                                         echo "-";
-                                                       echo $row3['status'];?></p>
+                                                       echo $row3['status'];?>
+
+                                                       </p>
       </div>
               <?php } ?>
 
