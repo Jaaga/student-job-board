@@ -70,61 +70,36 @@
 </div>
 <?php 
 $var=getofferings();
-for($row1=0;$row1<3;$row1++)
+
+for($row1=0;$row1<4;$row1++)
 { 
   for($row=0;$row<1;$row++)
   {
 
   ?>
 <div class="container">
-
-<<<<<<< HEAD
-  <div class="row">
-                     
-    <div class="col-md-3 col-sm-4 col-xs-6"><p></p><img class="img-responsive" src="<?php echo $var[$row1][$row]; ?>" /><?php echo $var[$row1][$row+1]; ?></div>
-                
-              
-<?php } }?>
-=======
-	<div class="row">
-                     <?php         $query = "SELECT *  FROM offering where user_id =2 limit 4";                   
-        $sql_result=mysql_query($query,$con2) or die("Couldn't execute query 1."); 
-
-                      while($row2=mysql_fetch_array($sql_result)){ ?>
-  
-		<div class="col-md-3 col-sm-4 col-xs-6"><p><?php echo $row2['title']; ?></p><img class="img-responsive" src="<?php echo $row2['picture']; ?>" /></div>
-              <a href="offering.php?id=<?php echo $row2['offer_id'] ?>">Link</a>  
-              <?php } } ?>
-
->>>>>>> 0d51528f7f0201b916a8e76b8926d24742c4f750
-
+  <div class="row">                  
+    <div class="col-md-3 col-sm-4 col-xs-6"><p></p><img class="img-responsive" src="<?php echo $var[$row1][$row]; ?>" /><?php echo $var[$row1][$row+1]; ?></div>            
+<?php }}?>
   </div>
    <p><a class="btn btn-primary" role="button" href="offering.php">Check Offerings</a></p>
-
 </div>
 
  
+<?php 
+$var2=getorders();
+
+for($row1=0;$row1<4;$row1++)
+{ 
+  for($row=0;$row<1;$row++)
+  {
+
+  ?>
 <div class="container">
-<h1>Orders:</h1>
-  
-
-    <div class="row">
-<<<<<<< HEAD
-                          
-
-      <div class="col-md-3 col-sm-4 col-xs-6"><p></p>
-=======
-                         <a href="oferring.php" > <?php while($row3=mysql_fetch_array($query_result)){ ?></a>
-
-    	<div class="col-md-3 col-sm-4 col-xs-6"><p><?php echo $row3['details'];
-                                                        echo "-";
-                                                       echo $row3['status'];?>
-
-                                                       </p>
->>>>>>> 0d51528f7f0201b916a8e76b8926d24742c4f750
-      </div>
-             
-
+  <div class="row">                  
+    <div class="col-md-3 col-sm-4 col-xs-6"><p></p><?php echo $var2[$row1][$row]; echo "-" ?> <?php echo $var2[$row1][$row+1]; ?></div>            
+<?php }}?>
+ 
  </div>
   <p><a class="btn btn-primary" role="button" href="orders.php">Check Orders</a></p>
 
