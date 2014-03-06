@@ -95,7 +95,7 @@ for($row1=0;$row1<4;$row1++)
   ?>
 <div class="container">
   <div class="row">                  
-    <div class="col-md-3 col-sm-4 col-xs-6"><p></p><?php echo $var2[$row1][$row]; echo "-" ?> <?php echo $var2[$row1][$row+1]; ?></div>            
+    <div class="col-md-3 col-sm-4 col-xs-6"><p></p><?php echo $var2[$row1][$row];  ?> </br><?php echo $var2[$row1][$row+1]; ?></div>            
 <?php }?>
  
  </div>
