@@ -73,14 +73,13 @@ $var=getofferings();
 
 for($row1=0;$row1<4;$row1++)
 { 
-  for($row=0;$row<1;$row++)
-  {
+  $row=0;
 
   ?>
 <div class="container">
   <div class="row">                  
     <div class="col-md-3 col-sm-4 col-xs-6"><p></p><img class="img-responsive" src="<?php echo $var[$row1][$row]; ?>" /><?php echo $var[$row1][$row+1]; ?></div>            
-<?php }}?>
+<?php }?>
   </div>
    <p><a class="btn btn-primary" role="button" href="offering.php">Check Offerings</a></p>
 </div>
@@ -91,14 +90,13 @@ $var2=getorders();
 
 for($row1=0;$row1<4;$row1++)
 { 
-  for($row=0;$row<1;$row++)
-  {
+  
 
   ?>
 <div class="container">
   <div class="row">                  
     <div class="col-md-3 col-sm-4 col-xs-6"><p></p><?php echo $var2[$row1][$row]; echo "-" ?> <?php echo $var2[$row1][$row+1]; ?></div>            
-<?php }}?>
+<?php }?>
  
  </div>
   <p><a class="btn btn-primary" role="button" href="orders.php">Check Orders</a></p>
