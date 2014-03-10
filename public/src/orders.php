@@ -1,45 +1,33 @@
-<? php
+<?php
 
 	include('common.php');
 
 	//getting value from session
 	$userid = $_SESSION['userid'];
 	
-	//selecting Database
-	$sql=mysql_query('SELECT * FROM orders WHERE user_id = $userid')or die(mysql_error());
-	
+	  
 	//fetching orders from Database
 	function get_orders(){
 	
-	$order_array = array();
+		$sql=mysql_query('SELECT * FROM orders INNER JOIN offering ON orders.user_id=$userid &&  orders.offer_id=offering.offer_id ')or die(mysql_error());
+
 
 	//display orders database
 	
-	while($row=mysql_fetch_array($sql))
-		{
-			
-			$order_array[] = $row;
+				$col=0;
+	            $row2=mysql_fetch_array($sql);
 
-			
-		}
-			return $order_array;
-
-	}
+                for($row=0;$row<4;$row++)
+                { 
+                            
+                    $data[$row][$col] = $row2['picture'];
+                    $data[$row][$col+1]=$row2['title'];
+                    $data[$row][$col+2]=$row2['status'];
+                    $row2=mysql_fetch_array($sql);
+                            
+                }
+                return($data);
+   	}
 
 ?>
 
-<!--example to call
-
-<html>
-<body>
-	
-	<?php 
-	 //$orders=get_orders();
-	 //echo $orders[0]['username'];
-    ?>
-	
-
-</body>
-
-</html>
--->
