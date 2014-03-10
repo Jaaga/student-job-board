@@ -37,27 +37,7 @@
                 }
             return $data;
     	}
-    	function getorders()
-    	{                $userid = $_SESSION['userid'];
-
-            $con3 = mysql_connect("localhost","root","") or die("Couldn't select DB"); 
-            $db = mysql_select_db("sjb", $con3)  or die("Couldn't select database.");  
-
-            $query2 = "SELECT *  FROM orders where user_id =$userid ";                   
-            $result1=mysql_query($query2,$con3) or die("Couldn't execute query 1.");
-            $row3=mysql_fetch_array($result1);
-                $col=0;
-                for($row=0;$row<4;$row++)
-                { 
-                            
-                    $data[$row][$col] = $row3['details'];
-                    $data[$row][$col+1]=$row3['status'];
-                    $row3=mysql_fetch_array($result1);
-                            
-                }
-            return $data;
-
-    	}
+    	
 ?>
           
        
