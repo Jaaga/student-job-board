@@ -13,26 +13,39 @@ class dbLogin
  }
  public function dbConnect()
  {
- $mysqli=new mysqli("localhost","root","root1","sjb");
- return $mysqli;
- }
+  $con=mysqli_connect("localhost","root","123","sjb");
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
 
- public function loginValid($username,$password)
- {
-   echo "test";
-  $mysqli=$this->dbConnect();
-  $query=$mysqli->query("select * from  user where email = '".$username."' AND pass='".$password."'");
-  // echo "select * from  'user' where email = $username AND pass=$password";
-  //$query=mysqli_query($mysqli,"select * from  'user' where email = 'ansal' AND pass='ansal' ");
-  
+ return $con;
+ } 
 
- $result=$query->fetch_array();
-  echo $result;
-  return $result;
-   //return true;
- }
  
+public function  loginValid($username, $password)
+{
 
+$con=$this->dbConnect();
+// Check connection
+
+$result = mysqli_query($con,"SELECT * FROM user where email='$username' and pass='$password'");
+$row = mysqli_fetch_array($result);
+
+//while($row = mysqli_fetch_array($result))
+ // {
+//  echo $row['email'] . "yoyo " . $row['pass'];
+ // echo "<br>";
+ // }
+
+mysqli_close($con);
+if($password==$row['pass'])
+{
+
+return true;
+} 
+return false;
+}
 
 }
 

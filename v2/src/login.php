@@ -7,15 +7,18 @@ if (isset($_POST['submit'])) {
     $password  = $_POST['passs'] ;
     
     $result    = $dbLogin->loginValid($username, $password);
-   echo $result;
+  
     // if (isset($result['name'])) {
     //     $_SESSION["username"] = $result['name'];
     //     $_SESSION["userid"]   = $result['user_id'];
-    //     header("Location:user-dashboard.php");
-    // } else {
-    //     $msg = "invalid user";
+    
+    if($result==1)
+    {
+    header("Location:user-dashboard.php");
+     } else {
+         $msg = "invalid user";
         
-    // }
+     }
 }
 ?>
 
