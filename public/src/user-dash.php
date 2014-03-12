@@ -20,8 +20,9 @@
                 for($row=0;$row<4;$row++)
                 { 
                             
-                    $data[$row][$col] = $row2['picture'];
-                    $data[$row][$col+1]=$row2['title'];
+                    $data[$row][$col] = $row2['order_id'];
+                    $data[$row][$col+1] = $row2['picture'];
+                    $data[$row][$col+2]=$row2['title'];
                     $row2=mysql_fetch_array($sql_result);
                             
                 }

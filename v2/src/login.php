@@ -1,32 +1,25 @@
 <?php
-include('common.php');
-if(isset($_POST['submit']))
-{
-
-  $email1=$_POST['emaill'];
-
-  # code...
-$pass2=$_POST['passs'];
-
-$tab=mysql_query("select * from user where email='".$email1."' AND pass ='".$pass2."'");
-
-$row=mysql_fetch_array($tab);
-
-if(isset($row['name']))
-{
- $_SESSION["username"]=$row['name'];
- $_SESSION["userid"]=$row['user_id'];
-header("Location:user-dashboard.php");
- }
- else 
- {
+include('dbLogin.php');
+if (isset($_POST['submit'])) {
+    $dbLogin   = new dbLogin;
+    //$tableName = 'user';
+    $username  =  $_POST['emaill'];
+    $password  = $_POST['passs'] ;
+    
+    $result    = $dbLogin->loginValid($username, $password);
   
- $msg="invalid user";
- }
-
+    // if (isset($result['name'])) {
+    //     $_SESSION["username"] = $result['name'];
+    //     $_SESSION["userid"]   = $result['user_id'];
+    
+    if($result==1)
+    {
+    header("Location:user-dashboard.php");
+     } else {
+         $msg = "invalid user";
+        
+     }
 }
-
-
 ?>
 
 <!doctype html>
@@ -77,14 +70,14 @@ header("Location:user-dashboard.php");
       <div class="row mg-btm">
              <div class="col-md-12">
                 <a href="#" class="btn btn-primary btn-block">
-                  <i class="icon-facebook"></i>    Login with Facebook
+                  <i class="icon-facebook"></i>    Login with Facebook
                 </a>
       </div>
       </div>
       <div class="row">
       <div class="col-md-12">
                 <a href="#" class="btn btn-info btn-block" >
-                  <i class="icon-twitter"></i>    Login with Twitter
+                  <i class="icon-twitter"></i>    Login with Twitter
                 </a>
             </div>
           </div>
@@ -112,12 +105,12 @@ header("Location:user-dashboard.php");
                       
 
 
-                      <?php if(isset($msg))
-                      {
-                        echo "email or password are incorrect";
-                      } 
+                      <?php
+if (isset($msg)) {
+    echo "email or password are incorrect";
+}
 
-                      ?> <div class="col-xs-6 col-md-6 pull-right">
+?> <div class="col-xs-6 col-md-6 pull-right">
                             <button type="submit" name ="submit" class="btn btn-large btn-success pull-right">Login</button>
 
 
