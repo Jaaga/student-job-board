@@ -25,16 +25,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">in3Hrs.com</a>
+        <a class="navbar-brand" href="/v2/src/">in3Hrs.com</a>
       </div> <!-- navbar-header -->
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Find Services</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="categories.php">Find Services</a></li>
         <li><a href="#">Start Selling</a></li>
-        <li><a href="/login.html">Signin</a></li>
+        <li class="active"><a href="login.php">Signin</a></li>
         <li>
-          <form class="navbar-form navbar-right" role="form">
+          <form class="navbar-form navbar-right" role="form" action="signup.php">
             <button type="submit" class="btn btn-success">Sign Up</button>
           </form>
         </li>
