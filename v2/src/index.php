@@ -17,7 +17,7 @@
   
   <!-- top nav bar -->
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
+    <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -25,14 +25,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="/v2/src/">
           in3Hrs.com
         </a>
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="category.php">Find Services</a></li>
-        <li><a href="catupload.php">Start Selling</a></li>
+        <li class="active"><a href="index.php">Home</a></li>
+        <li><a href="categories.php">Find Services</a></li>
+        <li><a href="">Start Selling</a></li>
         <li><a href="login.php">Signin</a></li>
         <li>
           <form class="navbar-form navbar-right" role="form" action="signup.php">
@@ -60,11 +60,11 @@
           <aside class="featured"></aside>
           <img src="http://cdn1.fiverrcdn.com/photos/2662146/v2_200/contentwritingfiverr.jpg?1391585552" alt="...">
           <h5>
-            <a href="#">I will write original content for your web project up to 500 words</a>
+            <a href="offering.php">I will write original content for your web project up to 500 words</a>
           </h5>
           <p>
             <img src="http://cdn0.fiverrcdn.com/photos/441737/thumb/374323_10150410284411292_523596291_8776528_185859792_n.jpg?1343838133" alt="" class="img-circle">
-            <a href="#">Roger Federer</a>
+            <a href="">Roger Federer</a>
           </p>
         </div>
       </div>
@@ -72,7 +72,7 @@
         <div class="skill-set">
           <img src="http://cdn0.fiverrcdn.com/photos/1969041/v2_200/review-1.jpg?1375103357" alt="...">
           <h5>
-            <a href="#">I will write original content for your web project up to 500 words</a>
+            <a href="offering.php">I will write original content for your web project up to 500 words</a>
           </h5>
           <p>
             <img src="http://cdn0.fiverrcdn.com/photos/441737/thumb/374323_10150410284411292_523596291_8776528_185859792_n.jpg?1343838133" alt="" class="img-circle">
@@ -84,7 +84,7 @@
         <div class="skill-set">
           <img src="http://cdn0.fiverrcdn.com/photos/2667680/v2_200/cover_design1.jpg?1391684448" alt="...">
           <h5>
-            <a href="#">I will write original content for your web project up to 500 words</a>
+            <a href="offering.php">I will write original content for your web project up to 500 words</a>
           </h5>
           <p>
             <img src="http://cdn0.fiverrcdn.com/photos/441737/thumb/374323_10150410284411292_523596291_8776528_185859792_n.jpg?1343838133" alt="" class="img-circle">
@@ -97,7 +97,7 @@
           <aside class="featured"></aside>
           <img src="http://cdn1.fiverrcdn.com/photos/2662146/v2_200/contentwritingfiverr.jpg?1391585552" alt="...">
           <h5>
-            <a href="#">I will write original content for your web project up to 500 words</a>
+            <a href="offering.php">I will write original content for your web project up to 500 words</a>
           </h5>
           <p>
             <img src="http://cdn0.fiverrcdn.com/photos/441737/thumb/374323_10150410284411292_523596291_8776528_185859792_n.jpg?1343838133" alt="" class="img-circle">
@@ -110,7 +110,7 @@
           <aside class="featured"></aside>
           <img src="http://static.dmcloud.net/4e5bf73e94a6f629c900461b/4fe1aae89473990a0a001883/thumb-200x123-f.jpeg" alt="...">
           <h5>
-            <a href="#">I will write original content for your web project up to 500 words</a>
+            <a href="offering.php">I will write original content for your web project up to 500 words</a>
           </h5>
           <p>
             <img src="http://cdn0.fiverrcdn.com/photos/441737/thumb/374323_10150410284411292_523596291_8776528_185859792_n.jpg?1343838133" alt="" class="img-circle">
@@ -123,7 +123,7 @@
           <aside class="featured"></aside>
           <img src="http://cdn1.fiverrcdn.com/photos/2662146/v2_200/contentwritingfiverr.jpg?1391585552" alt="...">
           <h5>
-            <a href="#">I will write original content for your web project up to 500 words</a>
+            <a href="offering.php">I will write original content for your web project up to 500 words</a>
           </h5>
           <p>
             <img src="http://cdn0.fiverrcdn.com/photos/441737/thumb/374323_10150410284411292_523596291_8776528_185859792_n.jpg?1343838133" alt="" class="img-circle">
@@ -135,7 +135,7 @@
         <div class="skill-set">
           <img src="http://cdn0.fiverrcdn.com/photos/1969041/v2_200/review-1.jpg?1375103357" alt="...">
           <h5>
-            <a href="#">I will write original content for your web project up to 500 words</a>
+            <a href="offering.php">I will write original content for your web project up to 500 words</a>
           </h5>
           <p>
             <img src="http://cdn0.fiverrcdn.com/photos/441737/thumb/374323_10150410284411292_523596291_8776528_185859792_n.jpg?1343838133" alt="" class="img-circle">
@@ -147,7 +147,7 @@
         <div class="skill-set">
           <img src="http://cdn0.fiverrcdn.com/photos/1969041/v2_200/review-1.jpg?1375103357" alt="...">
           <h5>
-            <a href="#">I will write original content for your web project up to 500 words</a>
+            <a href="offering.php">I will write original content for your web project up to 500 words</a>
           </h5>
           <p>
             <img src="http://cdn0.fiverrcdn.com/photos/441737/thumb/374323_10150410284411292_523596291_8776528_185859792_n.jpg?1343838133" alt="" class="img-circle">
