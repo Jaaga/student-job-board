@@ -129,7 +129,7 @@
         </div>
         <hr>
 
-        
+
 
         <h3>
           <a href="#">I can create a responsive site using Bootstrap</a> <br>
@@ -180,7 +180,7 @@
       <div class="col-md-3 coloumnBox" style="margin-top:1%;margin-right:1%;">
         <h2>My Offerings</h2>
         <hr>
-        <button class="btn btn-lg btn-inverse" style="font-size:14px;width:300px;">Create New Offering</button>
+        <button class="btn btn-lg btn-success" style="font-size:14px;width:300px;">Create New Offering</button>
         <hr>
         <a href="#" class="thumbnail">
           <h4 style="text-align:center;">I can create an Avatar</h4>
