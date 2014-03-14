@@ -43,11 +43,12 @@
       </div> <!-- navbar-header -->
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Find Services</a></li>
+        <li><a href="userDashboard.php">Home</a></li>
+        <li><a href="categories.php">Find Services</a></li>
         <li><a href="#">Start Selling</a></li>
         <li>
-          <form class="navbar-form navbar-right" role="form">
+          <form class="navbar-form navbar-right" role="form" action="index.php?loggedOut=true">
+            <input type="hidden" name="loggedOut" value="true">
             <button type="submit" class="btn btn-success">Logout</button>
           </form>
         </li>
@@ -282,7 +283,13 @@
       ]
     };
     var ctx = $("#analytics").get(0).getContext("2d");
-    new Chart(ctx).Line(data,{});
+    var charty = new Chart(ctx).Line(data,{});
+   setInterval(function(){
+      $('#analytics').fadeOut();
+      setInterval(function(){
+        $('#analytics').fadeIn();
+      }, 1000);
+   }, 5000);
     });
   </script>
 </body>
