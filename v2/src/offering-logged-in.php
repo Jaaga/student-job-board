@@ -39,7 +39,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/v2/src/">in3Hrs.com</a>
+        <a class="navbar-brand" href="/v2/src/userDashboard.php">in3Hrs.com</a>
       </div> <!-- navbar-header -->
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <ul class="nav navbar-nav navbar-right">

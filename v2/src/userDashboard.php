@@ -29,15 +29,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">in3Hrs.com</a>
+        <a class="navbar-brand" href="/v2/src/userDashboard.php">in3Hrs.com</a>
       </div> <!-- navbar-header -->
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Find Services</a></li>
+        <li class="active"><a href="userDashboard.php">Home</a></li>
+        <li><a href="categories.php">Find Services</a></li>
         <li><a href="#">Start Selling</a></li>
         <li>
-          <form class="navbar-form navbar-right" role="form">
+          <form class="navbar-form navbar-right" role="form" action="index.php?loggedOut=true">
+            <input type="hidden" name="loggedOut" value="true">
             <button type="submit" class="btn btn-success">Logout</button>
           </form>
         </li>
@@ -182,17 +183,17 @@
         <hr>
         <button class="btn btn-lg btn-success" style="font-size:14px;width:300px;">Create New Offering</button>
         <hr>
-        <a href="#" class="thumbnail">
+        <a href="offering-logged-in.php" class="thumbnail">
           <h4 style="text-align:center;">I can create an Avatar</h4>
           <hr>
           <img src="http://cdn3.fiverrcdn.com/photos/2769262/v2_200/Gig_Sample_1.jpg?1393567951" alt="...">
         </a>
-        <a href="#" class="thumbnail">
+        <a href="offering-logged-in.php" class="thumbnail">
           <h4 style="text-align:center;">I can create an Avatar</h4>
           <hr>
           <img src="http://cdn3.fiverrcdn.com/photos/1797125/v2_200/responsice_email_newsletter.jpg?1370418830" alt="...">
         </a>
-        <a href="#" class="thumbnail">
+        <a href="offering-logged-in.php" class="thumbnail">
           <h4 style="text-align:center;">I can create an Avatar</h4>
           <hr>
           <img src="http://cdn2.fiverrcdn.com/photos/2494195/v2_200/Cover2.jpg?13883241990" alt="...">

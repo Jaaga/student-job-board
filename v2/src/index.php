@@ -54,6 +54,11 @@
   </div>
 
   <div class="container">
+    <div class="row" id="loggedout" style="display:none;">
+      <div class="col-md-12">
+        <div class="alert alert-info">You've successfully logged out of in3Hrs.com. See you soon!</div>
+      </div>
+    </div>
     <div class="row" id="offerings">
       <div class="col-md-3">
         <div class="skill-set">
@@ -230,6 +235,12 @@
           $('#loadingimg').hide();
         }, 2000);
       });
+      var field = 'loggedOut';
+      var url = window.location.href;
+      if(url.indexOf('?' + field + '=') != -1)
+          $('#loggedout').fadeIn();
+      else if(url.indexOf('&' + field + '=') != -1)
+          $('#loggedout').fadeIn();
     });
   </script>
 </body>

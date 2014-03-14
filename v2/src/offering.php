@@ -39,14 +39,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">in3Hrs.com</a>
+        <a class="navbar-brand" href="/v2/src/">in3Hrs.com</a>
       </div> <!-- navbar-header -->
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Find Services</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li class="active"><a href="categories.php">Find Services</a></li>
         <li><a href="#">Start Selling</a></li>
-        <li><a href="/login.html">Signin</a></li>
+        <li><a href="login.php">Signin</a></li>
         <li>
           <form class="navbar-form navbar-right" role="form">
             <button type="submit" class="btn btn-success">Sign Up</button>
@@ -63,7 +63,7 @@
       
       <div class="col-md-8 coloumnBox">
         <h2>I will give you Ninja tactics to find a job using LinkedIn for $5
-          <small>Created 1 year ago. Posted in <a href="#">LinkedIn / Career Development</a></small>
+          <small>Created 1 year ago. Posted in <a href="categories.php">LinkedIn / Career Development</a></small>
         </h2>
           <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
         <g:plusone></g:plusone>
@@ -123,22 +123,22 @@
       <p>
         <div class="row">
           <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
+            <a href="offering.php" class="thumbnail">
               <img src="http://cdn2.fiverrcdn.com/photos/2494195/v2_200/Cover2.jpg?13883241990" alt="...">
             </a>
           </div>
           <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
+            <a href="offering.php" class="thumbnail">
               <img src="http://cdn2.fiverrcdn.com/photos/2482048/v2_200/sample1.jpg?1390220829" alt="...">
             </a>
           </div>
           <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
+            <a href="offering.php" class="thumbnail">
               <img src="http://cdn3.fiverrcdn.com/photos/1797125/v2_200/responsice_email_newsletter.jpg?1370418830" alt="...">
             </a>
           </div>
           <div class="col-xs-6 col-md-3">
-            <a href="#" class="thumbnail">
+            <a href="offering.php" class="thumbnail">
               <img src="http://cdn3.fiverrcdn.com/photos/2769262/v2_200/Gig_Sample_1.jpg?1393567951" alt="...">
             </a>
           </div>
