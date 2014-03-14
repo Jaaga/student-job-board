@@ -1,30 +1,3 @@
-<?php
-include('common.php');
-function make_safe($variable) {
-    $variable = mysql_real_escape_string(trim($variable));
-    return $variable;
-}
-if(isset($_POST['submit']))
-{
-
-$fname=make_safe($_POST['fname']);
-//echo $fname;
-$lname=make_safe($_POST['lname']);
-$email=make_safe($_POST['email']);
-$pw=make_safe($_POST['pw']);
-//$pw1=sha1($pw);
-
-$query=mysql_query("insert into user (name,email,pass) values ('".$fname."','".$email."','".$pw."')") or die(mysql_error());
-header("Location:login.php");
-}
-
-
-
-
-?>
-
-
-
 <!doctype html>
 <html lang="en">
 <head>
