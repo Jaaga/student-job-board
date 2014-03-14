@@ -129,6 +129,30 @@
         </div>
         <hr>
 
+        
+
+        <h3>
+          <a href="#">I can create a responsive site using Bootstrap</a> <br>
+          <small>Ordered by <a href="#">Deepak Choudhary</a>
+          <img src="../img/22.jpg" alt="" class="img-circle" width="35px">
+          </small>
+        </h3>
+        <div class="row">
+          <div class="col-md-4">
+            <button class="btn btn-xs btn-info">Messages</button>
+            <button class="btn btn-xs btn-success">Done</button>
+            <button class="btn btn-xs btn-warning">Conditions</button>
+          </div>
+          <div class="col-md-2">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                 70% Complete
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+
         <h3>
           <a href="#">I can create a responsive site using Bootstrap</a> <br>
           <small>Ordered by <a href="#">Deepak Choudhary</a>
@@ -178,6 +202,42 @@
     </div>
 
   </div> <!-- container-fluid -->
+
+  <div class="container">    
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-md-3">
+        <ul class="list-unstyled">
+          <li><strong>in3Hrs.com</strong><li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="list-unstyled">
+          <li><strong>Help &amp; Support</strong><li>
+          <li><a href="#">in3Hrs.com Help</a></li>
+          <li><a href="#">Frequently Asked Questions</a></li>
+          <li><a href="#">User Forum</a></li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-md-8">
+        <a href="#">Terms of Service</a>    
+        <a href="#">Privacy</a>    
+        <a href="#">Security</a>
+      </div>
+      <div class="col-md-4">
+        <p class="muted pull-right">© 2014 Jaaga Student Job Board. All rights reserved</p>
+      </div>
+    </div>
+  </div>
+</div>
 
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
