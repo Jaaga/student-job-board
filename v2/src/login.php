@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+<?php
+include('class.php');
+if (isset($_POST['submit'])) {
+    $dbLogin   = new dbLogin;
+    //$tableName = 'user';
+    $username  =  $_POST['emaill'];
+    $password  = $_POST['passs'] ;
+    
+    $result    = $dbLogin->loginValid($username, $password);
+   echo $result;
+    // if (isset($result['name'])) {
+    //     $_SESSION["username"] = $result['name'];
+    //     $_SESSION["userid"]   = $result['user_id'];
+    //     header("Location:user-dashboard.php");
+    // } else {
+    //     $msg = "invalid user";
+        
+    // }
+}
+?>
+
+=======
+>>>>>>> fde8f5dd5de551433f19db08d30b3e042f631b2c
 <!doctype html>
 <html lang="en">
 <head>
@@ -39,9 +63,48 @@
           </form>
         </li>
       </ul>
+<<<<<<< HEAD
+    </div> <!-- container -->
+  </div> <!-- navbar div -->
+  
+  <div class="container form-container">
+  <div class="row">
+    
+    <div class="col-md-offset-4">
+      <form class="form-signin mg-btm" method="post" action="login.php">
+      <h3 class="heading-desc">
+    Login to in3Hrs.com</h3>
+    <div class="social-box">
+      <div class="row mg-btm">
+             <div class="col-md-12">
+                <a href="#" class="btn btn-primary btn-block">
+                  <i class="icon-facebook"></i>    Login with Facebook
+                </a>
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-md-12">
+                <a href="#" class="btn btn-info btn-block" >
+                  <i class="icon-twitter"></i>    Login with Twitter
+                </a>
+            </div>
+          </div>
+    </div>
+    <div class="main">  
+        
+    <input type="text" class="form-control" placeholder="Email" autofocus name="emaill">
+        <input type="password" class="form-control" placeholder="Password" name="passs">
+           <h4>
+           
+          </h4>
+        
+    <span class="clearfix"></span>  
+        </div>
+=======
       </div><!-- navbar-collapse -->
     </div><!-- container-fluid -->
   </nav><!-- navbar -->
+>>>>>>> fde8f5dd5de551433f19db08d30b3e042f631b2c
 
   <div class="container">
     <div class="row">
@@ -53,6 +116,24 @@
               <div class="col-sm-10">
                 <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
               </div>
+<<<<<<< HEAD
+                        </div>
+
+                      
+
+
+                      <?php
+if (isset($msg)) {
+    echo "email or password are incorrect";
+}
+
+?> <div class="col-xs-6 col-md-6 pull-right">
+                            <button type="submit" name ="submit" class="btn btn-large btn-success pull-right">Login</button>
+
+
+
+
+=======
             </div>
             <div class="form-group">
               <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
@@ -79,6 +160,7 @@
       </div>
     </div>
   </div>
+>>>>>>> fde8f5dd5de551433f19db08d30b3e042f631b2c
 
   <div class="container">    
   <div class="row">
