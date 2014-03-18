@@ -1,7 +1,7 @@
 <?php
 
 include('common.php'); 
-$sql = "SELECT distinct * FROM offering order by rand()";
+$sql = "SELECT distinct * FROM offering order by rand() ";
 $result = mysql_query($sql) or die(mysql_error());  
 
 ?>
@@ -24,144 +24,70 @@ $result = mysql_query($sql) or die(mysql_error());
     </head>
 
 <body>
-
-    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="">in3h</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a>
-                    </li>
-                    <li><a href="#services">Services</a>
-                    </li>
-                    <li><a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">in3Hrs.com</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="category.php">Find Services</a></li>
+        <li><a href="catupload.php">Start Selling</a></li>
+        <li><a href="login.php">Signin</a></li>
+        <li>
+          <form class="navbar-form navbar-right" role="form" action="signup.php">
+            <button type="submit" class="btn btn-success">Sign Up</button>
+          </form>
+        </li>
+      </ul>
+    </div> <!-- container -->
+  </div> 
+    <img border="0" src="../img/Untitled-1 copy.jpg"alt="Pulpit rock" width="1365" height="230">
 
-        <div class="row">
+<ul class="nav nav-tabs">
+  <li class="active"><a href="index.php">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+  <li><a href="#">Item two</a></li>
+<li><a href="#">Item three</a></li>
+<li><a href="#">Item four</a></li>
+<li><a href="#">Item five</a></li>
+<li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+  <li><a href="#">Item two</a></li>
+<li><a href="#">Item three</a></li>
+<li><a href="#">Item four</a></li>
+<li><a href="#">Item five</a></li>
+<li><a href="#">Item three</a></li>
 
-            <div class="col-lg-12">
-                <h1 class="page-header">3 Col Portfolio
-                    <small>Showcase Your Work</small>
-                </h1>
-            </div>
+</ul>
+</br></br>
+               
+    
+<div class="container">
 
-        </div>
+    <div class="row">
+                     <?php          
 
+                      while($row2=mysql_fetch_array($result)){ ?>
+  
+        <div class="col-md-3 col-sm-4 col-xs-6"><p><?php echo $row2['title']; ?></p><img class="img-responsive" src="<?php echo $row2['picture']; ?>" /></div>
                 
-                <?php while($row=mysql_fetch_array($result)){ ?>        
-        <div class="row">       
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
+              <?php } ?>
 
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
 
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>" >
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-            <div class="col-md-4 category-item">
-                <a href="#project-link">
-                    <img class="img-responsive" src="<?php echo $row['picture'];?>">
-                </a>
-                <h3><a href="#project-link"><?php echo $row['title'];} ?></a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-
-        </div>
+    </div>
+</div>
 
         <hr>
 
-        <div class="row text-center">s
+        <div class="row text-center">
 
             <div class="col-lg-12">
                 <ul class="pagination">
@@ -184,7 +110,7 @@ $result = mysql_query($sql) or die(mysql_error());
 
         </div>
 
-    </div>
+    
     <!-- /.container -->
 
     <div class="container">
@@ -203,8 +129,9 @@ $result = mysql_query($sql) or die(mysql_error());
     <!-- /.container -->
 
     <!-- JavaScript -->
-    <script src="../js/jquery-1.10.2.js"></script>
-    <script src="../js/bootstrap.js"></script>
+    
+    <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
 
 </body>
 
