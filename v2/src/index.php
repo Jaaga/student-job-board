@@ -77,7 +77,7 @@
       <div class="col-md-3">
         <div class="skill-set">
           <aside class="featured"></aside>
-          <img src="<?php echo $data[$row][0]; ?>" alt="...">
+          <img style="height:200px;overflow:hidden;" class="img-responsive" src="<?php echo $data[$row][0]; ?>" alt="...">
           <h5>
             <a href="offering.php"><?php echo $data[$row][1]; ?></a>
           </h5>

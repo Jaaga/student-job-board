@@ -1,3 +1,37 @@
 body {
-  margin-top: 50px;
+  margin-top: 100px;
+  
+}
+.blue,.orange,.green,.purple,.yellow,.grey {
+width:180px;
+height:65px;
+}
+.blue{
+ background:#0087b9;
+ }
+ .orange{
+ background:#379e51;
+ }
+ .green{
+ background:#e48a07;
+ }
+ .purple{
+ background:#7839da;
+ }
+ .yellow{
+ background:#f01611;
+ }
+ .grey{
+ background:gray;
+ }
+ .border{
+ width:180px;
+ height:30px;
+ background-color:#cecece;
+ text-align:center;
+ padding-top:.2em;
+ margin-right:10px;
+}
+.cheader{
+ margin-right:10px;
 }
