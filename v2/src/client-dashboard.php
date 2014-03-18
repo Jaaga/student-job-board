@@ -44,7 +44,7 @@
         <hr>
         <ul>     
         <?php
-		$con = mysql_connect("localhost","root","golny23!");
+		$con = mysql_connect("localhost","root","");
 		$db = mysql_select_db("sjb");
 		$query = mysql_query('select * from orders limit 5');
 		while($row = mysql_fetch_array($query)) {

@@ -39,17 +39,17 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/v2/src/">in3Hrs.com</a>
+        <a class="navbar-brand" href="/v2/src/userDashboard.php">in3Hrs.com</a>
       </div> <!-- navbar-header -->
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.php">Home</a></li>
-        <li class="active"><a href="categories.php">Find Services</a></li>
+        <li><a href="userDashboard.php">Home</a></li>
+        <li><a href="categories.php">Find Services</a></li>
         <li><a href="#">Start Selling</a></li>
-        <li><a href="login.php">Signin</a></li>
         <li>
-          <form class="navbar-form navbar-right" role="form">
-            <button type="submit" class="btn btn-success">Sign Up</button>
+          <form class="navbar-form navbar-right" role="form" action="index.php?loggedOut=true">
+            <input type="hidden" name="loggedOut" value="true">
+            <button type="submit" class="btn btn-success">Logout</button>
           </form>
         </li>
       </ul>
@@ -63,7 +63,7 @@
       
       <div class="col-md-8 coloumnBox">
         <h2>I will give you Ninja tactics to find a job using LinkedIn for $5
-          <small>Created 1 year ago. Posted in <a href="categories.php">LinkedIn / Career Development</a></small>
+          <small>Created 1 year ago. Posted in <a href="#">LinkedIn / Career Development</a></small>
         </h2>
           <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
         <g:plusone></g:plusone>
@@ -121,28 +121,12 @@
 
       <h3>My Other Offerings</h3>
       <p>
-        <div class="row">
-          <div class="col-xs-6 col-md-3">
-            <a href="offering.php" class="thumbnail">
-              <img src="http://cdn2.fiverrcdn.com/photos/2494195/v2_200/Cover2.jpg?13883241990" alt="...">
-            </a>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <a href="offering.php" class="thumbnail">
-              <img src="http://cdn2.fiverrcdn.com/photos/2482048/v2_200/sample1.jpg?1390220829" alt="...">
-            </a>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <a href="offering.php" class="thumbnail">
-              <img src="http://cdn3.fiverrcdn.com/photos/1797125/v2_200/responsice_email_newsletter.jpg?1370418830" alt="...">
-            </a>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <a href="offering.php" class="thumbnail">
-              <img src="http://cdn3.fiverrcdn.com/photos/2769262/v2_200/Gig_Sample_1.jpg?1393567951" alt="...">
-            </a>
-          </div>
-        </div>
+        <hr>
+        <h4>
+          <span style="margin-right: 5%;">Views: <span class="text-primary"> 932</span></span>
+          <span>Sales: <span class="text-success"> 32</span></span>
+        </h4>
+        <canvas id="analytics" width="800" height="400"></canvas>
       </p>
       <hr>
       <h3>Customer Reviews
@@ -190,7 +174,8 @@
       </div>
       <div class="col-md-3 coloumnBox">
         <h2>
-          <button class="btn btn-success btn-lg" data-container="body" data-toggle="popover" data-placement="bottom" data-content="The average response time for this user is 2 days. Please contact him before placing an order!" id="orderButton">ORDER NOW ($20)</button>
+          <button class="btn btn-success" >Edit this Offering</button>
+          <button class="btn btn-danger" >Delete this Offering</button>
           <hr>
         </h2>
         <p>
@@ -205,18 +190,6 @@
           <span class="glyphicon glyphicon-heart"></span> 99% 
           <span class="glyphicon glyphicon-thumbs-up"></span> 234
         </h3>
-        <hr>
-        <h3>
-          <img src="../img/22.jpg" alt="" class="img-circle" width="100px">
-          Adrian Demian
-          <small>From: Canada, Joined 3 years ago.</small>
-        </h3>
-        <p>
-          I'm a man of many talents! I am a Health & Wellness professional working fulltime in HR. I'm a Real Estate Investor. I am a dad to a fabulous boy. I pride myself on helping others however I can.
-        </p>
-        <p>
-          <a href="#">Contact Me!</a>
-        </p>
         <hr>
         <p>
           Related Categories
@@ -285,12 +258,39 @@
 
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/chart.js"></script>
+  </script>
   <script>
-      $(document).ready(function(){
-        $('#orderButton').popover({
-          trigger: 'hover'
-        });
-      });
+    $(document).ready(function(){
+
+      var data = {
+      labels : ["January","February","March","April","May","June","July"],
+      datasets : [
+        {
+          fillColor : "rgba(220,220,220,0.5)",
+          strokeColor : "rgba(220,220,220,1)",
+          pointColor : "rgba(220,220,220,1)",
+          pointStrokeColor : "#fff",
+          data : [65,59,90,81,56,55,40]
+        },
+        {
+          fillColor : "rgba(151,187,205,0.5)",
+          strokeColor : "rgba(151,187,205,1)",
+          pointColor : "rgba(151,187,205,1)",
+          pointStrokeColor : "#fff",
+          data : [28,48,40,19,96,27,100]
+        }
+      ]
+    };
+    var ctx = $("#analytics").get(0).getContext("2d");
+    var charty = new Chart(ctx).Line(data,{});
+   setInterval(function(){
+      $('#analytics').fadeOut();
+      setInterval(function(){
+        $('#analytics').fadeIn();
+      }, 1000);
+   }, 5000);
+    });
   </script>
 </body>
 </html>

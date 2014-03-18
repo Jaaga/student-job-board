@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Client Profile</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/navbar-fixed-top.css">
+    <link rel="stylesheet" href="css/sticky-footer-navbar.css">
+	 <style>
+@font-face { font-family: JuneBug; src: url('fonts/File.otf'); } 
+h7 {
+font-family: JuneBug;
+font-size: 150%
+}
+</style>
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+ <!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><h7>in3Hrs</h7></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Notifications</a></li>
+          </ul>
+      <form class="navbar-form navbar-nav" role="search" action="searchresults.html">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-sm hidden">Search</button>
+    </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Orders<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Current orders</a></li>
+                <li class="divider"></li>
+                <li><a href="#">History</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Expenditures</a></li>
+              </ul>
+            </li>
+             <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Edit Profile</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 well">
+			<div class="row">
+				<div class="col-sm-4 col-md-3">
+					<div class="thumbnail">
+						<div class="caption">
+							<figure>
+								<img src="images/suit.png" width=200px; height=220px;>
+							</figure>
+						</div>
+					</div>
+				</div>
+		<div class="col-sm-6 col-md-8">
+			<div id="information">
+		 		<div class="thumbnail">
+		      			<div class="caption">
+						<form class="form-horizontal" role="form">
+ 							<div class="form-group">
+    								<label for="name" class="col-sm-2">Name</label>
+    									<div class="col-sm-2" id="name">
+    										Rahul Gandhi		
+    									</div>
+  							</div>
+							<div class="form-group">
+							    	<label for="contact" class="col-sm-2">Contact</label>
+							    		<div class="col-sm-2" id="contact">
+							    			0938374437
+							    		</div>
+							</div>
+ 							<div class="form-group">
+    								<label for="email" class="col-sm-2">Email</label>
+    									<div class="col-sm-2" id="email">
+    										rahul_rti@womenempowerment.com
+    									</div>
+  							</div>
+							 
+							 <div class="form-group">
+							 	<label for="twitter" class="col-sm-2">Twitter</label>
+							 		<div class="col-sm-2" id="twitter">
+							    			twitter.com/username
+							    		</div>
+							  </div>
+						</form>
+						<a href="#">Ongoing Jobs <span class="badge">3</span></a>
+						<a href="#">Jobs Done <span class="badge">38</span></a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="row">
+	
+
+<div id="ongoing" class="col-sm-12 col-md-12">
+        <a href="job-lists.html" class="btn btn-lg btn-primary">Add Jobs</a>
+<br></br>
+ <div class="thumbnail">
+      
+      <div class="caption">
+        <h3>Ongoing Jobs</h3>
+        <h4> Project Name: Http://www.womenempowement.org<br></br>
+        Status: 75% Job Done<br /></h4>
+        <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
+      </div>
+	<button type="button" class="btn btn-success">View Status</button>
+	
+
+</div>
+</div>
+</div>
+<div id="jobsdone" class="col-sm-12 col-md-12">
+ <div class="thumbnail">
+      
+      <div class="caption">
+        <h3>Jobs Completed</h3>
+        <h4>Project Name: Http://www.rti.co.in<br></br>
+        Status: 100% Job Done<br /></h4>
+        </h4>
+                <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"><span class="sr-only">60% Complete</span></div>
+      </div>
+	<button type="button" class="btn btn-success">View Project</button>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>	
+</div>	
+
+	
+ <div id="footer">
+      <p align="center">&copy; SJB </p>
+      <div align="center">
+        <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li class="mute"> . </li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li class="mute"> . </li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+  </div>
+ <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
