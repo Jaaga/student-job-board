@@ -22,7 +22,7 @@
 					$data[$row][2] = $row2['title'];
 					$data[$row][3] = $row2['description'];
 					$data[$row][4] = $row2['date'];
-					$row2 = mysql_fetch_array($sql_result);
+					$row2 = mysqli_fetch_array($sql_result);
 				}
 		//returning the array
 		return ($data);
@@ -36,7 +36,7 @@
 			//if no category_id is defined
 			if ($category_id==0) 
 	    {
-	                  $sql=mysqli_query($con,"SELECT DISTINCT * FROM offering ")or die(mysql_error());
+	                  $sql=mysqli_query($con,"SELECT DISTINCT * FROM offering ")or die(mysqli_error());
 
 	    }
 	    	//else with category_id
@@ -78,7 +78,7 @@
 				{
 					$data[$row][0] = $row2['picture'];
 					$data[$row][1] = $row2['title'];
-					$row2 = mysql_fetch_array($sql_result);
+					$row2 = mysqli_fetch_array($sql_result);
 				}
 		//returning the array
 		return ($data);
