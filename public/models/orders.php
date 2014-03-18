@@ -11,17 +11,15 @@
 				$sql=mysqli_query($con,'SELECT * FROM orders INNER JOIN offering ON orders.user_id=$userid &&  orders.offer_id=offering.offer_id ')or die(mysqli_error($con));
 	            $result=mysqli_fetch_array($sql);
 
-          /*      foreach ($result as $row)
+                for($row=0;$row<$numrows&&$result;$row++)
                 { 
                             
                     $data[$row][0] = $result['picture'];
                     $data[$row][1]=$result['title'];
                     $data[$row][2]=$result['status'];
-                    $result=mysqli_fetch_array($sql);
-                            
+                                              
                 }
-                return($data); */
-                return $result;
+                return($data);
    	}
    	//placing an order
 	public function create_order($userid,$offerid,$details)
