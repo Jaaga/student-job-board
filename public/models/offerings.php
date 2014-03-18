@@ -30,7 +30,7 @@
 		
 
 		//getting offerings by category
-		public function get_offerings_by_category($category_id, $item_num,){
+		public function get_offerings_by_category($category_id, $item_num){
 			//creating connection
 			$con = create_connection();
 			//if no category_id is defined
@@ -74,7 +74,7 @@
 			//fetching data as an array from database
 			$row2 = mysqli_fetch_array($sql_result);
 			//for loop to store data in 2-D array
-			for($row=0;$row<$item_num;$row++)
+			for($row=0;$row<4;$row++)
 				{
 					$data[$row][0] = $row2['picture'];
 					$data[$row][1] = $row2['title'];
