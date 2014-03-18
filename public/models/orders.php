@@ -2,9 +2,9 @@
 	include('dbconnection.php');
 
 	class orders{
-  
+ 
 	//fetching orders from Database
-	public function get_orders($userid,$numrows)
+	public function get_orders($userid)
 	{
 				$con=create_connection();
 
@@ -17,8 +17,7 @@
                     $data[$row][0] = $result['picture'];
                     $data[$row][1]=$result['title'];
                     $data[$row][2]=$result['status'];
-                    $result=mysqli_fetch_array($sql);
-                            
+                                              
                 }
                 return($data);
    	}
@@ -28,11 +27,10 @@
 			$con=create_connection();
 			//storing query value in result
 			$sql_query = "INSERT INTO orders(user_id, offer_id, status, details) values ('$userid', '$offerid', 'pending', '$details')";
-			mysqli_query($con,$sq//creating connection
-			$con = create_connection();l_query)or die(mysqli_error($con));
+			mysqli_query($con,$sql_query)or die(mysqli_error($con));
 	}
-	public function get_orders_by//creating connection
-			$con = create_connection();_offerid($offerid)
+
+	public function get_orders_by_offerid($offerid)
 	{
 		$con=create_connection();
 
