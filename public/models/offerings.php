@@ -64,6 +64,25 @@
 	    return($data);
 	               
 	           }
+	    public function featured_offering()
+	    {
+	    	$con = create_connection();
+			//selecting offering table for particular user
+			$sql_query = "SELECT * FROM offering ";
+			//storing query value in result
+			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
+			//fetching data as an array from database
+			$row2 = mysqli_fetch_array($sql_result);
+			//for loop to store data in 2-D array
+			for($row=0;$row<$item_num;$row++)
+				{
+					$data[$row][0] = $row2['picture'];
+					$data[$row][1] = $row2['title'];
+					$row2 = mysql_fetch_array($sql_result);
+				}
+		//returning the array
+		return ($data);
+	    }
 
         //create new offering
 		public function create_offering($user_id,$title,$description,$picture)
