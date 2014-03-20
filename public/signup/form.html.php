@@ -65,7 +65,9 @@
           <button type="submit" name="action" value="Sign Up" class="btn btn-success btn-lg" style="width:100%;">Create Account Now</button>
           <hr>
         </form>
-        
+        <?php if(isset($profileExist)){
+        	echo "sorry, This Email is Registered!";
+        } ?>
         <form>
           <div class="form-group" style="margin-top:10px;">
             <label for="exampleInputEmail1">Or Connect With Google or Facebook</label>
