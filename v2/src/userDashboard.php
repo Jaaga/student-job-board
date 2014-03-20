@@ -1,3 +1,23 @@
+<?php 
+  include('../../public/models/dbconnection.php');
+
+include('../../public/models/users.php');
+include('../../public/models/orders.php');
+include('../../public/models/offerings.php');
+$user=new users;
+$userdata= $user->get_user_by_id(2);
+
+
+
+$order=new orders;
+$orders=$order->get_orders(2,2);
+$orders_length=sizeof($orders);
+$offer=new offering;
+$offers=$offer->get_offerings_by_user_id(2,4);
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,7 +28,7 @@
     body {
       background: #f6f6f6;
       margin-top: 70px;
-      margin-left: 2%;
+      margin-left:  2%;
       margin-right: 2%;
     }
     .coloumnBox {
@@ -54,7 +74,9 @@
       <div class="col-md-12 coloumnBox">
 
         <div class="col-md-4">
-          <h2>Priyanka Jasmeet</h2>
+          <img style="margin: 5px;"src="<?php echo $userdata[4]; ?>" width='70' height='100'/>
+          <h2 style="margin-left:80px;margin-top: -50px;"><?php echo $userdata[0]; ?></h2>
+          <h3 ></h3>
           <hr>
         </div>
 
@@ -85,119 +107,52 @@
       <div class="col-md-8 coloumnBox" style="margin-top:1%;margin-left:3%;">
         <h2>My Current Jobs</h2>
         <hr>
+        <?php 
+
+        for($row=0;$row<$orders_length;$row++)
+        {
+
+            $get_user=new users;
+            $user_data=$get_user->get_user_by_offer_id($orders[$row][3]);
+
+         ?>
+        <h3>
+          <a href="#"><?php echo $orders[$row][1]; ?></a> <br>
+          <small>Ordered by <a href="#"><?php echo $user_data[0]; ?></a>
+          <img src="<?php echo $user_data[4]; ?>" alt="" class="img-circle" width="35px">
+          </small>
+        </h3>
+        <div class="row">
+          <div class="col-md-4">
+            <button class="btn btn-xs btn-success">Accept</button>
+            <button class="btn btn-xs btn-info">Info.</button>
+            <button class="btn btn-xs btn-warning">Decline</button>
+          </div>
+          <div class="col-md-2">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $orders[$row][2]; ?> ">
+                 <?php echo $orders[$row][2]; ?>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <?php } ?>
         
-        <h3>
-          <a href="#">I can create a responsive site using Bootstrap</a> <br>
-          <small>Ordered by <a href="#">Deepak Choudhary</a>
-          <img src="../img/22.jpg" alt="" class="img-circle" width="35px">
-          </small>
-        </h3>
-        <div class="row">
-          <div class="col-md-4">
-            <button class="btn btn-xs btn-info">Messages</button>
-            <button class="btn btn-xs btn-success">Done</button>
-            <button class="btn btn-xs btn-warning">Conditions</button>
-          </div>
-          <div class="col-md-2">
-            <div class="progress">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                 70% Complete
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-
-        <h3>
-          <a href="#">I can create a responsive site using Bootstrap</a> <br>
-          <small>Ordered by <a href="#">Deepak Choudhary</a>
-          <img src="../img/22.jpg" alt="" class="img-circle" width="35px">
-          </small>
-        </h3>
-        <div class="row">
-          <div class="col-md-4">
-            <button class="btn btn-xs btn-info">Messages</button>
-            <button class="btn btn-xs btn-success">Done</button>
-            <button class="btn btn-xs btn-warning">Conditions</button>
-          </div>
-          <div class="col-md-2">
-            <div class="progress">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                 70% Complete
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-
-
-
-        <h3>
-          <a href="#">I can create a responsive site using Bootstrap</a> <br>
-          <small>Ordered by <a href="#">Deepak Choudhary</a>
-          <img src="../img/22.jpg" alt="" class="img-circle" width="35px">
-          </small>
-        </h3>
-        <div class="row">
-          <div class="col-md-4">
-            <button class="btn btn-xs btn-info">Messages</button>
-            <button class="btn btn-xs btn-success">Done</button>
-            <button class="btn btn-xs btn-warning">Conditions</button>
-          </div>
-          <div class="col-md-2">
-            <div class="progress">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                 70% Complete
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-
-        <h3>
-          <a href="#">I can create a responsive site using Bootstrap</a> <br>
-          <small>Ordered by <a href="#">Deepak Choudhary</a>
-          <img src="../img/22.jpg" alt="" class="img-circle" width="35px">
-          </small>
-        </h3>
-        <div class="row">
-          <div class="col-md-4">
-            <button class="btn btn-xs btn-info">Messages</button>
-            <button class="btn btn-xs btn-success">Done</button>
-            <button class="btn btn-xs btn-warning">Conditions</button>
-          </div>
-          <div class="col-md-2">
-            <div class="progress">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                 70% Complete
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-
       </div>
 
       <div class="col-md-3 coloumnBox" style="margin-top:1%;margin-right:1%;">
         <h2>My Offerings</h2>
         <hr>
-        <button class="btn btn-lg btn-success" style="font-size:14px;width:300px;">Create New Offering</button>
+        <button class="btn btn-lg btn-success" style="font-size:14px;width:280px;">Create New Offering</button>
         <hr>
-        <a href="offering-logged-in.php" class="thumbnail">
-          <h4 style="text-align:center;">I can create an Avatar</h4>
+        <?php for($row=0;$row<4;$row++){ ?>
+        <a href="offering-logged-in.php?offering_id=<?php echo $offers[$row][0]; ?>" class="thumbnail">
+          <h4 style="text-align:center;"><?php echo $offers[$row][2];  ?></h4>
           <hr>
-          <img src="http://cdn3.fiverrcdn.com/photos/2769262/v2_200/Gig_Sample_1.jpg?1393567951" alt="...">
+          <img src="<?php echo $offers[$row][1]; ?>" alt="...">
         </a>
-        <a href="offering-logged-in.php" class="thumbnail">
-          <h4 style="text-align:center;">I can create an Avatar</h4>
-          <hr>
-          <img src="http://cdn3.fiverrcdn.com/photos/1797125/v2_200/responsice_email_newsletter.jpg?1370418830" alt="...">
-        </a>
-        <a href="offering-logged-in.php" class="thumbnail">
-          <h4 style="text-align:center;">I can create an Avatar</h4>
-          <hr>
-          <img src="http://cdn2.fiverrcdn.com/photos/2494195/v2_200/Cover2.jpg?13883241990" alt="...">
-        </a>
+        <?php } ?>
       </div>
 
     </div>
