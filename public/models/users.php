@@ -26,7 +26,7 @@
 			//creating connection
 			$con = create_connection();
 			//query to fetch user data
-			$sql_query=mysqli_query($con,"SELECT * from user u inner join offering of on offer_id='$offer_id' && u.user_id = of.user_id");
+			$sql_query=mysqli_query($con,"SELECT user.name,user.email,user.linkedin,user.about,user.picture,user.paypal,user.user_id,offering.offer_id,offering.user_id from user  inner join offering  on offering.offer_id='$offer_id' && user.user_id = offering.user_id");
 			//getting user data array
 			$row2 = mysqli_fetch_array($sql_query);
 			//storing data in data array
