@@ -1,24 +1,27 @@
 <?php
-	include('dbconnection.php');
 
 	class orders{
  
 	//fetching orders from Database
-	public function get_orders($userid)
+	public function get_orders($userid,$numrows)
 	{
 				$con=create_connection();
 
-				$sql=mysqli_query($con,'SELECT * FROM orders INNER JOIN offering ON orders.user_id=$userid &&  orders.offer_id=offering.offer_id ')or die(mysqli_error($con));
+				$sql=mysqli_query($con,"SELECT * FROM orders  INNER JOIN offering ON orders.user_id='$userid' &&  orders.offer_id=offering.offer_id ")or die(mysqli_error($con));
 	            $result=mysqli_fetch_array($sql);
 
-                for($row=0;$row<$numrows&&$result;$row++)
+                for($row=0;$row<$numrows;$row++)
                 { 
                             
-                    $data[$row][0] = $result['picture'];
+                    $data[$row][0]=$result['picture'];
                     $data[$row][1]=$result['title'];
                     $data[$row][2]=$result['status'];
+                    $data[$row][3]=$result['offer_id'];
+                   $result=mysqli_fetch_array($sql);
+
                                               
                 }
+                mysqli_close($con);
                 return($data);
    	}
    	//placing an order

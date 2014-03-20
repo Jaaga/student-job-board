@@ -59,6 +59,35 @@
 		    $data[5]=$row2['paypal'];
 		    return($data);
 		}
+		
+		public function get_offers_by_offer_id($offer_id){
+
+			$con = create_connection();
+			//selecting offering table for particular user
+			$sql_query = "SELECT * FROM offering WHERE offer_id=$offer_id";
+			//storing query value in result
+			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
+			//fetching data as an array from database
+			$row2 = mysqli_fetch_array($sql_result);
+			//for loop to store data in 2-D array
+			for($row=0;$row<4;$row++)
+				{
+					$data[$row][0] = $row2['picture'];
+					$data[$row][1] = $row2['title'];
+					$data[$row][2] = $row2['offer_id'];
+					$data[$row][3] = $row2['description'];
+					$row2 = mysqli_fetch_array($sql_result);
+				}
+		//returning the array
+		return ($data);
+
+
+		}
 }
 
 ?>
+
+
+
+
+
