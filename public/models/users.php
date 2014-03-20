@@ -1,6 +1,5 @@
 <?php
-	//connection file included
-	
+		
 	//users class
 	class users{
 		//get user data using user_id
@@ -19,7 +18,6 @@
 		    $data[3]=$row2['about'];
 		    $data[4]=$row2['picture'];
 		    $data[5]=$row2['paypal'];
-		    mysqli_close($con);
 		    return($data);
 		}
 
@@ -28,8 +26,7 @@
 			//creating connection
 			$con = create_connection();
 			//query to fetch user data
-			$sql_query=mysqli_query($con,"SELECT user.name,user.email,user.linkedin,user.about,user.picture,user.user_id,offering.user_id,offering.offer_id from user inner join offering on offering.offer_id=2 && user.user_id = offering.user_id
-");
+			$sql_query=mysqli_query($con,"SELECT * from user u inner join offering of on offer_id='$offer_id' && u.user_id = of.user_id");
 			//getting user data array
 			$row2 = mysqli_fetch_array($sql_query);
 			//storing data in data array
@@ -38,6 +35,7 @@
 		    $data[2]=$row2['linkedin'];
 		    $data[3]=$row2['about'];
 		    $data[4]=$row2['picture'];
+		    $data[5]=$row2['paypal'];
 		    return($data);
 		}
 
@@ -59,6 +57,35 @@
 		    $data[5]=$row2['paypal'];
 		    return($data);
 		}
+		
+		public function get_offers_by_offer_id($offer_id){
+
+			$con = create_connection();
+			//selecting offering table for particular user
+			$sql_query = "SELECT * FROM offering WHERE offer_id=$offer_id";
+			//storing query value in result
+			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
+			//fetching data as an array from database
+			$row2 = mysqli_fetch_array($sql_result);
+			//for loop to store data in 2-D array
+			for($row=0;$row<4;$row++)
+				{
+					$data[$row][0] = $row2['picture'];
+					$data[$row][1] = $row2['title'];
+					$data[$row][2] = $row2['offer_id'];
+					$data[$row][3] = $row2['description'];
+					$row2 = mysqli_fetch_array($sql_result);
+				}
+		//returning the array
+		return ($data);
+
+
+		}
 }
 
 ?>
+
+
+
+
+
