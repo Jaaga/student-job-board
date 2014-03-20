@@ -1,7 +1,7 @@
 <?php
 function create_connection()
 {
-	$con=mysqli_connect("localhost","root","root","sjb") or die(mysqli_error());
+	$con=mysqli_connect("localhost","root","","sjb") or die(mysqli_error());
 
 	return $con;
 }
