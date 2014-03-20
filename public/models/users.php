@@ -1,7 +1,5 @@
 <?php
-	//connection file included
-	include('dbconnection.php');
-	
+		
 	//users class
 	class users{
 		//get user data using user_id
