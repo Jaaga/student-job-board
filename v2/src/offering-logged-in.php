@@ -1,3 +1,14 @@
+<?php 
+include("../../public/models/users.php");
+echo $offering_id=$_REQUEST['offering_id'];
+$users = new users;
+//$user_id=1;
+//$item_num=2;
+$data = $users->get_offers_by_offer_id($offering_id);
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -58,11 +69,13 @@
   </nav><!-- navbar -->
 
   <div class="container-fluid">
-    
+     <?php for ($row=0; $row < 1; $row++) { 
+        
+       ?> 
     <div class="row">
       
       <div class="col-md-8 coloumnBox">
-        <h2>I will give you Ninja tactics to find a job using LinkedIn for $5
+        <h2><?php echo $data[$row][1]; ?>
           <small>Created 1 year ago. Posted in <a href="#">LinkedIn / Career Development</a></small>
         </h2>
           <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
@@ -78,26 +91,14 @@
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img src="../img/slider-1.jpg" alt="First slide image">
+          <img src="<?php echo  $data[$row][0];?>" alt="First slide image">
           <div class="carousel-caption">
             <h3>Create Letters</h3>
             <p>My letters will make employers want to hire you!!!</p>
           </div>
         </div>
-        <div class="item">
-          <img src="../img/slider-2.jpg" alt="Second slide image">
-          <div class="carousel-caption">
-            <h3>Create Resumes</h3>
-            <p>I'll make sure that your resumes are beautiful and outstanding.</p>
-          </div>
-        </div>
-        <div class="item">
-          <img src="../img/slider-3.jpg" alt="Third slide image">
-          <div class="carousel-caption">
-            <h3>Get a Job</h3>
-            <p>Land on your dream job.</p>
-          </div>
-        </div>
+        
+        
       </div>
       <a class="left carousel-control" href="#carousel-example-captions" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -106,16 +107,19 @@
         <span class="glyphicon glyphicon-chevron-right"></span>
       </a>
     </div>
-
+<?php }?>
       <p></p>
 
+      <?php for ($row=0; $row < 1; $row++) { 
+        
+       ?>
       <p>
-        I will make a cartoon drawing of you or someone you know. Perfect for your Website, Blog, Facebook, Twitter, etc. Just send me a large good quality picture, & You will usually receive your completed image in 2 days. Note: The attached pictures are my own work, & this is NOT a Photoshop filter effect. You can see more Samples of my work at: http://www.flickr.com/photos/relaxabe2012
+        <?php echo $data[$row][3]; ?>
       </p>
 
-      <p>
-        I will make a cartoon drawing of you or someone you know. Perfect for your Website, Blog, Facebook, Twitter, etc.
-      </p>
+      <?php }?>
+
+      
 
       <hr>
 
