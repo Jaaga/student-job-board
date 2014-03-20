@@ -1,4 +1,7 @@
 <?php
+  include('models/dbconnection.php');
+
+
   include './models/offerings.php';
   $offering = new offering;
   $data = $offering->featured_offering();
