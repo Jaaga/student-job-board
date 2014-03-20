@@ -1,6 +1,5 @@
 <?php
 	//connection file included
-	include('dbconnection.php');
 	
 	//users class
 	class users{
@@ -20,6 +19,7 @@
 		    $data[3]=$row2['about'];
 		    $data[4]=$row2['picture'];
 		    $data[5]=$row2['paypal'];
+		    mysqli_close($con);
 		    return($data);
 		}
 
@@ -28,7 +28,8 @@
 			//creating connection
 			$con = create_connection();
 			//query to fetch user data
-			$sql_query=mysqli_query($con,"SELECT * from user u inner join offering of on offer_id='$offer_id' && u.user_id = of.user_id");
+			$sql_query=mysqli_query($con,"SELECT user.name,user.email,user.linkedin,user.about,user.picture,user.user_id,offering.user_id,offering.offer_id from user inner join offering on offering.offer_id=2 && user.user_id = offering.user_id
+");
 			//getting user data array
 			$row2 = mysqli_fetch_array($sql_query);
 			//storing data in data array
@@ -37,7 +38,6 @@
 		    $data[2]=$row2['linkedin'];
 		    $data[3]=$row2['about'];
 		    $data[4]=$row2['picture'];
-		    $data[5]=$row2['paypal'];
 		    return($data);
 		}
 
