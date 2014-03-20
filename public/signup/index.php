@@ -1,5 +1,6 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/sjb/includes/db.inc.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/dbconnection.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/signup.php';
 
 
 if(isset($_POST['action']))
@@ -7,10 +8,29 @@ if(isset($_POST['action']))
 	$name=$_POST['name'];
 	$email=$_POST['email'];
 	$password=$_POST['password'];
-	$username=$_POST['username'];
 
-	try{
-		$sql="INSERT INTO user (name,email,pass,username) VALUES ('".$name."','".$email."','".$password."','".$username."')";
+	$newSignUp=new signup();
+
+	if($newSignUp->is_signedUp($email)==FALSE)
+	{
+		$userid=$newSignUp->new_signup($name, $email, $password);
+		session_start();
+		$_SESSION['username']=$name;
+		$_SESSION['userid']=$userid;
+		header ('Location: .');
+	}
+	else{
+		$profileExist=TRUE;
+		include 'form.html.php';
+	}
+}
+
+include 'form.html.php';
+exit();
+
+
+/*	<?php try{
+		$sql="INSERT INTO user (name,email,pass) VALUES ('".$name."','".$email."','".$password."')";
 		$pdo->exec($sql);
 	}
 	catch (PDOException $e)
@@ -18,7 +38,8 @@ if(isset($_POST['action']))
 		$error="Unable to update content";
 		echo $error;
 		exit();
-	}
+	} 
+
 	try
 	{
 		$sql1="SELECT * FROM user WHERE email='".$email."'";
@@ -33,13 +54,8 @@ if(isset($_POST['action']))
 
 	foreach ($result as $row){
 		$userid= $row['user_id'];
-	}
-	session_start();
-	$_SESSION['username']=$username;
-	$_SESSION['userid']=$userid;
+	} ?>
+*/	
 	
-	header ('Location: ../profile');
-}
-
-include 'form.html.php';
-?>
+	
+	
