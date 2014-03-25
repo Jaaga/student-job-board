@@ -32,7 +32,7 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="categories.php">Find Services</a></li>
         <li><a href="#">Start Selling</a></li>
-        <li><a href="login.php">Signin</a></li>
+        <li><a href="../login/">Signin</a></li>
         <li>
           <form class="navbar-form navbar-right" role="form" action="signup.php">
             <button type="submit" class="btn btn-success">Sign Up</button>
