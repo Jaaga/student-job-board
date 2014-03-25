@@ -14,6 +14,7 @@ $order=new orders;
 $orders=$order->get_orders($_SESSION['userid'],2);
 $orders_length=sizeof($orders);
 $offer=new offering;
+$offer_length=sizeof($offer);
 $offers=$offer->get_offerings_by_user_id($_SESSION['userid'],4);
 ?>
 
@@ -152,7 +153,7 @@ $offers=$offer->get_offerings_by_user_id($_SESSION['userid'],4);
         if($offers ==0)
           {echo "You have nothing to offer right now. Make one.";}
         else{
-        for($row=0;$row<4;$row++){ ?>
+        for($row=0;$row<$offer_length;$row++){ ?>
         <a href="../offering?offeringid=<?php echo $offers[$row][0]; ?>" class="thumbnail">
           <h4 style="text-align:center;"><?php echo $offers[$row][2];  ?></h4>
           <hr>
