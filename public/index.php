@@ -42,7 +42,7 @@
         <li class="active"><a href="index.php">Home</a></li>
         <li><a href="categories.php">Find Services</a></li>
         <li><a href="">Start Selling</a></li>
-        <li><a href="login.php">Signin</a></li>
+        <li><a href="./login/">Signin</a></li>
         <li>
           
             <a class="btn btn-lg btn-success navbar-right" href="./signup" style="color:white;">Sign Up</a> 
