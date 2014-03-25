@@ -1,11 +1,12 @@
 <?php 
+session_start();
   include('../../public/models/dbconnection.php');
 
 include('../../public/models/users.php');
 include('../../public/models/orders.php');
 include('../../public/models/offerings.php');
-$user=new users;
-$userdata= $user->get_user_by_id(2);
+$user=new users();
+$userdata= $user->get_user_by_id($_SESSION['userid']);
 
 
 

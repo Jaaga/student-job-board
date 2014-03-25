@@ -1,6 +1,7 @@
 <?php 
+include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/dbconnection.php';
 include("../../public/models/users.php");
-echo $offering_id=$_REQUEST['offering_id'];
+echo $offering_id=$_REQUEST['offeringid'];
 $users = new users;
 //$user_id=1;
 //$item_num=2;
