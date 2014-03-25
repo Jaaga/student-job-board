@@ -1,8 +1,7 @@
 <?php
 session_start();
-include('../models/dbconnection.php');
-include('../models/login.php');
-
+include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/dbconnection.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/login.php';
 
 
 
