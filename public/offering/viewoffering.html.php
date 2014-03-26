@@ -1,11 +1,14 @@
 <?php 
 //include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/dbconnection.php';
 include("../../public/models/users.php");
+
 echo $offering_id=$offeringid;
 $users = new users;
+$offering=new offering();
 //$user_id=1;
 //$item_num=2;
-$data = $users->get_offers_by_offer_id($offering_id);
+$data = $offering->get_offers_by_offer_id($offering_id);
+
 
 ?>
 
@@ -50,7 +53,8 @@ $data = $users->get_offers_by_offer_id($offering_id);
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </button>
+        </bu
+        tton>
         <a class="navbar-brand" href="/v2/src/userDashboard.php">in3Hrs.com</a>
       </div> <!-- navbar-header -->
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -70,13 +74,11 @@ $data = $users->get_offers_by_offer_id($offering_id);
   </nav><!-- navbar -->
 
   <div class="container-fluid">
-     <?php for ($row=0; $row < 1; $row++) { 
-        
-       ?> 
+      
     <div class="row">
       
       <div class="col-md-8 coloumnBox">
-        <h2><?php echo $data[$row][1]; ?>
+        <h2><?php echo $data[1]; ?>
           <small>Created 1 year ago. Posted in <a href="#">LinkedIn / Career Development</a></small>
         </h2>
           <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
@@ -92,7 +94,7 @@ $data = $users->get_offers_by_offer_id($offering_id);
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img src="<?php echo  $data[$row][0];?>" alt="First slide image">
+      <img src='../<?php echo $data[0]; ?>' alt="First slide image">
           <div class="carousel-caption">
             <h3>Create Letters</h3>
             <p>My letters will make employers want to hire you!!!</p>
@@ -108,17 +110,14 @@ $data = $users->get_offers_by_offer_id($offering_id);
         <span class="glyphicon glyphicon-chevron-right"></span>
       </a>
     </div>
-<?php }?>
+
       <p></p>
 
-      <?php for ($row=0; $row < 1; $row++) { 
-        
-       ?>
+      
       <p>
-        <?php echo $data[$row][3]; ?>
+        <?php echo $data[3]; ?>
       </p>
 
-      <?php }?>
 
       
 
@@ -179,8 +178,12 @@ $data = $users->get_offers_by_offer_id($offering_id);
       </div>
       <div class="col-md-3 coloumnBox">
         <h2>
+          <?php 
+           $userid= $users->get_user_by_offer_id($offeringid);
+          if($_SESSION['userid']==$userid[6]){ ?>
           <a href="?edit=<?php echo $offering_id;?>"><button class="btn btn-success" >Edit this Offering</button></a>
-          <button class="btn btn-danger" >Delete this Offering</button>
+          <button class="btn btn-danger" >Delete Offering</button> <?php } else {?>
+           <button class="btn btn-success" >Order this</button> <?php } ?>
           <hr>
         </h2>
         <p>
