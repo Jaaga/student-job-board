@@ -3,6 +3,30 @@
 	
 	class offering{
 		//function to get offering by user_id
+
+		public function get_offers_by_offer_id($offer_id){
+
+			$con = create_connection();
+			//selecting offering table for particular user
+			$sql_query = "SELECT * FROM offering WHERE offer_id=$offer_id";
+			//storing query value in result
+			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
+			//fetching data as an array from database
+			$row2 = mysqli_fetch_array($sql_result);
+			//for loop to store data in 2-D array
+			
+					$data[0] = $row2['picture'];
+					$data[1] = $row2['title'];
+					$data[2] = $row2['offer_id'];
+					$data[3] = $row2['description'];
+					$data[4] = $row2['instruction'];
+					
+				
+		//returning the array
+		return ($data);
+
+
+		}
 		public function get_offerings_by_user_id($user_id,$item_num)
 		{
 			//creating connection
@@ -12,6 +36,12 @@
 			//storing query value in result
 			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
 			//fetching data as an array from database
+			$rowcount=mysqli_num_rows($sql_result);
+
+			if($rowcount == 0){
+				return 0;
+			}
+
 			$row2 = mysqli_fetch_array($sql_result);
 			//for loop to store data in 2-D array
 			for($row=0;$row<$item_num;$row++)
@@ -24,6 +54,7 @@
 					$row2 = mysqli_fetch_array($sql_result);
 				}
 		//returning the array
+
 		return ($data);
 	}
 		
@@ -77,6 +108,7 @@
 				{
 					$data[$row][0] = $row2['picture'];
 					$data[$row][1] = $row2['title'];
+					$data[$row][2] = $row2['offer_id'];
 					$row2 = mysqli_fetch_array($sql_result);
 				}
 		//returning the array
@@ -84,21 +116,22 @@
 	    }
 
         //create new offering
-		public function create_offering($user_id,$title,$description,$picture)
+		public function create_offering($user_id,$title,$description,$picture,$instruction)
 		{
 			//creating connection
 			$con = create_connection();
 			//query for storing value in table
-			$sql_query =	mysqli_query($con,"INSERT INTO offering(user_id, title, description, picture, date) VALUES ('$user_id', '$title', '$description', '$picture', Now())");
+			$sql_query =	mysqli_query($con,"INSERT INTO offering(user_id, title, description, picture,instruction date) VALUES ('$user_id', '$title', '$description', '$picture',$instruction, Now())");
 		}
 
 		//update offering
-		public function update_offering($user_id,$offer_id,$title,$description,$picture)
+		public function update_offering($user_id,$offer_id,$title,$description,$picture,$instruction)
 		{
 			//creating connection
 			$con = create_connection();
 			//query for update values in table
-			$sql_query = mysqli_query($con,"UPDATE offering SET title = $title, description = $description, picture = $picture WHERE offer_id = $offer_id AND user_id = $user_id");
+			$sql_query = mysqli_query($con,"UPDATE offering SET title = '".$title."', description = '".$description."', picture = '".$picture."',instruction='".$instruction."' WHERE offer_id = '".$offer_id."' AND user_id = '".$user_id."'");
+		
 		}
 
 		//delete offering

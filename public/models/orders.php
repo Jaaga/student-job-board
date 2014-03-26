@@ -8,6 +8,11 @@
 				$con=create_connection();
 
 				$sql=mysqli_query($con,"SELECT * FROM orders  INNER JOIN offering ON orders.user_id='$userid' &&  orders.offer_id=offering.offer_id ")or die(mysqli_error($con));
+	            
+	            $rowcount=mysqli_num_rows($sql);
+	            if($rowcount==0)
+	            	return 0;
+
 	            $result=mysqli_fetch_array($sql);
 
                 for($row=0;$row<$numrows;$row++)
