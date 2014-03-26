@@ -1,7 +1,7 @@
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/dbconnection.php';
+//include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/dbconnection.php';
 include("../../public/models/users.php");
-echo $offering_id=$_REQUEST['offeringid'];
+echo $offering_id=$offeringid;
 $users = new users;
 //$user_id=1;
 //$item_num=2;
@@ -179,7 +179,7 @@ $data = $users->get_offers_by_offer_id($offering_id);
       </div>
       <div class="col-md-3 coloumnBox">
         <h2>
-          <button class="btn btn-success" >Edit this Offering</button>
+          <a href="?edit=<?php echo $offering_id;?>"><button class="btn btn-success" >Edit this Offering</button></a>
           <button class="btn btn-danger" >Delete this Offering</button>
           <hr>
         </h2>

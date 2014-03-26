@@ -17,7 +17,7 @@ if(isset($_POST['action']))
 		session_start();
 		$_SESSION['username']=$name;
 		$_SESSION['userid']=$userid;
-		header ('Location: ../../v2/src/userDashboard.php');
+		header ('Location: ../user/index.php');
 	}
 	else{
 		$profileExist=TRUE;

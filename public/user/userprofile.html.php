@@ -5,17 +5,17 @@ session_start();
 include('../../public/models/users.php');
 include('../../public/models/orders.php');
 include('../../public/models/offerings.php');
-$user=new users();
+$user=new users;
 $userdata= $user->get_user_by_id($_SESSION['userid']);
 
 
 
 $order=new orders;
-$orders=$order->get_orders(2,2);
+$orders=$order->get_orders($_SESSION['userid'],2);
 $orders_length=sizeof($orders);
 $offer=new offering;
-$offers=$offer->get_offerings_by_user_id(2,4);
-
+$offer_length=sizeof($offer);
+$offers=$offer->get_offerings_by_user_id($_SESSION['userid'],4);
 ?>
 
 
@@ -109,7 +109,9 @@ $offers=$offer->get_offerings_by_user_id(2,4);
         <h2>My Current Jobs</h2>
         <hr>
         <?php 
-
+        if($orders==0)
+          echo "You don't have any orders now. Relax!!!";
+        else{
         for($row=0;$row<$orders_length;$row++)
         {
 
@@ -138,22 +140,26 @@ $offers=$offer->get_offerings_by_user_id(2,4);
           </div>
         </div>
         <hr>
-        <?php } ?>
+        <?php }} ?>
         
       </div>
 
       <div class="col-md-3 coloumnBox" style="margin-top:1%;margin-right:1%;">
         <h2>My Offerings</h2>
         <hr>
-        <button class="btn btn-lg btn-success" style="font-size:14px;width:280px;">Create New Offering</button>
+        <a href="../offering/" class="btn btn-lg btn-success" style="font-size:14px;width:280px;">Create New Offering</a>
         <hr>
-        <?php for($row=0;$row<4;$row++){ ?>
-        <a href="offering-logged-in.php?offering_id=<?php echo $offers[$row][0]; ?>" class="thumbnail">
+        <?php 
+        if($offers ==0)
+          {echo "You have nothing to offer right now. Make one.";}
+        else{
+        for($row=0;$row<$offer_length;$row++){ ?>
+        <a href="../offering?offeringid=<?php echo $offers[$row][0]; ?>" class="thumbnail">
           <h4 style="text-align:center;"><?php echo $offers[$row][2];  ?></h4>
           <hr>
           <img src="<?php echo $offers[$row][1]; ?>" alt="...">
         </a>
-        <?php } ?>
+        <?php }} ?>
       </div>
 
     </div>

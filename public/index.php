@@ -42,7 +42,7 @@
         <li class="active"><a href="index.php">Home</a></li>
         <li><a href="categories.php">Find Services</a></li>
         <li><a href="">Start Selling</a></li>
-        <li><a href="login.php">Signin</a></li>
+        <li><a href="./login/">Signin</a></li>
         <li>
           
             <a class="btn btn-lg btn-success navbar-right" href="./signup" style="color:white;">Sign Up</a> 
@@ -81,9 +81,10 @@
       <div class="col-md-3">
         <div class="skill-set">
           <aside class="featured"></aside>
+          <a href="./offering?offeringid= <?php echo $data[$row][2]; ?>">
           <img style="height:200px;overflow:hidden;" class="img-responsive" src="<?php echo $data[$row][0]; ?>" alt="...">
           <h5>
-            <a href="offering.php"><?php echo $data[$row][1]; ?></a>
+            <?php echo $data[$row][1]; ?> </a>
           </h5>
           <p>
             <img src="http://cdn0.fiverrcdn.com/photos/441737/thumb/374323_10150410284411292_523596291_8776528_185859792_n.jpg?1343838133" alt="" class="img-circle">
