@@ -14,8 +14,9 @@ $order=new orders;
 $orders=$order->get_orders($_SESSION['userid'],2);
 $orders_length=sizeof($orders);
 $offer=new offering;
-$offer_length=sizeof($offer);
 $offers=$offer->get_offerings_by_user_id($_SESSION['userid'],4);
+$offer_length=sizeof($offers);
+
 ?>
 
 
