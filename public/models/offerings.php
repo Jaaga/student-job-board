@@ -116,12 +116,15 @@
 	    }
 
         //create new offering
-		public function create_offering($user_id,$title,$description,$picture,$instruction)
+		public function create_offering($user_id,$title,$description,$category,$picture,$instruction)
 		{
 			//creating connection
 			$con = create_connection();
 			//query for storing value in table
 			$sql_query =	mysqli_query($con,"INSERT INTO offering(user_id, title, description, picture,instruction date) VALUES ('$user_id', '$title', '$description', '$picture',$instruction, Now())");
+			$offfer_id= $sql_query->mysqli_insert_id() ;
+			$sql_query1=	mysqli_query($con,"INSERT INTO offer_category(offer_id,category) VALUES ('$offfer_id', '$category')";
+
 		}
 
 		//update offering

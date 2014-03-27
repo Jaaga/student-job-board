@@ -75,11 +75,11 @@
 		  <div class="form-group">
 			<label for="category">Select Category</label>
 			<select class="form-control" name="category">
-			  <option>WOrdpress</option>
-			  <option>DEsign</option>
-			  <option>Logo</option>
-			  <option>Bootstrap</option>
-			  <option>jQuery</option>
+			  <option value="1">WOrdpress</option>
+			  <option value="2">DEsign</option>
+			  <option value="3">Logo</option>
+			  <option value="4">Bootstrap</option>
+			  <option value="5">jQuery</option>
 			</select>
 		  </div>
 		  
@@ -110,7 +110,7 @@
 		  
 		  <div class="form-group">
 			<label>Instructions to client</label>
-			<textarea class="form-control"></textarea>
+			<textarea class="form-control" name="instruction" value="<?php echo $instruction;?>"><?php echo $instruction;?></textarea>
 		  </div>
 		  
 		  <p>
