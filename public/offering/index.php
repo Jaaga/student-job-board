@@ -13,7 +13,8 @@ if(isset($_POST['action']) and $_POST['action']=="Create")
 	$title=$_POST["title"];
 	$category=$_POST["category"];
 	$picture=$_POST['picture'];
-	$createOffering->create_offering($_SESSION['userid'],$title,$description,$picture);
+	$instruction=$_POST['$instruction'];
+	$createOffering->create_offering($_SESSION['userid'],$title,$description,$category,$picture,$instruction);
 	header('Location: ../user/');
 	exit();
 }
@@ -33,6 +34,7 @@ if(isset($_GET["edit"]))
 	$data=$createOffering->get_offers_by_offer_id($editofferingid);
 	$description=$data[3];
 	$title=$data[1]; 
+	$instruction=$data[4];
 	include 'createoffering.html.php';
 	exit();
 }
@@ -45,7 +47,8 @@ if(isset($_POST['action']) and $_POST['action']=="Update")
 	$title=$_POST["title"];
 	$category=$_POST["category"];
 	$picture=$_POST["picture"];
-	$createOffering->update_offering($_SESSION['userid'],$idoffer, $title,$description,$picture);
+	$instruction=$_POST["instruction"];
+	$createOffering->update_offering($_SESSION['userid'],$idoffer, $title,$description,$picture,$instruction);
 	header('Location: ../user/');
 	exit();
 }
