@@ -53,12 +53,8 @@
   </div> <!-- navbar div -->
 
   <!-- Jumbotron -->
-  <div class="jumbotron">
-    <div class="container">
-      <h1>in3Hrs.com</h1>
-      <p>Get your job done in 3 Hours!!!</p>
-      <p><a class="btn btn-zoomshift btn-lg" role="button" href="signup.php">Get Started Now!</a></p>
-      <a href="#">How this works?</a>
+  <div class="jumbotron" style="background:url(./images/cover.jpg) no-repeat;">
+    <div class="container" style="height:300px;">
     </div>
   </div>
 
