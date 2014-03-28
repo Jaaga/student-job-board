@@ -80,7 +80,7 @@
         <div class="skill-set">
           <aside class="featured"></aside>
           <a href="./offering?offeringid= <?php echo $data[$row][2]; ?>">
-          <img style="height:200px;overflow:hidden;" class="img-responsive" src="<?php echo "./".$data[$row][0]; ?>" alt="...">
+          <img style="height:200px;overflow:hidden;" class="img-responsive" src="<?php echo "./offering/".$data[$row][0]; ?>" alt="...">
           <h5>
             <?php echo $data[$row][1]; ?> </a>
           </h5>
