@@ -30,33 +30,7 @@
   
   
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#app-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/v2/src/">in3Hrs.com</a>
-      </div> <!-- navbar-header -->
-      <div class="collapse navbar-collapse" id="app-navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.php">Home</a></li>
-        <li class="active"><a href="categories.php">Find Services</a></li>
-        <li><a href="#">Start Selling</a></li>
-        <li><a href="login.php">Signin</a></li>
-        <li>
-          <form class="navbar-form navbar-right" role="form">
-            <button type="submit" class="btn btn-success">Sign Up</button>
-          </form>
-        </li>
-      </ul>
-      </div><!-- navbar-collapse -->
-    </div><!-- container-fluid -->
-  </nav><!-- navbar -->
-
+    <?php include '../includes/header.inc.php'; ?>
   <div class="container-fluid">
     
     <div class="row">
@@ -75,11 +49,23 @@
 		  <div class="form-group">
 			<label for="category">Select Category</label>
 			<select class="form-control" name="category">
-			  <option value="1">WOrdpress</option>
-			  <option value="2">DEsign</option>
-			  <option value="3">Logo</option>
-			  <option value="4">Bootstrap</option>
-			  <option value="5">jQuery</option>
+			  <option value="1">.NET</option>
+        <option value="2">C++</option>
+        <option value="3">CSS & HTML</option>
+        <option value="4">Joomla & Drupal</option>
+        <option value="5">Databases</option>
+        <option value="6">Java</option>
+        <option value="7">JavaScript</option>
+        <option value="8">PSD to HTML</option>
+        <option value="9">WordPress</option>
+        <option value="10">Flash</option>
+        <option value="11">iOS, Android & Mobile</option>
+        <option value="12">PHP</option>
+        <option value="13">Software Testing</option>
+        <option value="14">Technology</option>
+        <option value="15">Other</option>
+     
+			  
 			</select>
 		  </div>
 		  
@@ -110,7 +96,7 @@
 		  
 		  <div class="form-group">
 			<label>Instructions to client</label>
-			<textarea class="form-control" name="instruction" value="<?php echo $instruction;?>"></textarea>
+			<textarea class="form-control" name="instruction" value="<?php echo $instruction;?>"><?php echo $instruction;?></textarea>
 		  </div>
 		  
 		  <p>

@@ -20,6 +20,7 @@
 					$data[2] = $row2['offer_id'];
 					$data[3] = $row2['description'];
 					$data[4] = $row2['instruction'];
+					$data[5] = $row2['date'];
 					
 				
 		//returning the array
@@ -124,7 +125,7 @@
 			//query for storing value in table
 
 
-			echo "INSERT INTO offering(user_id, title, description, picture,instruction, date) VALUES ('$user_id', '$title', '$description', '$picture',$instruction, Now())";
+		//	echo "INSERT INTO offering(user_id, title, description, picture,instruction, date) VALUES ('$user_id', '$title', '$description', '$picture',$instruction, Now())";
 
 			$sql_query =	mysqli_query($con,"INSERT INTO offering(user_id, title, description, picture,instruction, date) VALUES ('$user_id', '$title', '$description', '$picture','$instruction', Now())");
 			
@@ -156,7 +157,7 @@
 			//creating connection
 			$con = create_connection();
 			//query for delete values from table
-			$sql_query = mysqli_query($con,"DELETE FROM offering WHERE user_id = $user_id AND offer_id = $user_id");
+			$sql_query = mysqli_query($con,"DELETE FROM offering WHERE user_id = $user_id AND offer_id = $offer_id");
 		}
 
 }

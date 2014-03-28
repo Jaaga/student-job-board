@@ -2,7 +2,7 @@
 
 
 $categoryoffering = new category;
-$data = $categoryoffering->search_by_category($category);
+
 ?> 
 
 <!doctype html>
@@ -21,7 +21,7 @@ $data = $categoryoffering->search_by_category($category);
   <link rel="stylesheet" href="../../v2/css/theme1.css">
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <!--  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -31,7 +31,7 @@ $data = $categoryoffering->search_by_category($category);
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="/v2/src/">in3Hrs.com</a>
-      </div> <!-- navbar-header -->
+      </div>  navbar-header 
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
         <li><a href="index.php">Home</a></li>
@@ -44,29 +44,42 @@ $data = $categoryoffering->search_by_category($category);
           </form>
         </li>
       </ul>
-      </div><!-- navbar-collapse -->
-    </div><!-- container-fluid -->
-  </nav><!-- navbar -->
+      </div> 
+    </div>
+  </nav>-->
+  <?php include '../includes/header.inc.php'; ?>
 
   <div class="container">
     <div class="col-md-8 col-md-offset-2">
-    <form action="." method="post">
-      <h2 style="text-align:center;">Search for Offerings</h2>
-      <p style="display:inline">
-        <input type="text" name="searchquery" class="form-control" placeholder="Search for services" style="width:60%;height:3em;display:inline;">
+    <form action="." method="post" class="col-md-8">
+   
+        <input type="text" name="searchquery" class="form-control" placeholder="Search for services" style="width:60%;height:3em;display:inline;"></input>
+        <input type="submit" name="searchq" class="btn btn-success" style="height:2.9em;"></input>
+        </form>
+      <form action="." method="post">  
         <select name="categoy" id="" class="form-control" style="width:20%;display:inline;height:2.9em;">
           <option value=""><strong>In Category</strong></option>
-          <option value="1">Wordpress</option>
-          <option value="2">Design</option>
-          <option value="3">Javascript</option>
-          <option value="4">jQuery</option>
-          <option value="5">PHP</option>
-          
+        <option value="1">.NET</option>
+        <option value="2">C++</option>
+        <option value="3">CSS & HTML</option>
+        <option value="4">Joomla & Drupal</option>
+        <option value="5">Databases</option>
+        <option value="6">Java</option>
+        <option value="7">JavaScript</option>
+        <option value="8">PSD to HTML</option>
+        <option value="9">WordPress</option>
+        <option value="10">Flash</option>
+        <option value="11">iOS, Android & Mobile</option>
+        <option value="12">PHP</option>
+        <option value="13">Software Testing</option>
+        <option value="14">Technology</option>
+        <option value="15">Other</option>
+     
         </select>
-        <input type="submit" name="search" class="btn btn-success" style="height:2.9em;">Go</input>
-      </p>
+        <input type="submit" name="search" class="btn btn-success" style="height:2.9em;"></input>
+
       </form>
-      <hr>
+  <hr>
     </div>
   </div>
 
@@ -75,15 +88,20 @@ $data = $categoryoffering->search_by_category($category);
 
     <div class="row" id="offerings">
 
-      <?php     foreach($data as $row1)
+      <?php     
+      if (isset($noSearchFound)){
+        echo "no results in this category";
+      }
+      else{
+      foreach($data as $row1)
         {
     
        ?>
       <div class="col-md-3">
         <div class="skill-set">
           <aside class="featured"></aside>
-          <a href="./offering?offeringid= <?php echo $row1['offerid']; ?>">
-          <img style="height:200px;overflow:hidden;" class="img-responsive" src="<?php echo $row1['picture']; ?>" alt="...">
+          <a href="../offering?offeringid= <?php echo $row1['offerid']; ?>">
+          <img style="height:200px;overflow:hidden;" class="img-responsive" src="<?php echo '../'. $row1['picture']; ?>" alt="...">
           <h5>
             <?php echo $row1['title']; ?> </a>
           </h5>
@@ -93,7 +111,7 @@ $data = $categoryoffering->search_by_category($category);
           </p>
         </div>
       </div>
-      <?php } ?>
+      <?php }} ?>
     </div>
   </div> <!-- container -->
 

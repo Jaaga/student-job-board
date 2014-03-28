@@ -1,4 +1,5 @@
 <?php
+$offeringpage=True;
 session_start();
 include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/dbconnection.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/offerings.php';
@@ -56,6 +57,13 @@ if(isset($_POST['action']) and $_POST['action']=="Update")
 }
 
 
+if(isset($_GET["delete"]))
+{
+	$deleteofferingid=$_GET["delete"];
+	$createOffering->delete_offering($_SESSION['userid'],$deleteofferingid);
+	header('Location: ../user/');
+	exit();
+}
 
 
 

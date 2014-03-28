@@ -1,10 +1,13 @@
 <?php 
 //include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/dbconnection.php';
 include("../../public/models/users.php");
+include("../../public/models/categories.php");
 
-echo $offering_id=$offeringid;
+ $offering_id=$offeringid;
 $users = new users;
 $offering=new offering();
+$cat= new category();
+$categoryname= $cat->find_category_by_offerid($offering_id);
 //$user_id=1;
 //$item_num=2;
 $data = $offering->get_offers_by_offer_id($offering_id);
@@ -45,41 +48,14 @@ $data = $offering->get_offers_by_offer_id($offering_id);
   
   
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#app-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </bu
-        tton>
-        <a class="navbar-brand" href="/v2/src/userDashboard.php">in3Hrs.com</a>
-      </div> <!-- navbar-header -->
-      <div class="collapse navbar-collapse" id="app-navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-        <li><a href="userDashboard.php">Home</a></li>
-        <li><a href="categories.php">Find Services</a></li>
-        <li><a href="#">Start Selling</a></li>
-        <li>
-          <form class="navbar-form navbar-right" role="form" action="index.php?loggedOut=true">
-            <input type="hidden" name="loggedOut" value="true">
-            <button type="submit" class="btn btn-success">Logout</button>
-          </form>
-        </li>
-      </ul>
-      </div><!-- navbar-collapse -->
-    </div><!-- container-fluid -->
-  </nav><!-- navbar -->
-
+<?php include '../includes/header.inc.php'; ?>
   <div class="container-fluid">
       
     <div class="row">
       
       <div class="col-md-8 coloumnBox">
         <h2><?php echo $data[1]; ?>
-          <small>Created 1 year ago. Posted in <a href="#">LinkedIn / Career Development</a></small>
+          <br><small>Created <?php echo $data[5]; ?>. Posted in <a href=""><?php echo $categoryname[0]; ?></a></small>
         </h2>
           <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
         <g:plusone></g:plusone>
@@ -182,7 +158,7 @@ $data = $offering->get_offers_by_offer_id($offering_id);
            $userid= $users->get_user_by_offer_id($offeringid);
           if($_SESSION['userid']==$userid[6]){ ?>
           <a href="?edit=<?php echo $offering_id;?>"><button class="btn btn-success" >Edit this Offering</button></a>
-          <button class="btn btn-danger" >Delete Offering</button> <?php } else {?>
+          <a href="?delete=<?php echo $offering_id;?>"><button class="btn btn-danger" >Delete Offering</button></a> <?php } else {?>
            <button class="btn btn-success" >Order this</button> <?php } ?>
           <hr>
         </h2>

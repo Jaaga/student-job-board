@@ -15,8 +15,7 @@ $orders=$order->get_orders($_SESSION['userid'],2);
 $orders_length=sizeof($orders);
 $offer=new offering;
 $offers=$offer->get_offerings_by_user_id($_SESSION['userid'],4);
-$offer_length=sizeof($offers);
-
+$offer_length=count($offers);
 ?>
 
 
@@ -42,40 +41,14 @@ $offer_length=sizeof($offers);
 <body>
   
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#app-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/v2/src/userDashboard.php">in3Hrs.com</a>
-      </div> <!-- navbar-header -->
-      <div class="collapse navbar-collapse" id="app-navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href=".">Home</a></li>
-        <li><a href="../categories/">Find Services</a></li>
-        <li><a href="../offering/">Start Selling</a></li>
-        <li>
-          <form class="navbar-form navbar-right" role="form" action="index.php?loggedOut=true">
-            <input type="hidden" name="loggedOut" value="true">
-            <button type="submit" class="btn btn-success">Logout</button>
-          </form>
-        </li>
-      </ul>
-      </div><!-- navbar-collapse -->
-    </div><!-- container-fluid -->
-  </nav><!-- navbar -->
-
+   <?php include '../includes/header.inc.php'; ?>
   <div class="container">
     
     <div class="row">
 
 
         <div class="col-md-4">
-          <img style="margin: 5px;"src="<?php echo $userdata[4]; ?>" width='70' height='100'/>
+          <img style="margin: 5px;"src="<?php echo "../". $userdata[4]; ?>" width='70' height='100'/>
           <h2 style="margin-left:80px;margin-top: -50px;"><?php echo $userdata[0]; ?></h2>
           <h3 ></h3>
           
@@ -122,7 +95,7 @@ $offer_length=sizeof($offers);
         <h3>
           <a href="#"><?php echo $orders[$row][1]; ?></a> <br>
           <small>Ordered by <a href="#"><?php echo $user_data[0]; ?></a>
-          <img src="<?php echo $user_data[4]; ?>" alt="" class="img-circle" width="35px">
+          <img src="<?php echo "../".$user_data[4]; ?>" alt="" class="img-circle" width="35px">
           </small>
         </h3>
         <div class="row">
@@ -157,7 +130,7 @@ $offer_length=sizeof($offers);
         <a href="../offering?offeringid=<?php echo $offers[$row][0]; ?>" class="thumbnail">
           <h4 style="text-align:center;"><?php echo $offers[$row][2];  ?></h4>
           <hr>
-          <img src="<?php echo $offers[$row][1]; ?>" alt="...">
+          <img src="<?php echo "../".$offers[$row][1]; ?>" alt="...">
         </a>
         <?php }} ?>
       </div>

@@ -1,5 +1,6 @@
 <?php
-  include('models/dbconnection.php');
+  $homepage=True;
+  include './models/dbconnection.php';
 
 
   include './models/offerings.php';
@@ -25,7 +26,7 @@
 <body>
   
   <!-- top nav bar -->
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+ <!-- <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -49,8 +50,9 @@
           
         </li>
       </ul>
-    </div> <!-- container -->
-  </div> <!-- navbar div -->
+    </div> <!-- container 
+  </div> <!-- navbar div --> 
+  <?php include './includes/header.inc.php';  ?>
 
   <!-- Jumbotron -->
   <div class="jumbotron">
@@ -82,7 +84,7 @@
         <div class="skill-set">
           <aside class="featured"></aside>
           <a href="./offering?offeringid= <?php echo $data[$row][2]; ?>">
-          <img style="height:200px;overflow:hidden;" class="img-responsive" src="<?php echo $data[$row][0]; ?>" alt="...">
+          <img style="height:200px;overflow:hidden;" class="img-responsive" src="<?php echo "./".$data[$row][0]; ?>" alt="...">
           <h5>
             <?php echo $data[$row][1]; ?> </a>
           </h5>
