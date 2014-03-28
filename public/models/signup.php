@@ -1,6 +1,6 @@
 <?php 
 	
-	
+
 	
 	class signUp
 {
@@ -15,7 +15,7 @@
 			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
 			//fetching data as an array from database
 			$rowcount=mysqli_num_rows($sql_result);
-			echo $rowcount;
+			
 			//for loop to store data in 2-D array
 		//returning the array
 			if($rowcount==0)
@@ -34,11 +34,12 @@
 			//Inserting query value in result
 			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
 			
-			$sql_query_for_userid="SELECT * FROM user WHERE email='".$email."'";
+			$sql_query_for_userid="SELECT user_id FROM user WHERE email='".$email."'";
 
 			$sql_result_for_userid = mysqli_query($con,$sql_query_for_userid) or die("Couldn't Execute Query");
-
-			return $sql_result_for_userid;
+			$send=mysqli_fetch_array($sql_result_for_userid);
+			$send_userId = $send['user_id'];
+			return $send_userId;
 		
 		}
 

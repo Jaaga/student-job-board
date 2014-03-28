@@ -63,36 +63,35 @@
 		
 		<div class="col-md-8" style="background:white;">
 		
-		<h3>Create New Offering</h3>
+		<h3><?php echo $pageTitle; ?></h3>
 		<hr>
 		
-		<form role="form" action="." method="POST">
+		<form role="form" action="." method="POST" enctype="multipart/form-data">
 		  <div class="form-group">
 			<label for="title">Offering Title</label>
-			<textarea name="title" class="form-control"></textarea>
+			<input type="name" name="title" class="form-control" value="<?php echo $title; ?>"></input>
 		  </div>
-		  
+		
 		  <div class="form-group">
 			<label for="category">Select Category</label>
 			<select class="form-control" name="category">
-			  <option>WOrdpress</option>
-			  <option>DEsign</option>
-			  <option>Logo</option>
-			  <option>Bootstrap</option>
-			  <option>jQuery</option>
+			  <option value="1">WOrdpress</option>
+			  <option value="2">DEsign</option>
+			  <option value="3">Logo</option>
+			  <option value="4">Bootstrap</option>
+			  <option value="5">jQuery</option>
 			</select>
 		  </div>
 		  
 		  <div class="form-group">
-			<label>Offering Title</label>
-			<input type="file">
+			<label>Offering File</label>
+			<input type="file" name="picture"></input>
 		  </div>
 		  
 		  <div class="form-group">
-			<label for="description">Offering Description</label>
-			<textarea name="description" class="form-control"></textarea>
+			<label for="description" >Offering Description</label>
+			<textarea name="description" class="form-control" value="<?php echo $description; ?>"><?php echo $description; ?></textarea>
 		  </div>
-		  
 		  <div class="form-group">
 			<label>Enter 3 tags</label>
 			<input type="text" class="form-control" placeholder="Please enter 3 tags seperated by comma">
@@ -111,11 +110,12 @@
 		  
 		  <div class="form-group">
 			<label>Instructions to client</label>
-			<textarea class="form-control"></textarea>
+			<textarea class="form-control" name="instruction" value="<?php echo $instruction;?>"></textarea>
 		  </div>
 		  
 		  <p>
-			<button type="submit" name="action" value="create"  class="btn btn-success">Create Offering</button>
+        <input type="hidden" name="editOfferid" value="<?php echo $editofferingid; ?>">
+			<button type="submit" name="action" value="<?php echo $buttonValue; ?>"  class="btn btn-success"><?php echo $buttonValue; ?></button>
 		  </p>
 		</form>
 		

@@ -14,8 +14,9 @@ $order=new orders;
 $orders=$order->get_orders($_SESSION['userid'],2);
 $orders_length=sizeof($orders);
 $offer=new offering;
-$offer_length=sizeof($offer);
 $offers=$offer->get_offerings_by_user_id($_SESSION['userid'],4);
+$offer_length=sizeof($offers);
+
 ?>
 
 
@@ -54,9 +55,9 @@ $offers=$offer->get_offerings_by_user_id($_SESSION['userid'],4);
       </div> <!-- navbar-header -->
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="userDashboard.php">Home</a></li>
-        <li><a href="categories.php">Find Services</a></li>
-        <li><a href="#">Start Selling</a></li>
+        <li class="active"><a href=".">Home</a></li>
+        <li><a href="../categories/">Find Services</a></li>
+        <li><a href="../offering/">Start Selling</a></li>
         <li>
           <form class="navbar-form navbar-right" role="form" action="index.php?loggedOut=true">
             <input type="hidden" name="loggedOut" value="true">
@@ -68,17 +69,16 @@ $offers=$offer->get_offerings_by_user_id($_SESSION['userid'],4);
     </div><!-- container-fluid -->
   </nav><!-- navbar -->
 
-  <div class="container-fluid">
+  <div class="container">
     
     <div class="row">
 
-      <div class="col-md-12 coloumnBox">
 
         <div class="col-md-4">
           <img style="margin: 5px;"src="<?php echo $userdata[4]; ?>" width='70' height='100'/>
           <h2 style="margin-left:80px;margin-top: -50px;"><?php echo $userdata[0]; ?></h2>
           <h3 ></h3>
-          <hr>
+          
         </div>
 
         <div class="col-md-offset-9">
