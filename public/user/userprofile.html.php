@@ -55,9 +55,9 @@ $offer_length=sizeof($offers);
       </div> <!-- navbar-header -->
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="userDashboard.php">Home</a></li>
-        <li><a href="categories.php">Find Services</a></li>
-        <li><a href="#">Start Selling</a></li>
+        <li class="active"><a href=".">Home</a></li>
+        <li><a href="../categories/">Find Services</a></li>
+        <li><a href="../offering/">Start Selling</a></li>
         <li>
           <form class="navbar-form navbar-right" role="form" action="index.php?loggedOut=true">
             <input type="hidden" name="loggedOut" value="true">
