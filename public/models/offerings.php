@@ -122,6 +122,7 @@
 			//creating connection
 			$con = create_connection();
 			//query for storing value in table
+<<<<<<< HEAD
 
 			echo "INSERT INTO offering(user_id, title, description, picture,instruction, date) VALUES ('$user_id', '$title', '$description', '$picture',$instruction, Now())";
 
@@ -130,6 +131,11 @@
 			$offfer_id=mysqli_insert_id($con);
 			
 			$sql_query1=	mysqli_query($con,"INSERT INTO offer_category(offer_id,category_id) VALUES ('$offfer_id', '$category')");
+=======
+			$sql_query =	mysqli_query($con,"INSERT INTO offering(user_id, title, description, picture,instruction date) VALUES ('$user_id', '$title', '$description', '$picture',$instruction, Now())");
+			$offfer_id= $sql_query->mysqli_insert_id() ;
+			$sql_query1=	mysqli_query($con,"INSERT INTO offer_category(offer_id,category) VALUES ('$offfer_id', '$category'");
+>>>>>>> 875ee9f60e2a085569a05b0aa673ec6f7aebdc54
 
 		}
 
