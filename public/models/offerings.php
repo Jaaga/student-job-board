@@ -44,6 +44,7 @@
 
 			$row2 = mysqli_fetch_array($sql_result);
 			//for loop to store data in 2-D array
+			
 			for($row=0;$row<$item_num;$row++)
 				{
 					$data[$row][0] = $row2['offer_id'];
@@ -121,9 +122,14 @@
 			//creating connection
 			$con = create_connection();
 			//query for storing value in table
-			$sql_query =	mysqli_query($con,"INSERT INTO offering(user_id, title, description, picture,instruction date) VALUES ('$user_id', '$title', '$description', '$picture',$instruction, Now())");
-			$offfer_id= $sql_query->mysqli_insert_id() ;
-			$sql_query1=	mysqli_query($con,"INSERT INTO offer_category(offer_id,category) VALUES ('$offfer_id', '$category')";
+
+			echo "INSERT INTO offering(user_id, title, description, picture,instruction, date) VALUES ('$user_id', '$title', '$description', '$picture',$instruction, Now())";
+
+			$sql_query =	mysqli_query($con,"INSERT INTO offering(user_id, title, description, picture,instruction, date) VALUES ('$user_id', '$title', '$description', '$picture','$instruction', Now())");
+			
+			$offfer_id=mysqli_insert_id($con);
+			
+			$sql_query1=	mysqli_query($con,"INSERT INTO offer_category(offer_id,category_id) VALUES ('$offfer_id', '$category')");
 
 		}
 
