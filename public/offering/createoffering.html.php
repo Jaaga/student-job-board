@@ -66,7 +66,7 @@
 		<h3><?php echo $pageTitle; ?></h3>
 		<hr>
 		
-		<form role="form" action="." method="POST">
+		<form role="form" action="." method="POST" enctype="multipart/form-data">
 		  <div class="form-group">
 			<label for="title">Offering Title</label>
 			<input type="name" name="title" class="form-control" value="<?php echo $title; ?>"></input>
@@ -85,7 +85,7 @@
 		  
 		  <div class="form-group">
 			<label>Offering File</label>
-			<input type="file" name="picture">
+			<input type="file" name="picture"></input>
 		  </div>
 		  
 		  <div class="form-group">
@@ -110,7 +110,7 @@
 		  
 		  <div class="form-group">
 			<label>Instructions to client</label>
-			<textarea class="form-control" name="instruction" value="<?php echo $instruction;?>"><?php echo $instruction;?></textarea>
+			<textarea class="form-control" name="instruction" value="<?php echo $instruction;?>"></textarea>
 		  </div>
 		  
 		  <p>
