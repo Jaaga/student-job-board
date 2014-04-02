@@ -1,15 +1,17 @@
 <?php 
 session_start();
-  include('../../public/models/dbconnection.php');
+include('../../public/models/dbconnection.php');
 
 include('../../public/models/users.php');
 include('../../public/models/orders.php');
 include('../../public/models/offerings.php');
+include('../../public/models/message.php');
+
 $user=new users;
 $userdata= $user->get_user_by_id($_SESSION['userid']);
 
 
-
+$message=new message;
 $order=new orders;
 $orders=$order->get_orders($_SESSION['userid'],2);
 $orders_length=sizeof($orders);
@@ -56,7 +58,7 @@ $offer_length=count($offers);
 
         <div class="col-md-offset-9">
           <div class="btn-group" style="margin-top:35px;">
-            <button type="button" class="btn btn-default">Messages <span class="badge">42</span></button>
+            <a href="../message" type="button" class="btn btn-default">Messages<span class="badge"><?php echo $message->get_unread_message_by_user_id($_SESSION['userid']); ?></span></a>
 
             <div class="btn-group">
               <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -88,7 +90,7 @@ $offer_length=count($offers);
         for($row=0;$row<$orders_length;$row++)
         {
 
-            $get_user=new users;
+            $get_user= new users;
             $user_data=$get_user->get_user_by_offer_id($orders[$row][3]);
 
          ?>
@@ -130,7 +132,7 @@ $offer_length=count($offers);
         <a href="../offering?offeringid=<?php echo $offers[$row][0]; ?>" class="thumbnail">
           <h4 style="text-align:center;"><?php echo $offers[$row][2];  ?></h4>
           <hr>
-          <img src="<?php echo "../".$offers[$row][1]; ?>" alt="...">
+          <img src="<?php echo  $offers[$row][1]; ?>" alt="...">
         </a>
         <?php }} ?>
       </div>
