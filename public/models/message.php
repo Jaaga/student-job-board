@@ -8,7 +8,7 @@
 
 			$con = create_connection();
 			//selecting offering table for particular user
-			$sql_query = "SELECT * FROM message WHERE thread='$thread' ORDER BY timestamp";
+			$sql_query = "SELECT * FROM message INNER JOIN thread ON thread.thread_id=message.thread WHERE message.thread='".$thread."' ORDER BY timestamp";
 			//storing query value in result
 			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
 			//fetching data as an array from database
@@ -16,7 +16,7 @@
 			//for loop to store data in 2-D array
 
 			while ($row= mysqli_fetch_array($sql_result)){
-				$data[]=array('userid'=>$row['user_id'],'senderid'=>$row['sender_id'],'msg'=>$row['msg'],'thread'=>$row['thread'],'timestamp'=>$row['timestamp']);
+				$data[]=array('userid'=>$row['user_id'],'title'=>$row['title'],'senderid'=>$row['sender_id'],'msg'=>$row['msg'],'thread'=>$row['thread'],'timestamp'=>$row['timestamp']);
 				$reciever=$row['user_id'];
 			}
 		//returning the array
@@ -30,23 +30,21 @@
 
 		}
 
-		public function list_message_by_thread()
+		public function list_message_by_thread($user_id)
 		{
 
 			$con = create_connection();
 			//selecting offering table for particular user
-			$sql_query = "SELECT * FROM message WHERE user_id=3 GROUP BY user_id,sender_id,thread";
+			$sql_query = "SELECT * FROM message INNER JOIN thread ON message.thread=thread.thread_id WHERE user_id='".$user_id."' GROUP BY message.user_id, message.sender_id, message.thread";
 			//storing query value in result
 
 			$list = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
 
 
 			while($row = mysqli_fetch_array($list)){
-				$data[]=array('user_id'=>$row['user_id'],'sender_id'=>$row['sender_id'],'thread'=>$row['thread'],'msg'=>$row['msg'],'read_status'=>$row['read_status']);
+				$data[]=array('user_id'=>$row['user_id'],'sender_id'=>$row['sender_id'],'thread'=>$row['thread'],'msg'=>$row['msg'],'read_status'=>$row['read_status'], 'title'=>$row['title']);
 				
 			}
-
-
 
 			return $data;
 		}
