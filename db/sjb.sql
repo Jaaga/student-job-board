@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2014 at 11:00 AM
+-- Generation Time: Apr 03, 2014 at 01:34 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -60,20 +60,31 @@ INSERT INTO `category` (`category_id`, `name`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `message` (
-  `user_id` int(20) NOT NULL AUTO_INCREMENT,
-  `message_info` text NOT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `thread` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `sender_id` int(11) DEFAULT NULL,
+  `msg` text,
+  `read_status` varchar(10) DEFAULT NULL,
+  `timestamp` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `message`
 --
 
-INSERT INTO `message` (`user_id`, `message_info`) VALUES
-(1, 'hi, how are you doing.\r\nI want a google clone.'),
-(2, 'hi, how are you doing.\r\nI want a fb clone.'),
-(3, 'hi, how are you doing.\r\nI want to make password clone to hack ansal''s account.'),
-(4, 'hi, how are you doing.\r\nI want you to do my homework.');
+INSERT INTO `message` (`id`, `thread`, `user_id`, `sender_id`, `msg`, `read_status`, `timestamp`) VALUES
+(2, 2, 3, 2, 'I want it to be delivered today\r\n', 'Yes', '2014-04-01'),
+(3, 1, 3, 2, 'I want it by today', 'Yes', '2014-04-01'),
+(4, 1, 3, 2, 'cool', 'Yes', '2014-04-01'),
+(5, 2, 2, 3, 'ok, it will be', 'Yes', '2014-04-01'),
+(6, 2, 2, 3, 'it will be', 'Yes', '2014-04-01'),
+(7, 2, 3, 2, 'ok man.', 'Yes', '2014-04-01'),
+(8, 2, 2, 3, 'I hsrv\r\n', 'Yes', '2014-04-01'),
+(9, 1, 3, 2, 'ok,done', 'No', '2014-04-03'),
+(10, 2, 3, 2, 'Ok, done', 'No', '2014-04-03'),
+(11, 2, 3, 2, 'Ok cool', 'No', '2014-04-03');
 
 -- --------------------------------------------------------
 
@@ -90,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `offering` (
   `date` datetime NOT NULL,
   `instruction` text,
   PRIMARY KEY (`offer_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
 
 --
 -- Dumping data for table `offering`
@@ -102,7 +113,8 @@ INSERT INTO `offering` (`offer_id`, `user_id`, `title`, `description`, `picture`
 (34, 3, 'I will make a 5 pae web app ', 'I will make a web app that is. max 5 pages. It will have basic fiunctionality. mainly for prototyping', '../images/download (1).jpg', '2014-03-28 13:01:50', 'Give me what your site wants'),
 (35, 3, 'I will fix worpdress issues', 'I will fix any [plugin or customise your installation', '../images/wp-banner.jpg', '2014-03-28 13:03:30', 'Give me site domain and control panel also tell me what theme to use'),
 (36, 2, 'I will test your website', 'I will do the testing', '../images/bug.jpg', '2014-03-28 15:16:07', 'I want site'),
-(38, 2, 'I will make a HTML template ', 'I will do it in simple color scheme', '../images/land.jpg', '2014-03-28 15:23:00', 'Need design');
+(38, 2, 'I will make a HTML template ', 'I will do it in simple color scheme', '../images/land.jpg', '2014-03-28 15:23:00', 'Need design'),
+(39, 2, 'I wil make a photoshop logo', 'I will do it in 3hrs', '../images/', '2014-03-30 14:34:17', '');
 
 -- --------------------------------------------------------
 
@@ -128,7 +140,9 @@ INSERT INTO `offer_category` (`offer_id`, `category_id`) VALUES
 (35, 9),
 (36, 13),
 (37, 3),
-(38, 3);
+(38, 3),
+(39, 5),
+(39, 8);
 
 -- --------------------------------------------------------
 
@@ -183,6 +197,26 @@ INSERT INTO `rating` (`order_id`, `rating`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `thread`
+--
+
+CREATE TABLE IF NOT EXISTS `thread` (
+  `thread_id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`thread_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `thread`
+--
+
+INSERT INTO `thread` (`thread_id`, `title`) VALUES
+(1, 'I will make a wordpress'),
+(2, 'I wil make sth cool');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -196,7 +230,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `picture` text NOT NULL,
   `paypal` varchar(20) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `user`
