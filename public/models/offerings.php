@@ -7,8 +7,9 @@
 		public function get_offers_by_offer_id($offer_id){
 
 			$con = create_connection();
+			$offer_id= mysqli_real_escape_string($con, $offer_id);
 			//selecting offering table for particular user
-			$sql_query = "SELECT * FROM offering WHERE offer_id=$offer_id";
+			$sql_query = "SELECT * FROM offering WHERE offer_id='".$offer_id."'";
 			//storing query value in result
 			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
 			//fetching data as an array from database
