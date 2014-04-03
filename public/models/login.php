@@ -9,6 +9,8 @@
 		{
 			//creating connection
 			$con = create_connection();
+			$email= mysqli_real_escape_string($con, $email);
+			$password = mysqli_real_escape_string($con, $password);
 			//selecting offering table for particular user
 			$sql_query = "SELECT pass, user_id, name FROM user where email ='".$email."' and pass='".$password."'";
 			//storing query value in result
