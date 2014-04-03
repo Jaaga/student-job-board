@@ -23,6 +23,10 @@ if(isset($_POST['sendmsg'])){
 	$to=$_POST['to'];
 	$thread=$_POST['thread'];
 	$message->send_message($to,$_SESSION['userid'],$msg,$thread,$read_status);
+	
+	$threaded=$message->get_message_by_thread($thread);
+	include 'thread.html.php';
+	exit();
 }
 
 include 'list.html.php';
