@@ -1,63 +1,97 @@
 <?php
-
-
 $categoryoffering = new category;
-
 ?> 
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Jaaga Student Job Board</title>
-  <link rel="stylesheet" href="../../v2/css/lib/bootstrap.css">
-  <style>
-    body {
-      margin-top: 70px;
-      margin-left: 2%;
-      margin-right: 2%;
-    }
-  </style>
-  <link rel="stylesheet" href="../../v2/css/theme1.css">
-</head>
-<body>
-  <!--  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#app-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/v2/src/">in3Hrs.com</a>
-      </div>  navbar-header 
-      <div class="collapse navbar-collapse" id="app-navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.php">Home</a></li>
-        <li class="active"><a href="categories.php">Find Services</a></li>
-        <li><a href="#">Start Selling</a></li>
-        <li><a href="login.php">Signin</a></li>
-        <li>
-          <form class="navbar-form navbar-right" role="form" action="signup.php">
-            <button type="submit" class="btn btn-success">Sign Up</button>
-          </form>
-        </li>
-      </ul>
-      </div> 
-    </div>
-  </nav>-->
-  <?php include '../includes/header.inc.php'; ?>
+  <head>
+    <meta charset="utf-8">
+    <title>in3hrs.com&middot; Bootstrap</title>
+      <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
 
-  <div class="container">
-    <div class="col-md-8 col-md-offset-2">
-    <form action="." method="post" class="col-md-8">
+      <!-- Le styles -->
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <!--[if IE 7]>
+      <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+      <![endif]-->
+      <link href="../css/bootplus.css" rel="stylesheet">
+      <link href="../css/bootplus-responsive.css" rel="stylesheet">
+      <link href="../css/custom.css" rel="stylesheet">
+
+    
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="ico/favicon.png">
+  </head>
+
+  <body>
+
+
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+        <div class="navbar _navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#">in3hrs.com</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">Find Services </a></li>
+                <li><a href="#contact">Start Selling</a></li>
+                <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+
+              </ul>
+                              <a class="btn  btn-success pull-right" href="#">Sign in</a>
+
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+
+
+
+    <div class="container movedown">
+    <h2 class="text-center">Search for Offerings</h2>
+        <div class="span6 offset1">
+      
+      
+      <form action="." method="post" >
    
-        <input type="text" name="searchquery" class="form-control" placeholder="Search for services" style="width:60%;height:3em;display:inline;"></input>
-        <input type="submit" name="searchq" class="btn btn-success" style="height:2.9em;"></input>
+        <input type="text" name="searchquery" class="form-control" placeholder="Search for services"></input>
+        <input type="submit" name="searchq" class="btn btn-primary"></input>
         </form>
+        </div>
+    <div class="span4">
       <form action="." method="post">  
-        <select name="categoy" id="" class="form-control" style="width:20%;display:inline;height:2.9em;">
+        <select name="categoy" id="" class="form-control" >
           <option value=""><strong>In Category</strong></option>
         <option value="1">.NET</option>
         <option value="2">C++</option>
@@ -76,19 +110,21 @@ $categoryoffering = new category;
         <option value="15">Other</option>
      
         </select>
-        <input type="submit" name="search" class="btn btn-success" style="height:2.9em;"></input>
+        <input type="submit" name="search" class="btn btn-primary" ></input>
 
       </form>
-  <hr>
-    </div>
+      </div>
+      </div>
   </div>
+  </div>
+  
 
-
-
-
+   <!-- Cards for the jobs
+    ================================================== -->
+  
     <div class="row" id="offerings">
-
-      <?php     
+    <div class="span13  ">
+     <?php     
       if (isset($noSearchFound)){
         echo "no results in this category";
       }
@@ -97,103 +133,65 @@ $categoryoffering = new category;
         {
     
        ?>
-      <div class="col-md-3">
-        <div class="skill-set">
-          <aside class="featured"></aside>
-          <a href="../offering?offeringid= <?php echo $row1['offerid']; ?>">
-          <img style="height:200px;overflow:hidden;" class="img-responsive" src="<?php echo '../'. $row1['picture']; ?>" alt="...">
-          <h5>
-            <?php echo $row1['title']; ?> </a>
-          </h5>
-          <p>
-            <img src="http://cdn0.fiverrcdn.com/photos/441737/thumb/374323_10150410284411292_523596291_8776528_185859792_n.jpg?1343838133" alt="" class="img-circle">
-            <a href="">Roger Federer</a>
-          </p>
-        </div>
+    <div class="span3 moveleft">
+          <div class="card hovercard">
+            <img src="<?php echo "../". $row1['picture']; ?>" alt=""/>
+            <div class="avatar">
+              <img src="img/avatar_homer.png" alt="" />
+            </div>
+          <div class="info">
+          <div class="title">
+         <?php echo $row1['title']; ?>
       </div>
-      <?php }} ?>
-    </div>
-  </div> <!-- container -->
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-offset-3">
-      <p style="margin: 20px;"></p>
-        <div class="form">
-          <div class="form-group">
-            <button class="btn btn-lg btn-primary" style="width:70%" id="loadmorebutton">Load More Offerings</button> <img src="../v2/img/gif-load.gif" alt="" id="loadingimg" style="display:none;">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <hr>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">    
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="col-md-3">
-        <ul class="list-unstyled">
-          <li><strong>in3Hrs.com</strong><li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <ul class="list-unstyled">
-          <li><strong>Help &amp; Support</strong><li>
-          <li><a href="#">in3Hrs.com Help</a></li>
-          <li><a href="#">Frequently Asked Questions</a></li>
-          <li><a href="#">User Forum</a></li>
-        </ul>
-      </div>  
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="col-md-8">
-        <a href="#">Terms of Service</a>    
-        <a href="#">Privacy</a>    
-        <a href="#">Security</a>
-      </div>
-      <div class="col-md-4">
-        <p class="muted pull-right">© 2014 Jaaga Student Job Board. All rights reserved</p>
-      </div>
-    </div>
-  </div>
+      <div class="desc">By-Yatin Taluja</div>
+      
+   </div>
+   <div class="bottom">
+      <a class="btn" href="../offering?offeringid= <?php echo $row1['$offerid']; ?>">Order</a>
+   </div>
+</div>
+</div>
+  <?php }} ?> 
+</div>
 </div>
 
-  <script src="../v2/js/jquery.min.js"></script>
-  <script src="../v2/js/bootstrap.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('#loadmorebutton').on('click', function(e){
-        e.preventDefault();
-        $('#loadmorebutton').html('Please wait.....');
-        $('#loadingimg').show();
-        setTimeout(function(){
-          var html = $('#offerings').html();
-          $('#offerings').html(html + html);
-          $('#loadmorebutton').html('Load More Offerings');
-          $('#loadingimg').hide();
-        }, 2000);
-      });
-      var field = 'loggedOut';
-      var url = window.location.href;
-      if(url.indexOf('?' + field + '=') != -1)
-          $('#loggedout').fadeIn();
-      else if(url.indexOf('&' + field + '=') != -1)
-          $('#loggedout').fadeIn();
-    });
-  </script>
-</body>
+
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="js/holder/holder.js"></script>
+  </body>
 </html>
