@@ -1,274 +1,246 @@
-/* User defined styles */
-body {
-  margin-top: 50px; /* 50px is the height of the navbar - change this if the navbarn height changes */
-}
 
-.category-item {
-  margin-bottom: 25px;
-}
+     
+      @font-face {
+         font-family: 'FontAwesome';
+         src: url('font/fontawesome-webfont.eot")?v=3.1.1');
+         src: url('font/fontawesome-webfont.eot")?#iefix&v=3.1.1') format('embedded-opentype'),
+         url('font/fontawesome-webfont.woff")?v=3.1.1') format('woff'),
+         url('font/fontawesome-webfont.ttf")?v=3.1.1') format('truetype');
+         font-weight: normal;
+         font-style: normal;
+      }
 
-footer {
-  margin: 50px 0;
-}
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
 
-.myButton {
-  -moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
-  -webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
-  box-shadow:inset 0px 1px 0px 0px #54a3f7;
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
-  background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
-  background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
-  background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
-  background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
-  background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
-  background-color:#007dc1;
-  -moz-border-radius:6px;
-  -webkit-border-radius:6px;
-  border-radius:6px;
-  border:1px solid #124d77;
-  display:inline-block;
-  cursor:pointer;
-  color:#ffffff;
-  font-family:arial;
-  font-size:15px;
-  font-weight:bold;
-  padding:6px 24px;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #154682;
-}
-.myButton:hover {
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
-  background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
-  background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
-  background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
-  background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
-  background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
-  background-color:#0061a7;
-}
-.myButton:active {
-  position:relative;
-  top:1px;
-}
+    
+     body {
+        padding-bottom: 40px;
+        background-image: url('../newui/img/back.jpg');
+        background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    background-size: cover;
+      }
 
-body {
-  margin-top: 100px;
-  
-}
-.blue,.orange,.green,.purple,.yellow,.grey {
-width:180px;
-height:65px;
-}
-.blue{
- background:#0087b9;
- }
- .orange{
- background:#379e51;
- }
- .green{
- background:#e48a07;
- }
- .purple{
- background:#7839da;
- }
- .yellow{
- background:#f01611;
- }
- .grey{
- background:gray;
- }
- .border{
- width:180px;
- height:30px;
- background-color:#cecece;
- text-align:center;
- padding-top:.2em;
- margin-right:10px;
-}
-.cheader{
- margin-right:10px;
-}
+    .moveleft{
+      padding-left: 40px;
+    }
+    .movedown{
+      padding-top: 90px
+    }
+    .position {
+      position: center;
+    }
 
-.category-navigator {
-  margin-top: -20px;
-  list-style: none;
-}
-.category-navigator li {
-  display: inline;
-  margin-right: 20px;
-}
-.skill-set {
-  background-color: #fff;
-  width: 222px;
-  padding-left: 0;
-  padding-bottom: 5px;
-  margin: 1px 0 0 3px;
-  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.15);
-  -moz-box-shadow: 0 0 3px rgba(0,0,0,0.15);
-  box-shadow: 0 0 3px rgba(0,0,0,0.15);
-}
-.skill-set img {
-  margin: 10px;
-}
-.skill-set aside.featured {
-  background: transparent url("//d2nt7j7ljjsiah.cloudfront.net/assets/v2_globals/icn-master-large-7acaaea51e84e96d0de7d57ee91ed347.png") no-repeat 0 -500px;
-  position: absolute;
-  z-index: 1;
-  top: -1px;
-  left: 16px;
-  width: 61px;
-  height: 61px;
-  text-indent: -3000px;
-  overflow: hidden;
-}
-.skill-set h5{
-  margin: 4px 10px 10px 10px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19px;
-  color: #303030;
-  max-height: 57px;
-  height: 57px;
-}
-.skill-set p {
-  margin: 4px 10px 10px 10px;
-  display: none;
-}
-.skill-set h5 a {
-  color: #303030;
-}
-.skill-set h5 a:hover {
-  text-decoration: none;
-  color: #2a6496;
-}
-.skill-set h5 a:hover p {
-  display: block;
-}
-.form-signin {
-  max-width: 400px; 
-  display:block;
-  background-color: #f7f7f7;
-  -moz-box-shadow: 0 0 3px 3px #888;
-    -webkit-box-shadow: 0 0 3px 3px #888;
-  box-shadow: 0 0 3px 3px #888;
-  border-radius:2px;
-}
-.main{
-  padding: 38px;
-}
-.social-box{
-  margin: 0 auto;
-  padding: 38px;
-  border-bottom:1px #ccc solid;
-}
-.social-box a{
-  font-weight:bold;
-  font-size:18px;
-  padding:8px;
-}
-.social-box a i{
-  font-weight:bold;
-  font-size:20px;
-}
-.heading-desc{
-  font-size:20px;
-  font-weight:bold;
-  padding:38px 38px 0px 38px;
-  
-}
 
-/* signin form */
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
-}
-.form-signin .checkbox {
-  font-weight: normal;
-}
-.form-signin .form-control {
-  position: relative;
-  font-size: 16px;
-  height: 20px;
-  padding: 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input[type="text"] {
-  margin-bottom: 10px;
-  border-radius: 5px;
-  
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-.login-footer{
-  background:#f0f0f0;
-  margin: 0 auto;
-  border-top: 1px solid #dadada;
-  padding:20px;
-}
-.login-footer .left-section a{
-  font-weight:bold;
-  color:#8a8a8a;
-  line-height:19px;
-}
-.mg-btm{
-  margin-bottom:20px;
-}
-.form-container {
-  margin-top: 50px;
-}
-.btn-zoomshift {
-  background-color: hsl(0, 84%, 65%) !important;
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f59393", endColorstr="#f05a5a");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#f59393), to(#f05a5a));
-  background-image: -moz-linear-gradient(top, #f59393, #f05a5a);
-  background-image: -ms-linear-gradient(top, #f59393, #f05a5a);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f59393), color-stop(100%, #f05a5a));
-  background-image: -webkit-linear-gradient(top, #f59393, #f05a5a);
-  background-image: -o-linear-gradient(top, #f59393, #f05a5a);
-  background-image: linear-gradient(#f59393, #f05a5a);
-  border-color: #f05a5a #f05a5a hsl(0, 84%, 62%);
-  color: #FFF !important;
-  text-shadow: 1px 1px 0 #E34141;
-  -webkit-font-smoothing: antialiased;
-}
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
 
-img {
-  filter: gray; /* IE6-9 */
-  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
-    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
-    margin-bottom:20px;
-}
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    /*.navbar-wrapper .navbar {*/
 
-img:hover {
-  filter: none; /* IE6-9 */
-  -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
- 
-}
-body {background: #EAEAEA;
-padding-top:20px;}
-.user-details {position: relative; padding: 0;}
-.user-details .user-image {position: relative;  z-index: 1; width: 100%; text-align: center;}
- .user-image img { clear: both; margin: auto; position: relative;}
+    /*}*/
 
-.user-details .user-info-block {width: 100%; position: absolute; top: 55px; background: rgb(255, 255, 255); z-index: 0; padding-top: 35px;}
- .user-info-block .user-heading {width: 100%; text-align: center; margin: 10px 0 0;}
- .user-info-block .navigation {float: left; width: 100%; margin: 0; padding: 0; list-style: none; border-bottom: 1px solid #428BCA; border-top: 1px solid #428BCA;}
-  .navigation li {float: left; margin: 0; padding: 0;}
-   .navigation li a {padding: 20px 30px; float: left;}
-   .navigation li.active a {background: #428BCA; color: #fff;}
- .user-info-block .user-body {float: left; padding: 5%; width: 90%;}
-  .user-body .tab-content > div {float: left; width: 100%;}
-  .user-body .tab-content h4 {width: 100%; margin: 10px 0; color: #333;}
+    /* Remove border and change up box shadow for more contrast */
+    /*.navbar .navbar-inner {*/
+      /*border: 0;*/
+      /*-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);*/
+         /*-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);*/
+              /*box-shadow: 0 2px 10px rgba(0,0,0,.25);*/
+    /*}*/
 
-  
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      /*text-shadow: 0 -1px 0 rgba(0,0,0,.5);*/
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+
+
+     
+      .form-signin {
+         border: 1px solid #D8D8D8;
+         border-bottom-width: 2px;
+         border-top-width: 0;
+         background-color: #FFF;
+         max-width: 350px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #F5F5F5;
+        -webkit-border-radius: 3px;
+           -moz-border-radius: 3px;
+                border-radius: 3px;
+      }
+      .form-signin .form-signin-heading {
+         font-size: 24px;
+         font-weight: 300;
+      }
+
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
