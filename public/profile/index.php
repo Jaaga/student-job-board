@@ -10,7 +10,7 @@ try{
 }
 catch(PDOException $e)
 {
-	$error= "Unabel to get the data";
+	$error= "Unable to get the data";
 	echo $error;
 	exit();
 }
@@ -30,7 +30,7 @@ try{
 }
 catch(PDOException $e)
 {
-	$error= "Unabel to get the data";
+	$error= "Unable to get the data";
 	echo $error;
 	exit();
 }
