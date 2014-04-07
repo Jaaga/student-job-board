@@ -6,173 +6,208 @@
   include './models/offerings.php';
   $offering = new offering;
   $data = $offering->featured_offering();
+  include './models/users.php';
+  $user= new users;
 ?>
 
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Jaaga Student Job Board</title>
-  <link rel="stylesheet" href="../v2/css/lib/bootstrap.css">
-  <style>
-    body {
-      margin-top: 70px;
-      margin-left: 2%;
-      margin-right: 2%;
-    }
-  </style>
-  <link rel="stylesheet" href="../v2/css/theme1.css">
-</head>
-<body>
-  
-  <!-- top nav bar -->
- <!-- <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../v2/src/">
-          in3Hrs.com
-        </a>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="index.php">Home</a></li>
-        <li><a href="categories.php">Find Services</a></li>
-        <li><a href="">Start Selling</a></li>
-        <li><a href="./login/">Signin</a></li>
-        <li>
-          
-            <a class="btn btn-lg btn-success navbar-right" href="./signup" style="color:white;">Sign Up</a> 
-          
-        </li>
-      </ul>
-    </div> <!-- container 
-  </div> <!-- navbar div --> 
-  <?php include './includes/header.inc.php';  ?>
+  <head>
+    <meta charset="utf-8">
+    <title>in3hrs.com</title>
+      <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
 
-  <!-- Jumbotron -->
-  <div class="jumbotron" style="background:url(./images/cover.jpg) no-repeat;">
-    <div class="container" style="height:300px;">
-    </div>
-  </div>
+      <!-- Le styles -->
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <!--[if IE 7]>
+      <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+      <![endif]-->
+      <link href="css/bootplus.css" rel="stylesheet">
+      <link href="css/bootplus-responsive.css" rel="stylesheet">
+      <link href="css/custom.css" rel="stylesheet">
+      <link href="css/home.css" rel="stylesheet">
 
-  <div class="container">
-    <div class="row" id="loggedout" style="display:none;">
-      <div class="col-md-12">
-        <div class="alert alert-info">You've successfully logged out of in3Hrs.com. See you soon!</div>
-      </div>
-    </div>
 
     
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="ico/favicon.png">
+  </head>
+
+  <body>
 
 
 
-    <div class="row" id="offerings">
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
 
-      <?php for ($row=0; $row < 4; $row++) { 
-        
-       ?>
-      <div class="col-md-3">
-        <div class="skill-set">
-          <aside class="featured"></aside>
-          <a href="./offering?offeringid= <?php echo $data[$row][2]; ?>">
-          <img style="height:200px;overflow:hidden;" class="img-responsive" src="<?php echo "./offering/".$data[$row][0]; ?>" alt="...">
-          <h5>
-            <?php echo $data[$row][1]; ?> </a>
-          </h5>
-          <p>
-            <img src="http://cdn0.fiverrcdn.com/photos/441737/thumb/374323_10150410284411292_523596291_8776528_185859792_n.jpg?1343838133" alt="" class="img-circle">
-            <a href="">Roger Federer</a>
-          </p>
+        <div class="navbar _navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#">in3hrs.com</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">Find Services </a></li>
+                <li><a href="#contact">Start Selling</a></li>
+                <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+
+              </ul>
+                              <a class="btn  btn-success pull-right" href="./login/">Sign in</a>
+
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/slide-01.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="./signup">Sign up today</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <?php } ?>
-    </div>
-  </div> <!-- container -->
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-offset-3">
-      <p style="margin: 20px;"></p>
-        <div class="form">
-          <div class="form-group">
-            <button class="btn btn-lg btn-primary" style="width:70%" id="loadmorebutton">Load More Offerings</button> <img src="../v2/img/gif-load.gif" alt="" id="loadingimg" style="display:none;">
+        <div class="item">
+          <img src="img/slide-02.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/slide-03.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
 
+
+    <!-- Subhead
+================================================== -->
+<header class="jumbotron subhead masthead" id="overview">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <hr>
-      </div>
-    </div>
+    <h1>Find People to get your work done.</h1>
+    <p class="lead">View offerings and select the student you wanna work with.</p><hr>
   </div>
+</header>
 
-  <div class="container">    
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="col-md-3">
-        <ul class="list-unstyled">
-          <li><strong>in3Hrs.com</strong><li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
+
+    <!-- Cards for the jobs
+    ================================================== -->
+  
+    <div class="row" id="offerings">
+    
+    <div class="span13 moveleft ">
+    <?php for ($row=0; $row < 4; $row++) { 
+        $userdata=$user->get_user_by_offer_id($data[$row][2]);
+
+       ?>
+    <div class="span3">
+          <div class="card hovercard">
+            <img src="<?php echo "./offering/".$data[$row][0]; ?>"/>
+            <div class="avatar">
+              <img src="<?php echo $userdata[4]; ?>" alt="" />
+            </div>
+          <div class="info">
+          <div class="title">
+         <?php echo $data[$row][1]; ?>
       </div>
-      <div class="col-md-3">
-        <ul class="list-unstyled">
-          <li><strong>Help &amp; Support</strong><li>
-          <li><a href="#">in3Hrs.com Help</a></li>
-          <li><a href="#">Frequently Asked Questions</a></li>
-          <li><a href="#">User Forum</a></li>
-        </ul>
-      </div>  
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="col-md-8">
-        <a href="#">Terms of Service</a>    
-        <a href="#">Privacy</a>    
-        <a href="#">Security</a>
-      </div>
-      <div class="col-md-4">
-        <p class="muted pull-right">© 2014 Jaaga Student Job Board. All rights reserved</p>
-      </div>
-    </div>
-  </div>
+      <div class="desc">By-<?php echo $userdata[0];?></div>
+      
+   </div>
+   <div class="bottom">
+      <a class="btn" href="./offering?offeringid= <?php echo $data[$row][2]; ?>">Order</a>
+   </div>
 </div>
+</div>
+<?php }?>
 
-  <script src="../v2/js/jquery.min.js"></script>
-  <script src="../v2/js/bootstrap.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('#loadmorebutton').on('click', function(e){
-        e.preventDefault();
-        $('#loadmorebutton').html('Please wait.....');
-        $('#loadingimg').show();
-        setTimeout(function(){
-          var html = $('#offerings').html();
-          $('#offerings').html(html + html);
-          $('#loadmorebutton').html('Load More Offerings');
-          $('#loadingimg').hide();
-        }, 2000);
-      });
-      var field = 'loggedOut';
-      var url = window.location.href;
-      if(url.indexOf('?' + field + '=') != -1)
-          $('#loggedout').fadeIn();
-      else if(url.indexOf('&' + field + '=') != -1)
-          $('#loggedout').fadeIn();
-    });
-  </script>
-</body>
+    </div>
+    </div>
+
+
+<div class="container">
+     
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="js/holder/holder.js"></script>
+  </body>
 </html>
