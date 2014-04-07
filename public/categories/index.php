@@ -37,5 +37,5 @@ if(isset($_POST['searchq']))
 
 
 
-include 'viewoffers.html.php';
+include 'categories.html.php';
 ?>
