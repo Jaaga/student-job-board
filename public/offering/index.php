@@ -25,7 +25,7 @@ if(isset($_POST['action']) and $_POST['action']=="Create")
 if(isset($_GET["offeringid"]))
 {
 	$offeringid=$_GET["offeringid"];
-	include 'viewoffering.html.php';
+	include 'offering.html.php';
 	exit();
 }
 
@@ -38,7 +38,7 @@ if(isset($_GET["edit"]))
 	$description=$data[3];
 	$title=$data[1]; 
 	$instruction=$data[4];
-	include 'createoffering.html.php';
+	include 'createoffer.html.php';
 	exit();
 }
 
@@ -74,5 +74,5 @@ $description="";
 $buttonValue="Create";
 $instruction="";
 
-include 'createoffering.html.php';
+include 'createoffer.html.php';
 ?>
