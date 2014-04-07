@@ -17,15 +17,14 @@ if(isset($_POST['action']))
 		session_start();
 		$_SESSION['username']=$name;
 		$_SESSION['userid']=$userid;
-		header ('Location: ../user/index.php');
+		header ('Location: ../user/');
 	}
 	else{
 		$profileExist=TRUE;
-		include 'form.html.php';
 	}
 }
 
-include 'form.html.php';
+include 'signup.html.php';
 exit();
 
 
