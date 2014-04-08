@@ -30,6 +30,11 @@
     .movedown{
       padding-top: 90px
     }
+    img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 
     /* CUSTOMIZE THE NAVBAR
