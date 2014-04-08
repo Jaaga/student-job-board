@@ -15,33 +15,7 @@
 <body>
   
   
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#app-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/v2/src/">in3Hrs.com</a>
-      </div> <!-- navbar-header -->
-      <div class="collapse navbar-collapse" id="app-navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="categories.php">Find Services</a></li>
-        <li><a href="#">Start Selling</a></li>
-        <li><a href="../login/">Signin</a></li>
-        <li>
-          <form class="navbar-form navbar-right" role="form" action="signup.php">
-            <button type="submit" class="btn btn-success">Sign Up</button>
-          </form>
-        </li>
-      </ul>
-      </div><!-- navbar-collapse -->
-    </div><!-- container-fluid -->
-  </nav><!-- navbar -->
+ <?php include '../includes/header.inc.php'; ?>
 
   <div class="container">
     <div class="row">
