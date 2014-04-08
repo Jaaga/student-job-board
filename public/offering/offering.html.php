@@ -100,30 +100,17 @@ $data = $offering->get_offers_by_offer_id($offering_id);
           <small>Created <?php echo $data[5]; ?>. Posted in <a href="#"><?php echo $categoryname[0]; ?></a></small>
         </h2>
         <hr>
-         <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-captions" data-slide-to="1"></li>
-        <li data-target="#carousel-example-captions" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel inner">
-        <div class="item active">
-      <img src='../<?php echo $data[0]; ?>' alt="First slide image">
+        <div class="carousel"> 
+      <img src='<?php echo $data[0]; ?>' >
           <div class="carousel-caption">
             <h2>Create Letters</h2>
             <p>My letters will make employers want to hire you!!!</p>
           </div>
-        </div>
+          </div>
         
         
-      </div>
-      <a class="left carousel-control" href="#carousel-example-captions" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </a>
-      <a class="right carousel-control" href="#carousel-example-captions" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-      </a>
-    </div>
+        
+      
         <h4>
         <?php echo $data[3]; ?>
       </h4>
