@@ -42,7 +42,7 @@
 	{
 		$con=create_connection();
 
-				$sql=mysqli_query($con,'SELECT * FROM orders where offer_id=$offerid')or die(mysqli_error($con));
+				$sql=mysqli_query($con,"SELECT * FROM orders where offer_id='$offerid'")or die(mysqli_error($con));
 	            $result=mysqli_fetch_array($sql);
 
 				
