@@ -30,7 +30,7 @@
 			//creating connection
 			$con = create_connection();
 			//selecting offering table for particular user
-			$sql_query = "INSERT INTO user (name,email,pass) VALUES ('".$name."','".$email."','".$password."')";
+			$sql_query = "INSERT INTO user (name,email,pass,picture) VALUES ('".$name."','".$email."','".$password."','"."images/boy.png"."')";
 			//Inserting query value in result
 			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
 			
