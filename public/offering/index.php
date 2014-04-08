@@ -3,7 +3,9 @@ $offeringpage=True;
 session_start();
 include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/dbconnection.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/offerings.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/orders.php';
 $createOffering= new offering();
+$orderOffering= new orders();
 
 
 
@@ -63,6 +65,13 @@ if(isset($_GET["delete"]))
 	$createOffering->delete_offering($_SESSION['userid'],$deleteofferingid);
 	header('Location: ../user/');
 	exit();
+}
+if(isset($_GET["order"]))
+{
+		$orderofferingid=$_GET["order"];
+		header('Location: ../orders/');
+		exit();
+
 }
 
 
