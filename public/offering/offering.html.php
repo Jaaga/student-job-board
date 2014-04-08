@@ -233,7 +233,7 @@ $data = $offering->get_offers_by_offer_id($offering_id);
            $userid= $users->get_user_by_offer_id($offeringid);
            if(isset($_SESSION['userid'])==false)
            {?>
-              <a href="../login"><button class="btn btn-success" >Order this</button></a>
+              <a href="../login"><button class="btn btn-success" >Order</button></a>
               <?php
            }
           elseif($_SESSION['userid']==$userid[6]){ ?>
