@@ -156,7 +156,11 @@ $data = $offering->get_offers_by_offer_id($offering_id);
         <h2>
           <?php 
            $userid= $users->get_user_by_offer_id($offeringid);
-          if($_SESSION['userid']==$userid[6]){ ?>
+           if($_SESSION['userid']!)
+           {
+            
+           }
+          elseif($_SESSION['userid']==$userid[6]){ ?>
           <a href="?edit=<?php echo $offering_id;?>"><button class="btn btn-success" >Edit this Offering</button></a>
           <a href="?delete=<?php echo $offering_id;?>"><button class="btn btn-danger" >Delete Offering</button></a> <?php } else {?>
            <button class="btn btn-success" >Order this</button> <?php } ?>
