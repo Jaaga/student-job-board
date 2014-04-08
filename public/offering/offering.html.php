@@ -233,7 +233,7 @@ $data = $offering->get_offers_by_offer_id($offering_id);
           if($_SESSION['userid']==$userid[6]){ ?>
           <a href="?edit=<?php echo $offering_id;?>"><button class="btn btn-success" >Edit this Offering</button></a><br>
           <a href="?delete=<?php echo $offering_id;?>"><button class="btn btn-danger" >Delete Offering</button></a> <?php } else {?>
-           <button class="btn btn-success" >Order this</button> <?php } ?>
+          <a href="../orders/?order=<?php echo $offering_id;?>"><button class="btn btn-success" >Order this</button></a> <?php } ?>
           <hr>
         </h2>
         
