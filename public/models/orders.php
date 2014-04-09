@@ -22,6 +22,7 @@
                     $data[$row][1]=$result['title'];
                     $data[$row][2]=$result['status'];
                     $data[$row][3]=$result['offer_id'];
+                    $data[$row][4]=$result['details'];
                    $result=mysqli_fetch_array($sql);
 
                                               
@@ -52,6 +53,8 @@
                     $data[$row][0] = $result['picture'];
                     $data[$row][1]=$result['title'];
                     $data[$row][2]=$result['status'];
+                    $data[$row][4]=$result['details'];
+
                     $result=mysqli_fetch_array($sql);          
                 }
                 return($data);
