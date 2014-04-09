@@ -17,7 +17,7 @@
     
      body {
         padding-bottom: 40px;
-        background-image: url('../newui/img/back.jpg');
+        background-image: url('../images/back.jpg');
         background-repeat:no-repeat;
     background-attachment:fixed;
     background-position:center;
@@ -30,9 +30,19 @@
     .movedown{
       padding-top: 90px
     }
-    .position {
-      position: center;
-    }
+    img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cover{
+     background-image: url('../images/cover4.jpg');
+        background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    background-size: cover;
+
+  }
 
 
     /* CUSTOMIZE THE NAVBAR
