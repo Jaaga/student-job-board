@@ -29,7 +29,7 @@
 
 
 		}
-		public function get_offerings_by_user_id($user_id,$item_num)
+		public function get_offerings_by_user_id($user_id)
 		{
 			//creating connection
 			$con = create_connection();
@@ -47,7 +47,7 @@
 			$row2 = mysqli_fetch_array($sql_result);
 			//for loop to store data in 2-D array
 			
-			for($row=0;$row<$item_num;$row++)
+			for($row=0;$row<$rowcount;$row++)
 				{
 					$data[$row][0] = $row2['offer_id'];
 					$data[$row][1] = $row2['picture'];
