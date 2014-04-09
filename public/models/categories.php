@@ -8,7 +8,7 @@
 
 			$con = create_connection();
 			//selecting offering table for particular user
-			$sql_query= "SELECT * FROM offer_category INNER JOIN category ON offer_category.category_id=category.category_id INNER JOIN offering ON offer_category.offer_id=offering.offer_id WHERE offer_category.category_id='".$category."' ";
+			$sql_query= "SELECT * FROM offer_category INNER JOIN category ON offer_category.category_id=category.category_id INNER JOIN offering ON offer_category.offer_id=offering.offer_id WHERE offer_category.category_id='$category' ";
 		
 			//storing query value in result
 			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
@@ -21,16 +21,25 @@
 				{$noSearchFound=True;
 					return Null;
 				 }
+				 				 $row2=mysqli_fetch_array($sql_result);
 
+				for($row=0;$row<mysqli_num_rows($sql_result);$row++)
+	                { 
+	                            
+	                    $data[$row][0] = $row2['offer_id'];
+						$data[$row][1] = $row2['picture'];
+						$data[$row][2] = $row2['title'];
+						$data[$row][3] = $row2['description'];
+						$data[$row][4] = $row2['date'];
+						$data[$row][5] =$row2['user_id'];
+	                    				 $row2=mysqli_fetch_array($sql_result);
 
-				foreach ($sql_result as $rows)
-				{
-					$row[]=array('offerid'=>$rows['offer_id'],'title'=>$rows['title'],'description'=>$rows['description'],'picture'=>$rows['picture']);
-				}
+	                            
+	                }
 			
 				
 		//returning the array
-		return $row;
+		return $data;
 
 
 		}
