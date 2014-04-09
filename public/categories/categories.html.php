@@ -2,7 +2,7 @@
 
 
   $offering = new offering;
-  $data = $offering->featured_offering();
+  $offerdata = $offering->featured_offering();
 
   include '../models/users.php';
   $user= new users;
@@ -101,24 +101,24 @@
     
     <div class="span13 moveleft ">
     <?php for ($row=0; $row < 4; $row++) { 
-        $userdata=$user->get_user_by_offer_id($data[$row][2]);
+        $userdata=$user->get_user_by_offer_id($offerdata[$row][2]);
 
        ?>
     <div class="span3">
           <div class="card hovercard">
-            <img src="<?php echo $data[$row][0]; ?>"/>
+            <img src="<?php echo $offerdata[$row][0]; ?>"/>
             <div class="avatar">
               <img src="../<?php echo $userdata[4]; ?>" alt="" />
             </div>
           <div class="info">
           <div class="title">
-         <?php echo $data[$row][1]; ?>
+         <?php echo $offerdata[$row][1]; ?>
       </div>
       <div class="desc">By-<?php echo $userdata[0];?></div>
       
    </div>
    <div class="bottom">
-      <a class="btn" href="../offering?offeringid= <?php echo $data[$row][2]; ?>">Order</a>
+      <a class="btn" href="../offering?offeringid= <?php echo $offerdata[$row][2]; ?>">Order</a>
    </div>
 </div>
 </div>
