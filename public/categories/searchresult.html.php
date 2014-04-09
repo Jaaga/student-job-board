@@ -1,5 +1,10 @@
 <?php
+
 $categoryoffering = new category;
+  include '../models/users.php';
+
+  $user= new users;
+
 ?> 
 
 <!DOCTYPE html>
@@ -129,29 +134,32 @@ $categoryoffering = new category;
         echo "no results in this category";
       }
       else{
-      foreach($data as $row1)
-        {
+        $rowcount=count($data);
+      for($row=0;$row<$rowcount;$row++)
+        { 
+          $userdata=$user->get_user_by_offer_id($data[$row][2]);
     
        ?>
-    <div class="span3 moveleft">
+    <div class="span3">
           <div class="card hovercard">
-            <img src="<?php echo "../". $row1['picture']; ?>" alt=""/>
+            <img src="<?php echo $data[$row][1]; ?>"/>
             <div class="avatar">
-              <img src="img/avatar_homer.png" alt="" />
+              <img src="../<?php echo $userdata[4]; ?>" alt="" />
             </div>
           <div class="info">
           <div class="title">
-         <?php echo $row1['title']; ?>
+         <?php echo $data[$row][2]; ?>
       </div>
-      <div class="desc">By-Yatin Taluja</div>
+      <div class="desc">By-<?php echo $userdata[0];?></div>
       
    </div>
    <div class="bottom">
-      <a class="btn" href="../offering?offeringid= <?php echo $row1['$offerid']; ?>">Order</a>
+      <a class="btn" href="../offering?offeringid= <?php echo $data[$row][0]; ?>">Order</a>
    </div>
 </div>
 </div>
-  <?php }} ?> 
+<?php } }?>
+
 </div>
 </div>
 
