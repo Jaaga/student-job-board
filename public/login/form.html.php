@@ -10,31 +10,7 @@
 </head>
 <body>
   
-  <!-- top nav bar -->
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">in3Hrs.com</a>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Find Services</a></li>
-        <li><a href="#">Start Selling</a></li>
-        <li><a href="#">Signin</a></li>
-        <li>
-          <form class="navbar-form navbar-right" role="form">
-            <button type="submit" class="btn btn-success">Sign Up</button>
-          </form>
-        </li>
-      </ul>
-    </div> <!-- container -->
-  </div> <!-- navbar div -->
+  <?php include '../includes/header.inc.php'; ?>
   
   <div class="container form-container">
   <div class="row">
