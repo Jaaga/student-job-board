@@ -113,9 +113,11 @@
     ================================================== -->
   
     <div class="row" id="offerings">
-    
+        <?php for ($row=0; $row < 8; $row++) { 
+        	if($row==0 || $row%4==0)
+        		{ ?>
     <div class="span13 moveleft ">
-    <?php for ($row=0; $row < 4; $row++) { 
+    <?php } 
         $userdata=$user->get_user_by_offer_id($data[$row][2]);
 
        ?>
@@ -136,8 +138,26 @@
       <a class="btn" href="./offering?offeringid= <?php echo $data[$row][2]; ?>">Order</a>
    </div>
 </div>
-</div>
-<?php }?>
+
+
+<?php
+	if($row==0 || $row%4==0)
+	{ ?>
+		</div>
+		</div>
+		
+	<?php	
+	}
+	?>
+<?php
+	if($row%4!=0)
+	{ ?>
+		</div>
+		
+		<?php
+	}
+}
+	?>
 
     </div>
     </div>
