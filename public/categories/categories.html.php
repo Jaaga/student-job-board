@@ -98,9 +98,11 @@
     ================================================== -->
   
     <div class="row" id="offerings">
-    
+    <?php for ($row=0; $row < 8; $row++) { 
+          if($row==0 || $row%4==0)
+            { ?>
     <div class="span13 moveleft ">
-    <?php for ($row=0; $row < 4; $row++) { 
+    <?php }
         $userdata=$user->get_user_by_offer_id($offerdata[$row][2]);
 
        ?>
@@ -121,11 +123,30 @@
       <a class="btn" href="../offering?offeringid= <?php echo $offerdata[$row][2]; ?>">Order</a>
    </div>
 </div>
-</div>
-<?php }?>
+
+<?php
+  if( ($row+1)%4==0 && $row!=0)
+  { ?> 
+    </div>
+    </div>
+    
+  <?php 
+  }
+ 
+  else
+  { ?>
+    </div>
+    
+    <?php
+  }
+}
+  ?>
 
     </div>
     </div>
+
+
+
 
 
 
@@ -143,19 +164,19 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap-transition.js"></script>
-    <script src="js/bootstrap-alert.js"></script>
-    <script src="js/bootstrap-modal.js"></script>
-    <script src="js/bootstrap-dropdown.js"></script>
-    <script src="js/bootstrap-scrollspy.js"></script>
-    <script src="js/bootstrap-tab.js"></script>
-    <script src="js/bootstrap-tooltip.js"></script>
-    <script src="js/bootstrap-popover.js"></script>
-    <script src="js/bootstrap-button.js"></script>
-    <script src="js/bootstrap-collapse.js"></script>
-    <script src="js/bootstrap-carousel.js"></script>
-    <script src="js/bootstrap-typeahead.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap-transition.js"></script>
+    <script src="../js/bootstrap-alert.js"></script>
+    <script src="../js/bootstrap-modal.js"></script>
+    <script src="../js/bootstrap-dropdown.js"></script>
+    <script src="../js/bootstrap-scrollspy.js"></script>
+    <script src="../js/bootstrap-tab.js"></script>
+    <script src="../js/bootstrap-tooltip.js"></script>
+    <script src="../js/bootstrap-popover.js"></script>
+    <script src="../js/bootstrap-button.js"></script>
+    <script src="../js/bootstrap-collapse.js"></script>
+    <script src="../js/bootstrap-carousel.js"></script>
+    <script src="../js/bootstrap-typeahead.js"></script>
     <script>
       !function ($) {
         $(function(){
