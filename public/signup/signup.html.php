@@ -75,23 +75,19 @@
             <div class="controls">
         
             <button type="submit" name="action" class="btn btn-success">Sign up</button>
+
         </div>
+         <?php if(isset($profileExist)){
+              echo "Sorry, This Email is Registered!";
+            } ?>
         </div>
           <hr>
         </form>
         
 
-                <form>
-                <?php if(isset($profileExist)){
-                  echo "Sorry, This Email is Registered!";
-                } ?>
-          <div class="form" >
-            <label class="text-center" for="exampleInputEmail1">Connect With Google or Facebook</label>
-            <br>
-            <button type="submit" class="btn btn-danger offset1" >Signup with Google</button>
-            <button type="submit" class="btn btn-primary " >Signup with Facebook</button>            
-          </div>
-        </form>
+               
+                
+         
       </div>
     </div>
   </div>
