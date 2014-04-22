@@ -9,7 +9,7 @@ if(isset($_POST['action']))
 	$email=$_POST['email'];
 	$password=$_POST['password'];
 
-	$newSignUp=new signup();
+	$newSignUp=new signUp();
 
 	if($newSignUp->is_signedUp($email)==FALSE)
 	{
