@@ -67,9 +67,9 @@
           <img src="img/slide-01.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="./signup">Sign up today</a>
+              <h1>Sign up today!!!</h1>
+              <p class="lead">Join for free today and start earning money.</p>
+              <a class="btn btn-large btn-primary" href="./signup">Sign up</a>
             </div>
           </div>
         </div>
@@ -77,8 +77,8 @@
           <img src="img/slide-02.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Find Offered services</h1>
+              <p class="lead">Search our database for students and get your jobs done.</p>
               <a class="btn btn-large btn-primary" href="./categories">Find Services</a>
             </div>
           </div>
