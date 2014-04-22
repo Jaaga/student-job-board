@@ -21,12 +21,12 @@
               if(!isset($_SESSION['userid'])){
              
                ?> 
-              <li><a class="btn  btn-success pull-right"  href="./login/">Signin</a></li>
+              <li><a class="btn  btn-success pull-right"  href="/student-job-board/public/login/">Signin</a></li>
               <li>
-                  <a class="btn  btn-success pull-right" href="./signup" style="color:white;">Sign Up</a> 
+                  <a class="btn  btn-success pull-right" href="/student-job-board/public/signup/" style="color:white;">Sign Up</a> 
               </li> <?php } if(isset($_SESSION['userid'])){ ?>
                 <li>
-                  <a class="btn  btn-success pull-right" href="../logout" style="color:white;">Logout</a> 
+                  <a class="btn  btn-success pull-right" href="/student-job-board/public/logout/" style="color:white;">Logout</a> 
               </li>
              <?php } ?> 
 
