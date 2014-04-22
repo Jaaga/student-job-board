@@ -135,10 +135,10 @@ $categoryoffering = new category;
       }
       else{
         $rowcount=count($data);
+     
       for($row=0;$row<$rowcount;$row++)
         { 
-          $userdata=$user->get_user_by_offer_id($data[$row][2]);
-    
+          $userdata= $user->get_user_by_offer_id($data[$row][2]);
        ?>
     <div class="span3">
           <div class="card hovercard">
