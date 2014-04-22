@@ -130,9 +130,10 @@ $offer_length=count($offers);
                   <div class="card-body">
                   <h4></h4>
 
-                  <?php echo $orders[$row][4]; ?>
+                  <?php echo $orders[$row][4]; ?><hr>
                   <a class="btn">Accept</a>
                   <a class="btn btn-warning">Decline</a>
+                
                   </div>
               <div class="card-comments">
                   <div class="comments-collapse-toggle">
@@ -162,8 +163,24 @@ $offer_length=count($offers);
 
   <h1>
     Your Offerings
-    <a href="../offering/" class="btn btn-lg btn-success pull-right" >Create New Offering</a>
+    <?php 
+    if($orders==0)
+    { ?>
+    <div class="btn-group pull-right" >
+            <a href="../message" type="button" class="btn btn-default">Messages<span class="badge">0</span></a>
 
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                My Profile
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Edit Profile</a></li>
+                <li><a href="#">Settings</a></li>
+              </ul>
+            </div>
+          </div>
+          <?php } ?>
   </h1>
   <hr>
 </div>
