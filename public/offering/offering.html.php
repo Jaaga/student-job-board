@@ -87,66 +87,7 @@ $data = $offering->get_offers_by_offer_id($offering_id);
       </h4>
       
         <hr>
-      <h3>My Other Offerings</h3>
-      <hr>
-
-          <div class="card people">
-    <div class="card-top green">
-    <a href="#">
-    <img src="" alt=""/>
-    </a>
-    </div>
-    <div class="card-info">
-    <a class="title" href="#">I will do this work for you</a>
-    
-    <div class="card-bottom">
-    <button class="btn btn-block">Edit</button>
-    </div>
-    </div>
-    </div>
-
-
-        <div class="card people">
-    <div class="card-top blue">
-    <a href="#">
-    <img src="" alt=""/>
-    </a>
-    </div>
-    <div class="card-info">
-    <a class="title" href="#">I will make a Webpage</a>
-    
-    <div class="card-bottom">
-    <button class="btn btn-block">Edit</button>
-    </div>
-    </div>
-    </div>
-
-        <div class="card people">
-    <div class="card-top green">
-    <a href="#">
-    <img src="" alt=""/>
-    </a>
-    </div>
-    <div class="card-info">
-    <a class="title" href="#">I will design your DBMS</a>
-    <div class="card-bottom">
-    <button class="btn btn-block">Edit</button>
-    </div>
-    </div>
-    </div>
-        <div class="card people">
-    <div class="card-top blue">
-    <a href="#">
-    <img src="" alt=""/>
-    </a>
-    </div>
-    <div class="card-info">
-    <a class="title" href="#">Will do your home work</a>
-    <div class="card-bottom">
-    <button class="btn btn-block">Edit</button>
-    </div>
-    </div>
-    </div>
+     
         
       <h3>Customer Reviews
       </h3>
