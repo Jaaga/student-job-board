@@ -1,6 +1,5 @@
 <?php 
-  include '../models/offerings.php';
-
+ 
  
 ?>
 

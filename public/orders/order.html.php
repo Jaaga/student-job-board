@@ -1,5 +1,5 @@
 <?php 
-  include '../models/offerings.php';
+ 
 
   $getorder = new orders;
   $offering_id=$order;
