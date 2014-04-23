@@ -1,8 +1,6 @@
 <?php 
-session_start();
-include('../../public/models/dbconnection.php');
+include_once('../../public/models/dbconnection.php');
 
-include('../../public/models/users.php');
 include('../../public/models/orders.php');
 include('../../public/models/offerings.php');
 include('../../public/models/message.php');
@@ -109,7 +107,7 @@ $offer_length=count($offers);
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
-                <li><a href="#">Edit Profile</a></li>
+                <li><a href="../user?edit=<?php echo $_SESSION['userid']; ?>">Edit Profile</a></li>
                 <li><a href="#">Settings</a></li>
               </ul>
             </div>
@@ -175,8 +173,8 @@ $offer_length=count($offers);
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
-                <li><a href="#">Edit Profile</a></li>
-                <li><a href="#">Settings</a></li>
+                <li><a href="../user?edit=<?php echo $_SESSION['userid']; ?>">Edit Profile</a></li>
+                <li><a href="">Settings</a></li>
               </ul>
             </div>
           </div>
