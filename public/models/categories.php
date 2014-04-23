@@ -64,15 +64,25 @@
 					return Null;
 				 }
 
-				foreach ($sql_result as $rows)
-				{
-					$row[]=array('offerid'=>$rows['offer_id'],'title'=>$rows['title'],'description'=>$rows['description'],'picture'=>$rows['picture']);
-				}
+				 $row2=mysqli_fetch_array($sql_result);
+
+				for($row=0;$row<mysqli_num_rows($sql_result);$row++)
+	                { 
+	                            
+	                    $data[$row][0] = $row2['offer_id'];
+						$data[$row][1] = $row2['picture'];
+						$data[$row][2] = $row2['title'];
+						$data[$row][3] = $row2['description'];
+						$data[$row][4] = $row2['date'];
+						$data[$row][5] =$row2['user_id'];
+	                    				 $row2=mysqli_fetch_array($sql_result);
+
+	                            
+	                }
 			
 				
 		//returning the array
-		return $row;
-
+		return $data;
 
 		}
 
