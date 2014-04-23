@@ -86,7 +86,7 @@
       </div>
       
       <div class="control-group">
-      <label class="control-label">Offering File</label>
+      <label class="control-label">Offering Image</label>
       <div class="controls">
       <input type="file" name="picture"></input>
       </div>
@@ -100,26 +100,8 @@
       </div>
 
 
-      <div class="control-group">
-      <label class="control-label">Enter 3 tags</label>
-      <div class="controls">
-      <input type="text"  placeholder="Enter tags seperated by comma's">
-      </div>
-      </div>
       
-      <div class="control-group">
-      <label class="control-label">No: of days to deliver</label>
-      <div class="controls">
-      <select >
-        <option>1</option>
-        <option>2</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-      </select>
-      </div>
-      </div>
-
+   
       
       <div class="control-group">
       <label class="control-label">Instructions to client</label>

@@ -145,13 +145,13 @@ $data = $offering->get_offers_by_offer_id($offering_id);
            $userid= $users->get_user_by_offer_id($offeringid);
            if(isset($_SESSION['userid'])==false)
            {?>
-              <a href="../login"><button class="btn btn-success" >Order</button></a>
+              <a href="../login"><button class="btn btn-large btn-warning" >Order</button></a>
               <?php
            }
           elseif($_SESSION['userid']==$userid[6]){ ?>
-          <a href="?edit=<?php echo $offering_id;?>"><button class="btn btn-success" >Edit this Offering</button></a><br>
+          <a href="?edit=<?php echo $offering_id;?>"><button class="btn  btn-success" >Edit this Offering</button></a><br>
           <a href="?delete=<?php echo $offering_id;?>"><button class="btn btn-danger" >Delete Offering</button></a> <?php } else {?>
-          <a href="../orders/?order=<?php echo $offering_id;?>"><button class="btn btn-success" >Order this</button></a> <?php } ?>
+          <a href="../orders/?order=<?php echo $offering_id;?>"><button class="btn btn-large btn-warning" >Order now</button></a> <?php } ?>
           <hr>
         </h2>
         
