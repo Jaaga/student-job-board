@@ -11,11 +11,12 @@ $userdata= $user->get_user_by_id($_SESSION['userid']);
 
 $message=new message;
 $order=new orders;
-$orders=$order->get_orders($_SESSION['userid'],2);
-$orders_length=sizeof($orders);
+$orders=$order->get_orders($_SESSION['userid']);
+$orders_length=count($orders);
 $offer=new offering;
 $offers=$offer->get_offerings_by_user_id($_SESSION['userid']);
 $offer_length=count($offers);
+echo $orders_length;
 ?>
 
 
@@ -94,12 +95,12 @@ $offer_length=count($offers);
       <?php 
       if($orders!=0)
       { ?>
-        <div class="span12">
+        <div class="span12" id="orders">
 
           <h1 >Your Orders
 
           <div class="btn-group pull-right" >
-            <a href="../message" type="button" class="btn btn-default">Messages<span class="badge">0</span></a>
+            <a href="../message" type="button" class="btn btn-default">Messages<span class="badge"><?php echo $message->get_unread_message_by_user_id($_SESSION['userid']); ?></span></a>
 
             <div class="btn-group">
               <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">

@@ -75,10 +75,27 @@
 		}
 
 
+		public function first_message($user_id,$sender_id,$msg,$offertitle,$read_status){
+			$con = create_connection();
+			//selecting offering table for particular user
+			$sql_query1 = "INSERT INTO thread(title) VALUES ('$offertitle')";
+			$sql_result1 = mysqli_query($con,$sql_query1) or die("Couldn't Execute Query");
+			
+			$thread=mysqli_insert_id($con);
+
+			$sql_query = "INSERT INTO message(user_id,sender_id,thread,msg,read_status,timestamp) VALUES ('$user_id','$sender_id','$thread','$msg','$read_status',NOW())";
+			//storing query value in result
+			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
+			//fetching data as an array from database
+			
+		}
+
 		public function send_message($user_id,$sender_id,$msg,$thread,$read_status){
 
 			$con = create_connection();
 			//selecting offering table for particular user
+
+
 			$sql_query = "INSERT INTO message(user_id,sender_id,thread,msg,read_status,timestamp) VALUES ('$user_id','$sender_id','$thread','$msg','$read_status',NOW())";
 			//storing query value in result
 			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");

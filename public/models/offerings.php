@@ -22,6 +22,7 @@
 					$data[3] = $row2['description'];
 					$data[4] = $row2['instruction'];
 					$data[5] = $row2['date'];
+					$data[6] = $row2['user_id'];
 					
 				
 		//returning the array
@@ -130,7 +131,7 @@
 
 			$sql_query =	mysqli_query($con,"INSERT INTO offering(user_id, title, description, picture,instruction, date) VALUES ('$user_id', '$title', '$description', '$picture','$instruction', Now())");
 			
-			$offfer_id=mysqli_insert_id($con);
+			$offfer_id= mysqli_insert_id($con);
 			
 			$sql_query1=	mysqli_query($con,"INSERT INTO offer_category(offer_id,category_id) VALUES ('$offfer_id', '$category')");
 
