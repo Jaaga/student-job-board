@@ -58,6 +58,11 @@
 		    $data[5]=$row2['paypal'];
 		    return($data);
 		}
+		public function edit_user($user_id,$name,$email,$paypal,$picture,$linkedin,$about){
+			$con=create_connection();
+			$sql_query = mysqli_query($con,"UPDATE user SET name = '".$name."', email = '".$email."', picture = '".$picture."',linkedin='".$linkedin."',paypal='".$paypal."',about='".$about."' WHERE  user_id = '".$user_id."'");
+
+		}
 		
 }
 
