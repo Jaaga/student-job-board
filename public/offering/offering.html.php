@@ -84,6 +84,7 @@ $data = $offering->get_offers_by_offer_id($offering_id);
       
         <h4>
         <?php echo $data[3]; ?>
+
       </h4>
       
         <hr>
@@ -137,28 +138,29 @@ $data = $offering->get_offers_by_offer_id($offering_id);
 
 
 
-    <div class="span3 card">
-      <div class="span2">
-        <h2>
+    <div class="container span3 ">
+      
+      
+        <h1>
           <?php 
 
            $userid= $users->get_user_by_offer_id($offeringid);
            if(isset($_SESSION['userid'])==false)
            {?>
-              <a href="../login"><button class="btn btn-large btn-warning" >Order</button></a>
+              <a href="../login"   ><button class="btn btn-large btn-warning offset1" >Order</button></a>
               <?php
            }
           elseif($_SESSION['userid']==$userid[6]){ ?>
           <a href="?edit=<?php echo $offering_id;?>"><button class="btn  btn-success" >Edit this Offering</button></a><br>
           <a href="?delete=<?php echo $offering_id;?>"><button class="btn btn-danger" >Delete Offering</button></a> <?php } else {?>
-          <a href="../orders/?order=<?php echo $offering_id;?>"><button class="btn btn-large btn-warning" >Order now</button></a> <?php } ?>
+          <a href="../orders/?order=<?php echo $offering_id;?>"><button class="btn btn-block btn-warning  " align="center" >Order now</button></a> <?php } ?>
           <hr>
-        </h2>
+        </h1>
         
-          <h3>
-          <span class="glyphicon glyphicon-heart"></span> 99% 
-          <span class="glyphicon glyphicon-thumbs-up"></span> 234
-        </h3>
+              <img src="<?php echo "../". $userdata[4]; ?>" class="img-circle center">
+              <h3 class="text-center">By- Yash Raj Chhabra</h3>
+    <h4 class="text-center">I am a Programmer from india doing my shit here.</h4>
+
         <hr>
         <p>Related Categories</p>
         <p>
@@ -175,6 +177,7 @@ $data = $offering->get_offers_by_offer_id($offering_id);
 
     </div>
   </div>
+  
 
   
       <!-- FOOTER -->

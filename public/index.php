@@ -64,7 +64,7 @@
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="img/slide-01.jpg" alt="">
+          <img src="images/cover1.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>Sign up today!!!</h1>
