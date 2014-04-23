@@ -3,7 +3,7 @@
 	class orders{
  
 	//fetching orders from Database
-	public function get_orders($userid,$numrows)
+	public function get_orders($userid)
 	{
 				$con=create_connection();
 
@@ -14,8 +14,9 @@
 	            	return 0;
 
 	            $result=mysqli_fetch_array($sql);
+	            
 
-                for($row=0;$row<$numrows;$row++)
+                for($row=0;$row<$rowcount;$row++)
                 { 
                             
                     $data[$row][0]=$result['picture'];
