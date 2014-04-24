@@ -97,7 +97,7 @@ echo $orders_length;
       { ?>
         <div class="span12" id="orders">
 
-          <h1 >Your Orders
+          <h1 >You Ordered
 
           <div class="btn-group pull-right" >
             <a href="../message" type="button" class="btn btn-default">Messages<span class="badge"><?php echo $message->get_unread_message_by_user_id($_SESSION['userid']); ?></span></a>
@@ -121,14 +121,15 @@ echo $orders_length;
 
               $get_user= new users;
               $user_data=$get_user->get_user_by_offer_id($orders[$row][3]);
-
+              $offer_details=$offer->get_offers_by_offer_id($orders[$row][3]);
            ?>
             <div class="span3 ">
               <div class="card hovercard">
-                <h4 class="card-heading simple">Ordered by:-<?php echo $user_data[0]; ?></h4>
+                <h4 class="card-heading simple"><?php echo $offer_details[1]; ?></h4>
                   <div class="card-body">
-                  <h4></h4>
-
+                  <h5>
+                    Ordered To: <?php echo $user_data[0]; ?>
+                   </h5>
                   <?php echo $orders[$row][4]; ?><hr>
                   <a class="btn">Accept</a>
                   <a class="btn btn-warning">Decline</a>

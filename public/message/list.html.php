@@ -65,7 +65,11 @@
       <div class="span7">
       <!-- Display Latest Messages -->
       <h4>Latest Messages</h4>
-      <?php
+      <?php if($threads==0)
+      {
+        echo "No Message";
+      }
+      else{
       foreach($threads as $thread){
 		//echo "<a href='?t=".$thread['thread']."'>".$thread['msg']."</hr></a><br>";
 		?>
@@ -74,7 +78,7 @@
             <strong><?php echo $thread['title']."</br>" ?></strong></a>
             <span><?php echo $thread['msg']; ?>
         </div>
-        <?php } ?>
+        <?php }} ?>
        </div>
     </div>
   </div>
