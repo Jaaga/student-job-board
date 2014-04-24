@@ -46,7 +46,8 @@
 
    <div class="container movedown">
    <div class="row">
-   <div class="span12">
+   <div class="span12 card">
+   <div class="span11">
    <h1>Your To Do List.</h1>
    <hr>
  
@@ -61,35 +62,28 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td> <a class="btn">Accept</a>
-                  <a class="btn btn-warning">Decline</a></td>
-          </tr>
+
           <tr>
             <td>2</td>
             <td>Jacob</td>
             <td>Thornton</td>
-            <td>@fat</td>
+            <td><form method="POST" action="." ><select class="form-control pull-left" name="">
+          <option value="1">0%</option>
+
+        <option value="2">20%</option>
+        <option value="3">40%</option>
+        <option value="4">60%</option>
+        <option value="5">80%</option>
+        <option value="6">100%</option>
+        </select><a class="btn ">Update</a></form></td>
             <td> <a class="btn">Accept</a>
                   <a class="btn btn-warning">Decline</a></td>
 
           </tr>
-          <tr>
-            <td>3</td>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td> <a class="btn">Accept</a>
-                  <a class="btn btn-warning">Decline</a></td>
-
-          </tr>
+          
         </tbody>
       </table>
-
+      </div>
    </div>
    </div>
    </div>

@@ -123,37 +123,25 @@ echo $orders_length;
               $user_data=$get_user->get_user_by_offer_id($orders[$row][3]);
               $offer_details=$offer->get_offers_by_offer_id($orders[$row][3]);
            ?>
-            <div class="span3 ">
-              <div class="card hovercard">
+            
+              <div class="span5 card  ">
                 <h4 class="card-heading simple"><?php echo $offer_details[1]; ?></h4>
                   <div class="card-body">
                   <h5>
                     Ordered To: <?php echo $user_data[0]; ?>
                    </h5>
                   <?php echo $orders[$row][4]; ?><hr>
-                  <a class="btn">Accept</a>
-                  <a class="btn btn-warning">Decline</a>
+                  <h3>Status</h3>
+                  <div class="progress progress-striped active">
+  <div class="bar" style="width: 40%;"></div>
+</div>
                 
                   </div>
-              <div class="card-comments">
-                  <div class="comments-collapse-toggle">
-                      <a data-toggle="collapse" data-target="#c1-comments" href="#c1-comments">3 Messages<i class="icon-angle-down"></i></a>
-                  </div>
-              <div id="c1-comments" class="comments collapse">
-            <div class="media">
-                <a class="pull-left" href="#">
-                <img class="media-object" data-src="holder.js/28x28" alt="avatar"/>
-            </a>
-            <div class="media-body">
-               <h4 class="media-heading">Comment title</h4>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
+             
 </div>
 <?php }?>
+
+</div>
 </div>
 <?php  } ?>
 
