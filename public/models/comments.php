@@ -36,5 +36,13 @@ class comments{
 			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
 
 	}
+	public function no_of_comments($offerid){
+			$con=create_connection();
+			$sql_query = "SELECT COUNT(*) from comment where offer_id='$offerid'";
+			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
+			$number=mysqli_fetch_array($sql_result);
+			return $number;
+
+	}
 }
 ?>
