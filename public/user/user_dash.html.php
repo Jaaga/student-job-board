@@ -72,7 +72,7 @@ echo $orders_length;
     <div class="row  ">
     <div class="span12 card cover">
     
-    <img src="<?php echo "../". $userdata[4]; ?>" class="img-circle center" width="150px">
+    <img src="<?php echo $userdata[4]; ?>" class="img-circle center" width="150px">
     
     <h2 class="text-center"><?php echo $userdata[0]; ?></h2>
     <h3 class="text-center"><?php echo $userdata[1]; ?></h3>

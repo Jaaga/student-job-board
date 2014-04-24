@@ -23,7 +23,7 @@ if(isset($_GET["edit"]))
 if(isset($_POST['action']) )
 {
 	$temp=$_FILES['picture']['tmp_name'];
-	$picture='images/'.$_FILES['picture']['name'];
+	$picture='../images/'.$_FILES['picture']['name'];
 	move_uploaded_file($temp, $picture);
 	$name=$_POST["name"];
 	$email=$_POST["email"];
