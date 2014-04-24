@@ -78,17 +78,8 @@ $rowcount=count($commentdata);
           <small>Created <?php echo $data[5]; ?>. Posted in <a href="#"><?php echo $categoryname[0]; ?></a></small>
         </h2>
         <hr>
-        <div class="carousel"> 
-      <img src='<?php echo $data[0]; ?>' >
-          <div class="carousel-caption">
-            <h2>Create Letters</h2>
-            <p>My letters will make employers want to hire you!!!</p>
-          </div>
-          </div>
         
-        
-        
-      
+      <img src='<?php echo $data[0]; ?>'>      
         <h4>
         <?php echo $data[3]; ?>
 
