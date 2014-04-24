@@ -28,6 +28,39 @@ exit();
 }
 
 
+if(isset($_GET["accept"]))
+{
+$acceptId=$_GET["accept"];
+$orderOffering->acceptOrder($acceptId);
+$accepted=True;
+include 'orderlist.html.php';
+exit();
+}
+
+if(isset($_GET["decline"]))
+{
+$declineId=$_GET["decline"];
+$orderOffering->declineOrder($declineId);
+$declined=True;
+include 'orderlist.html.php';
+exit();
+}
+
+if(isset($_POST["status"]))
+{
+$status=$_POST["statusset"];
+$setStatusOfOrder=$_POST["orderid"];
+$orderOffering->setStatus($status,$setStatusOfOrder);
+include 'orderlist.html.php';
+exit();
+}
+
+
+
+
+
+
+
 if(isset($_POST['ordernow']))
 {
 	$description=$_POST["description"];
@@ -39,6 +72,6 @@ if(isset($_POST['ordernow']))
 	exit();
 }
 
-header('Location: ../user#orders');
+include 'orderlist.html.php';
 exit();
 ?>
