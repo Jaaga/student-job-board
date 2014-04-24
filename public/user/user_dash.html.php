@@ -130,10 +130,10 @@ echo $orders_length;
                   <h5>
                     Ordered To: <?php echo $user_data[0]; ?>
                    </h5>
-                  <?php echo $orders[$row][4]; ?><hr>
-                  <h3>Status</h3>
+                 
+                  <h4>Status: <?php echo $orders[$row][2]; ?> </h4>
                   <div class="progress progress-striped active">
-  <div class="bar" style="width: 40%;"></div>
+  <div class="bar" style="width: <?php echo $orders[$row][2]; ?>"></div>
 </div>
                 
                   </div>
