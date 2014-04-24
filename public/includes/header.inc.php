@@ -15,6 +15,8 @@
             <ul class="nav">
               <?php if(isset ($_SESSION['userid'])){ ?><li <?php if(isset($userpage)){echo "class='active'"; }?>><a href="<?php echo "/student-job-board/public/user"; ?>">Home</a></li> <?php } ?>
               <li <?php if(isset($categoriespage)){echo "class='active'"; }?>><a href="<?php echo "/student-job-board/public/categories/" ; ?>">Find Services</a></li>
+              <?php if(isset ($_SESSION['userid'])){ ?><li <?php if(isset($orderpage)){echo "class='active'"; }?>><a href="<?php echo "/student-job-board/public/orders"; ?>">To Do</a></li> <?php } ?>
+
               <?php if(isset ($_SESSION['userid'])){ ?><li <?php if (isset($offeringpage)){echo "class='active'";} ?>><a href="<?php echo "/student-job-board/public/offering" ; ?>">Create Offering</a></li> <?php } ?>
 
               <?php 
