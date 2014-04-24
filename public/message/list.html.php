@@ -1,3 +1,5 @@
+<!-- View Page for message -->
+
 <!doctype html>
 <html>
 <head>

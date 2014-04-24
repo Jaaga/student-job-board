@@ -1,3 +1,4 @@
+<!-- View page for order -->
 <?php 
   $getorder = new orders;
   $offering_id=$order;

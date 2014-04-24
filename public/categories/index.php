@@ -1,3 +1,4 @@
+<!-- controller page for category -->
 <?php
 $categoriespage=True;
 session_start();

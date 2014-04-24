@@ -1,3 +1,4 @@
+<!-- Messages controller -->
 <?php 
 session_start();
 include('../models/dbconnection.php');
