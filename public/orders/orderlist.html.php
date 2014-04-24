@@ -1,3 +1,8 @@
+<?php
+$orderToYou= new orders();
+$orderslist=$orderToYou->get_orders_by_user($_SESSION['userid']);
+$Order_length=count($orderslist);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,11 +53,15 @@
    <div class="row">
    <div class="span12 card">
    <div class="span11">
-   <h1>Your To Do List.</h1>
+   <h1>Your To Do's</h1>
    <hr>
  
    <table class="table table-hover">
-        <thead>
+    <?php
+    if($orderslist==0){
+            echo "no Orders To you";
+          } else{
+        ?><thead>
           <tr>
             <th>Order no.</th>
             <th>Title</th>
@@ -62,25 +71,35 @@
           </tr>
         </thead>
         <tbody>
-
+          <?php
+          
+          for($row=0;$row<$Order_length;$row++)
+          { ?>
           <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td><form method="POST" action="." ><select class="form-control pull-left" name="">
-          <option value="1">0%</option>
+            <td><?php echo $orderslist[$row][5]+1000; echo "b"; ?></td>
+            <td><?php echo $orderslist[$row][1]; ?></td>
+            <td><?php echo $orderslist[$row][6]; ?></td>
+            <td>
+              
+              <form method="POST" action="." ><select class="form-control pull-left" name="statusset" <?php if($orderslist[$row][7]==1) echo "enabled"; else echo "disabled"; ?>>
+          <option value="<?php echo $orderslist[$row][2]; ?>"><?php echo $orderslist[$row][2]; ?></option>
 
-        <option value="2">20%</option>
-        <option value="3">40%</option>
-        <option value="4">60%</option>
-        <option value="5">80%</option>
-        <option value="6">100%</option>
-        </select><a class="btn ">Update</a></form></td>
-            <td> <a class="btn">Accept</a>
-                  <a class="btn btn-warning">Decline</a></td>
+        <option value="20%">20%</option>
+        <option value="40%">40%</option>
+        <option value="60%">60%</option>
+        <option value="80%">80%</option>
+        <option value="Done">100%</option>
+        </select>
+        <input type="hidden" name="orderid" value="<?php echo $orderslist[$row][5] ?>" class="btn">
+        <input type="submit" name="status" value="Update" class="btn"></form>
+      </td>
+            <td> <?php if($orderslist[$row][7]==1) { ?><a class="btn">Accepted</a>
+             <?php } elseif($orderslist[$row][7]==-1){?><a class="btn btn-warning">Declined</a> <?php } else { ?>
+            <a class="btn" href=?accept=<?php echo $orderslist[$row][5]; ?>>Accept</a>
+            <a class="btn btn-warning" href=?decline=<?php echo $orderslist[$row][5]; ?>>Decline</a> <?php } ?></td>
 
           </tr>
-          
+          <?php }} ?>
         </tbody>
       </table>
       </div>
