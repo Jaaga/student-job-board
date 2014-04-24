@@ -1,4 +1,4 @@
-
+<!-- Index page -->
 <?php
 include('../../public/models/users.php');
 include_once('../../public/models/dbconnection.php');

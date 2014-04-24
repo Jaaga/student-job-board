@@ -1,5 +1,5 @@
 
-
+<!-- Html form page for login -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/lib/styles.css">
 </head>
 <body>
+
 <!-- Git gen -->
   
   <?php include '../includes/header.inc.php'; ?>
@@ -62,7 +63,7 @@
 
   </div>
 </div>
-
+<!-- Javascript -->
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
 </body>

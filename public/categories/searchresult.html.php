@@ -1,3 +1,4 @@
+<!-- search result page for category -->
 <?php
 
 $categoryoffering = new category;

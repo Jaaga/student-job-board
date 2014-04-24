@@ -1,3 +1,4 @@
+<!-- displaying the offering in category -->
 <?php
 
 

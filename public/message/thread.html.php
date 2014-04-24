@@ -1,3 +1,5 @@
+<!-- Thread Page for messages -->
+
 <?php
 $sender=new users; ?>
 	<!DOCTYPE html>

@@ -108,7 +108,7 @@
 			//fetching data as an array from database
 			$row2 = mysqli_fetch_array($sql_result);
 			//for loop to store data in 2-D array
-			for($row=0;$row<8;$row++)
+			for($row=0;$row<16;$row++)
 				{
 					$data[$row][0] = $row2['picture'];
 					$data[$row][1] = $row2['title'];
