@@ -4,8 +4,11 @@ session_start();
 include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/dbconnection.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/offerings.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/student-job-board/public/models/orders.php';
+include$_SERVER['DOCUMENT_ROOT']  . '/student-job-board/public/models/comments.php';
+
 $createOffering= new offering();
 $orderOffering= new orders();
+$postcomment=new comments();
 
 
 
@@ -72,6 +75,16 @@ if(isset($_GET["order"]))
 		header('Location: ../orders/');
 		exit();
 
+}
+if(isset($_POST["comment"]))
+{
+	$comment=$_POST['comments'];
+	$userid=$_POST['userid'];
+	$offerid=$_POST['offerid'];
+	$postcomment->post_comments($userid,$offerid,$comment);
+	$offeringid=$offerid;
+	include 'offering.html.php';
+	exit();
 }
 
 
