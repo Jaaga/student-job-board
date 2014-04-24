@@ -5,14 +5,21 @@ include("../../public/models/categories.php");
 
  $offering_id=$offeringid;
 $users = new users;
-$offering=new offering();
-$cat= new category();
+$offering=new offering;
+$cat= new category;
+$comment=new comments;
+
+echo $offering_id;
 $categoryname= $cat->find_category_by_offerid($offering_id);
 //$user_id=1;
 //$item_num=2;
 $data = $offering->get_offers_by_offer_id($offering_id);
 
 $userdata=$users->get_user_by_offer_id($offering_id);
+
+$commentdata=$comment->get_comments($offering_id);
+
+$rowcount=count($commentdata);
 ?>
 
 <!DOCTYPE html>
@@ -98,39 +105,34 @@ $userdata=$users->get_user_by_offer_id($offering_id);
         <div class="comments">
         <a  data-target="#c1-comments" href="#c1-comments">34 comments </a><hr>
         </div>
+<?php 
+
+          for($row=0;$row<$rowcount;$row++)
+          { 
+              $commentuser=$users->get_user_by_id($commentdata[$row][1]);
+            ?>
       <div id="c1-comments" class="comments ">
         <div class="media">
       <a class="pull-left" href="#">
-      <img class="media-object" data-src="holder.js/28x28" alt="avatar"/>
+      <img class="media-object" src="../<?php echo $commentuser[4]; ?>" alt="avatar" width="40px"/>
       </a>
         <div class="media-body">
-          <h4 class="media-heading">Comment title</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+          <h4 class="media-heading"><?php echo $commentuser[0]; ?></h4>
+        <p><?php echo $commentdata[$row][2]; ?></p>
       </div>
-      </div>
-    </div>
-    <div id="c1-comments" class="comments ">
-        <div class="media">
-      <a class="pull-left" href="#">
-      <img class="media-object" data-src="holder.js/28x28" alt="avatar"/>
-      </a>
-        <div class="media-body">
-          <h4 class="media-heading">Comment title</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-      </div>
+      
+    
       </div>
     </div>
-    <div id="c1-comments" class="comments ">
-        <div class="media">
-      <a class="pull-left" href="#">
-      <img class="media-object" data-src="holder.js/28x28" alt="avatar"/>
-      </a>
-        <div class="media-body">
-          <h4 class="media-heading">Comment title</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-      </div>
-      </div>
-    </div>
+
+    <?php } ?>
+      <form class="form" action="." method="POST">
+            <textarea  name="comments" value="" ></textarea>
+            <input type="hidden" name="offerid" value="<?php echo $offeringid; ?>">
+            <input type="hidden" name="userid" value="<?php echo $_SESSION['userid']; ?>">
+            <button type="submit" name="comment" class="btn ">Post Comment</button>
+
+            </form>
     </div>
 
     </div>
@@ -147,7 +149,7 @@ $userdata=$users->get_user_by_offer_id($offering_id);
            $userid= $users->get_user_by_offer_id($offeringid);
            if(isset($_SESSION['userid'])==false)
            {?>
-              <a href="../login"   ><button class="btn btn-large btn-warning offset1" >Order</button></a>
+              <a href="../login"   ><button class="btn btn-block btn-warning " >Order</button></a>
               <?php
            }
           elseif($_SESSION['userid']==$userid[6]){ ?>
