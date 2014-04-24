@@ -1,6 +1,4 @@
 <?php 
- 
-
   $getorder = new orders;
   $offering_id=$order;
   //$data = $getorder->create_order($offering_id,,);
