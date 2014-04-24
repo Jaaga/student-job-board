@@ -46,8 +46,8 @@
     <?php include '../includes/header.inc.php'; ?>
 
     <div class="container movedown">
-      <div class="row ">
-        <div class="span12 card">
+      <div class="row-fluid ">
+        <div class="span12 well">
           <div class="span6">
             <h1>Place Order</h1>
            <h2> We accept Paypal </h2>

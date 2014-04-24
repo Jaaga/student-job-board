@@ -45,8 +45,8 @@
       <!--  FORM FOR CREATING OFFERIGN -->
       <div class="container movedown">
     
-      <div class="row ">
-      <div class="card span12">
+      <div class="row-fluid">
+      <div class="span12 well">
     
       <div class="span6 offset3" >
     

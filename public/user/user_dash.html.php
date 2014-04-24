@@ -91,7 +91,7 @@ echo $orders_length;
     <!-- Cards for the jobs
     ================================================== -->
     <div class="container">
-      <div class="row">
+      <div class="row-fluid">
       <?php 
       if($orders!=0)
       { ?>

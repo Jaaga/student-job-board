@@ -49,10 +49,12 @@
      <!--  Form for editing profile -->
       <div class="container movedown">
     
-      <div class="row ">
-      <div class="card span12">
+      <div class="row-fluid">
+      <div class="span12 well">
+      <div class="span3 ">
+      </div>
     
-      <div class="span6 offset3" >
+      <div class="span6 " >
     
     <h2>Edit Profile</h2>
     <hr>

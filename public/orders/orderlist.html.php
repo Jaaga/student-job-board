@@ -50,8 +50,8 @@ $Order_length=count($orderslist);
 
 
    <div class="container movedown">
-   <div class="row">
-   <div class="span12 card">
+   <div class="row-fluid">
+   <div class="span12 well">
    <div class="span11">
    <h1>Your To Do's</h1>
    <hr>
