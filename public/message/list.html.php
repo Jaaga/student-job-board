@@ -18,54 +18,58 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Messages</title>
+    <title>in3hrs.com</title>
+      <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
 
-    <!-- Bootstrap -->
-    <link href="../css/lib/bootstrap.css" rel="stylesheet">
+      <!-- Le styles -->
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <!--[if IE 7]>
+      <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+      <![endif]-->
+      <link href="../css/bootplus.css" rel="stylesheet">
+      <link href="../css/bootplus-responsive.css" rel="stylesheet">
+      <link href="../css/custom.css" rel="stylesheet">
+
+
+    
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="ico/favicon.png">
   </head>
-  
+
   <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#app-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/v2/src/">in3Hrs.com</a>
-      </div> <!-- navbar-header -->
-      <div class="collapse navbar-collapse" id="app-navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.php">Home</a></li>
-        <li class="active"><a href="categories.php">Find Services</a></li>
-        <li><a href="#">Start Selling</a></li>
-        <li><a href="login.php">Signin</a></li>
-        <li>
-          <form class="navbar-form navbar-right" role="form" action="signup.php">
-            <button type="submit" class="btn btn-success">Sign Up</button>
-          </form>
-        </li>
-      </ul>
-      </div><!-- navbar-collapse -->
-    </div><!-- container-fluid -->
-  </nav><!-- navbar -->
+
+
+    <!-- NAVBAR
+    ================================================== -->
+   <?php include '../includes/header.inc.php'; ?>
 
   <!-- Main Body -->
-  <div class="container" style="margin-top:60px;">
+  <div class="container movedown" >
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="span8 card offset2">
+      <div class="span7">
       <!-- Display Latest Messages -->
       <h4>Latest Messages</h4>
       <?php
       foreach($threads as $thread){
 		//echo "<a href='?t=".$thread['thread']."'>".$thread['msg']."</hr></a><br>";
 		?>
-        <div class="alert alert-success">
+        <div class="alert alert-block">
             <a href='?t=<?php echo $thread['thread']; ?>'>
             <strong><?php echo $thread['title']."</br>" ?></strong></a>
             <span><?php echo $thread['msg']; ?>
@@ -74,7 +78,44 @@
        </div>
     </div>
   </div>
+  </div>
 
 
-</body>
+<div class="container">
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap-transition.js"></script>
+    <script src="../js/bootstrap-alert.js"></script>
+    <script src="../js/bootstrap-modal.js"></script>
+    <script src="../js/bootstrap-dropdown.js"></script>
+    <script src="../js/bootstrap-scrollspy.js"></script>
+    <script src="../js/bootstrap-tab.js"></script>
+    <script src="../js/bootstrap-tooltip.js"></script>
+    <script src="../js/bootstrap-popover.js"></script>
+    <script src="../js/bootstrap-button.js"></script>
+    <script src="../js/bootstrap-collapse.js"></script>
+    <script src="../js/bootstrap-carousel.js"></script>
+    <script src="../js/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="../js/holder/holder.js"></script>
+  </body>
 </html>
