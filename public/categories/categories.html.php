@@ -1,3 +1,6 @@
+
+<!-- View page for the Category Page -->
+
 <?php
 
 

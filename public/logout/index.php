@@ -1,3 +1,4 @@
+<!-- Logout PHP code -->
 <?php
 session_start();
 unset($_SESSION['userid']);
