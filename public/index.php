@@ -115,7 +115,7 @@
           <div class="card hovercard">
             <img src="<?php echo "./offering/".$data[$row][0]; ?>"/>
             <div class="avatar">
-              <img src="<?php echo $userdata[4]; ?>" alt="" />
+              <img src="<?php echo "./categories/".$userdata[4]; ?>" alt="" />
             </div>
           <div class="info">
           <div class="title">
