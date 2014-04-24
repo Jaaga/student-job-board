@@ -12,7 +12,7 @@ $categoryname= $cat->find_category_by_offerid($offering_id);
 //$item_num=2;
 $data = $offering->get_offers_by_offer_id($offering_id);
 
-
+$userdata=$users->get_user_by_offer_id($offering_id);
 ?>
 
 <!DOCTYPE html>
@@ -157,9 +157,9 @@ $data = $offering->get_offers_by_offer_id($offering_id);
           <hr>
         </h1>
         
-              <img src="<?php echo "../". $userdata[4]; ?>" class="img-circle center">
-              <h3 class="text-center">By- Yash Raj Chhabra</h3>
-    <h4 class="text-center">I am a Programmer from india doing my shit here.</h4>
+              <img src="../<?php echo $userdata[4]; ?>" class="img-circle center" width="100px">
+              <h3 class="text-center"><?php echo $userdata[0]; ?></h3>
+    <h4 class="text-center"><?php echo  $userdata[3]; ?></h4>
 
         <hr>
         <p>Related Categories</p>
