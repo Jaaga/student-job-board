@@ -79,7 +79,8 @@ $rowcount=count($commentdata);
         </h2>
         <hr>
         
-      <img src='<?php echo $data[0]; ?>'>      
+      <img src='<?php echo $data[0]; ?>'>   
+      <br><br>   
         <h4>
         <?php echo $data[3]; ?>
 

@@ -22,7 +22,7 @@ exit();
 if(isset($_GET["order"]))
 {
 $order=$_GET["order"];
-echo $order;
+
 include 'order.html.php';
 exit();
 }
