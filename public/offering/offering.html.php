@@ -103,7 +103,7 @@ $rowcount=count($commentdata);
 
        <div class="card-comments">
         <div class="comments">
-        <a  data-target="#c1-comments" href="#c1-comments">34 comments </a><hr>
+        <a  data-target="#c1-comments" href="#c1-comments"><?php $no=$comment->no_of_comments($offeringid); echo $no[0]; ?> comments </a><hr>
         </div>
 <?php 
 
@@ -153,7 +153,7 @@ $rowcount=count($commentdata);
               <?php
            }
           elseif($_SESSION['userid']==$userid[6]){ ?>
-          <a href="?edit=<?php echo $offering_id;?>"><button class="btn  btn-success" >Edit this Offering</button></a><br>
+          <a href="?edit=<?php echo $offering_id;?>"><button class="btn  btn-success" >Edit this Offering</button></a>
           <a href="?delete=<?php echo $offering_id;?>"><button class="btn btn-danger" >Delete Offering</button></a> <?php } else {?>
           <a href="../orders/?order=<?php echo $offering_id;?>"><button class="btn btn-block btn-warning  " align="center" >Order now</button></a> <?php } ?>
           <hr>
