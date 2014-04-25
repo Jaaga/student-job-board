@@ -24,14 +24,16 @@
                           <?php 
               if(!isset($_SESSION['userid'])){
              
-               ?> 
-                                 <a class="btn btn-danger pull-right  " href="/student-job-board/public/signup/" ">Sign Up</a> 
+               ?>   <div class="pull-right">
+                                               <a class="btn  btn-success "  href="/student-job-board/public/login/" >Sign in</a>
 
-              <a class="btn  btn-success pull-right "  href="/student-job-board/public/login/">Sign in</a>
-              
+                                  &nbsp&nbsp
+                                                                   <a class="btn btn-danger " href="/student-job-board/public/signup/" >Sign Up</a> 
+
+              </div>
                <?php } if(isset($_SESSION['userid'])){ ?>
                
-                  <a class="btn  btn-warning pull-right" href="/student-job-board/public/logout/" style="color:white;">Logout</a> 
+                  <a class="btn  btn-warning pull-right" href="/student-job-board/public/logout/">Logout</a> 
               
              <?php } ?> 
 
