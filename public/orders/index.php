@@ -65,9 +65,9 @@ if(isset($_POST['ordernow']))
 {
 	$description=$_POST["description"];
 	$offerid=$_POST['offerid'];
-	$orderOffering->create_order($_SESSION['userid'],$offerid,$description);
+	$getOrderId=$orderOffering->create_order($_SESSION['userid'],$offerid,$description);
 	$offerDetails=$offerFirstMsg->get_offers_by_offer_id($offerid);
-	$firstMsg->first_message($offerDetails[6],$_SESSION['userid'],$description,$offerDetails[1],"No");
+	$firstMsg->first_message($offerDetails[6],$_SESSION['userid'],$getOrderId,$description,$offerDetails[1],"No");
 	include 'pay.html.php';	
 	exit();
 }

@@ -37,6 +37,10 @@
 			//storing query value in result
 			$sql_query = "INSERT INTO orders(user_id, offer_id, status, details,accept_order) values ('$userid', '$offerid', 'Pending', '$details',0)";
 			mysqli_query($con,$sql_query)or die(mysqli_error($con));
+			$latestOrderId= mysqli_insert_id($con);
+			return $latestOrderId;
+
+
 	}
 
 	public function get_orders_by_offerid($offerid)
@@ -68,14 +72,17 @@
 	{
 				$con=create_connection();
 
-				$sql=mysqli_query($con,"SELECT * FROM orders  INNER JOIN offering ON orders.offer_id=offering.offer_id &&  offering.offer_id='$userid' ")or die(mysqli_error($con));
+				$list=mysqli_query($con,"SELECT * FROM orders  INNER JOIN offering ON orders.offer_id=offering.offer_id &&  offering.user_id='$userid' ")or die(mysqli_error($con));
 	            
-	            $rowcount=mysqli_num_rows($sql);
+	            
+
+	            $rowcount=mysqli_num_rows($list);
 
 	            if($rowcount==0)
 	            	return 0;
 
-	            $result=mysqli_fetch_array($sql);
+	            $result=mysqli_fetch_array($list);
+
 	            
 
                 for($row=0;$row<$rowcount;$row++)
@@ -89,7 +96,7 @@
                     $data[$row][5]=$result['order_id'];
                    	$data[$row][6]=$result['user_id'];
                    	$data[$row][7]=$result['accept_order'];
-                   $result=mysqli_fetch_array($sql);
+                   $result=mysqli_fetch_array($list);
 
                                               
                 }
@@ -119,6 +126,14 @@
 				$sql=mysqli_query($con,"UPDATE orders SET status='".$status."' WHERE order_id='".$orderid."'") or die(mysqli_error($con));	
 	}
 
+
+	public function deliverFile($delivery,$orderid)
+	{
+		$con=create_connection();
+
+		$sql=mysqli_query($con,"UPDATE orders SET delivery='".$delivery."' WHERE order_id='".$orderid."'") or die(mysqli_error($con));	
+	}
+	
 
 
 }
