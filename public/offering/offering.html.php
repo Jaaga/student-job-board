@@ -74,7 +74,7 @@ $rowcount=count($commentdata);
       
       <div class="span9 well">
       
-        <h2><?php echo $data[1]; ?><br>
+        <h2><?php echo $data[1]; ?> For $5<br>
           <small>Created <?php echo $data[5]; ?>. Posted in <a href="#"><?php echo $categoryname[0]; ?></a></small>
         </h2>
         <hr>
