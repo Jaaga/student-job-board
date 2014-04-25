@@ -75,7 +75,7 @@
             </div>
 
           <div class="span5">
-                        <h2><?php echo $offerdata[1]; ?></h2>
+                        <h2><?php echo $offerdata[1]; ?> For $5</h2>
 
             <img src="<?php echo $offerdata[0]; ?>">
 
