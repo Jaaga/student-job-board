@@ -33,6 +33,10 @@ if(isset($_GET["accept"]))
 $acceptId=$_GET["accept"];
 $orderOffering->acceptOrder($acceptId);
 $accepted=True;
+$thread=$firstMsg->get_thread_by_orderId($acceptId);
+$useridToMsg=$orderOffering->get_offer_by_orderid($acceptId);
+$msg='Your Order was accepted';
+$firstMsg->send_message($useridToMsg,$_SESSION['userid'],$msg,$thread,"No");
 include 'orderlist.html.php';
 exit();
 }
@@ -54,9 +58,6 @@ $orderOffering->setStatus($status,$setStatusOfOrder);
 include 'orderlist.html.php';
 exit();
 }
-
-
-
 
 
 

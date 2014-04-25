@@ -109,9 +109,25 @@
 			//storing query value in result
 			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
 			//fetching data as an array from database
+	}
+
+	public function get_thread_by_orderId($orderid){
+
+			$con = create_connection();
+			//selecting offering table for particular user
+			$sql_query="SELECT * FROM thread WHERE order_id='$orderid'";
+			$sql_result = mysqli_query($con,$sql_query) or die("Couldn't Execute Query");
+			$row2=mysqli_fetch_array($sql_result);
+		
+			//storing data in data array
+			$data[0]=$row2['thread_id'];
 			
+			return $data[0];
 
 	}
+
+
+
 
 	}
 ?>

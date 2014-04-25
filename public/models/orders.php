@@ -1,5 +1,6 @@
 <?php
 
+
 	class orders{
  
 	//fetching orders from Database
@@ -133,7 +134,22 @@
 
 		$sql=mysqli_query($con,"UPDATE orders SET delivery='".$delivery."' WHERE order_id='".$orderid."'") or die(mysqli_error($con));	
 	}
+
+	public function get_offer_by_orderid($orderid)
+	{
+		$con=create_connection();
+
+				$sql=mysqli_query($con,"SELECT * FROM offering LEFT JOIN orders ON orders.offer_id=offering.offer_id where orders.order_id='$orderid'") or die(mysqli_error($con));
+	            $result=mysqli_fetch_array($sql);
+
+				
+               $data[0]=$result['user_id'];
+
+                return $data[0];
+	}
+
 	
+
 
 
 }
