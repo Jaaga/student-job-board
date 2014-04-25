@@ -62,7 +62,7 @@ $sender=new users; ?>
 		<h4><?php if($counting == 0) {echo "Conversation For: ".$thread['title']; $counting++ ;} ?></h4>
 
         <div class="alert alert-info">
-        	<?php $data=$sender->get_user_by_id($thread['senderid']); echo $data[0]; ?>
+        	<span style="color:black"><?php $data=$sender->get_user_by_id($thread['senderid']); echo $data[0]; ?> :</span>
             <strong><?php echo $thread['msg']; ?></strong><br />
         </div>
         <?php } ?>

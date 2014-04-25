@@ -76,7 +76,7 @@
       foreach($threads as $thread){
 		//echo "<a href='?t=".$thread['thread']."'>".$thread['msg']."</hr></a><br>";
 		?>
-        <div class="alert alert-block">
+        <div class="alert alert-block" style="background-color:#ADD8E6; opacity:0.9" >
             <a href='?t=<?php echo $thread['thread']; ?>'>
             <strong><?php echo $thread['title']."</br>" ?></strong></a>
             <span><?php echo $thread['msg']; ?>
