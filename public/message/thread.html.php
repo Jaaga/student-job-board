@@ -84,6 +84,22 @@ $sender=new users; ?>
 
 	</form>
 
+  
+  <form action="." method="POST" enctype="multipart/form-data">
+    <input type="file" name="delivery"></input>
+    <input type="hidden" name="orderid" value="19"></input>
+     <input type="hidden" name="thread" value="<?php echo $thread['thread'];  ?>">
+          <?php if($thread['userid']==$_SESSION['userid'])
+      {
+        $thread['userid']=$thread['senderid'];
+      }
+      ?>
+      <input type="hidden" name="to" value="<?php echo $thread['userid'];  ?>">
+
+    <input type="submit" name="deliver"></input>
+
+  </form>
+
       </div>
     </div>
   </div>
