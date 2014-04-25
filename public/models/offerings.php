@@ -1,6 +1,5 @@
 <?php 
 	
-	
 	class offering{
 		//function to get offering by user_id
 
