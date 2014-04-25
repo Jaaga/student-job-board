@@ -52,8 +52,8 @@ $sender=new users; ?>
 
   <!-- Main Body -->
   <div class="container movedown" >
-    <div class="row ">
-      <div class="span8 card offset2">
+    <div class="row-fluid ">
+      <div class="span8 well offset2">
       <div class="span7">
       <!-- Display Messages -->
       

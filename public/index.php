@@ -19,6 +19,7 @@
       <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
       <meta name="description" content="">
       <meta name="author" content="">
 
@@ -101,12 +102,12 @@
 
     <!-- Cards for the jobs
     ================================================== -->
-  
-    <div class="row" id="offerings">
-        <?php for ($row=0; $row < 16; $row++) { 
-        	if($row==0 || $row%4==0)
-        		{ ?>
-    <div class="span13 moveleft ">
+  <?php for ($row=0; $row < 16; $row++) { 
+          if($row==0 || $row%4==0)
+            { ?>
+    <div class="row-fluid moveleft">
+        
+    
     <?php } 
         $userdata=$user->get_user_by_offer_id($data[$row][2]);
 
@@ -117,9 +118,10 @@
             <div class="avatar">
               <img src="<?php echo "./categories/".$userdata[4]; ?>" alt="" />
             </div>
-          <div class="info">
+                   <?php echo $data[$row][1]; ?>
+
           <div class="title">
-         <?php echo $data[$row][1]; ?>
+          <div class="info">
       </div>
       <div class="desc">By-<?php echo $userdata[0];?></div>
       
@@ -131,26 +133,22 @@
 
 
 <?php
-	if($row==0 || $row%4==0)
-	{ ?>
-		</div>
-		</div>
-		
-	<?php	
-	}
-	?>
-<?php
-	if($row%4!=0)
-	{ ?>
-		</div>
-		
-		<?php
-	}
+  if( ($row+1)%4==0 )
+  { ?> 
+    </div>
+    </div>
+    
+  <?php 
+  }
+ 
+  else
+  { ?>
+    </div>
+    
+    <?php
+  }
 }
-	?>
-
-    </div>
-    </div>
+  ?>
 
 
 <div class="container">

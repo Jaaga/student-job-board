@@ -70,10 +70,10 @@ $rowcount=count($commentdata);
 
 
   <div class="container movedown">
-    <div class="row">
+    <div class="row-fluid">
       
-      <div class="span9 card">
-      <div class="span8">
+      <div class="span9 well">
+      
         <h2><?php echo $data[1]; ?><br>
           <small>Created <?php echo $data[5]; ?>. Posted in <a href="#"><?php echo $categoryname[0]; ?></a></small>
         </h2>
@@ -128,14 +128,13 @@ $rowcount=count($commentdata);
     </div>
 
     </div>
-    </div>
+    
 
 
-
-    <div class="container span3 ">
+    <div class="span3 well text-center">
       
       
-        <h1>
+        
           <?php 
 
            $userid= $users->get_user_by_offer_id($offeringid);
@@ -147,9 +146,9 @@ $rowcount=count($commentdata);
           elseif($_SESSION['userid']==$userid[6]){ ?>
           <a href="?edit=<?php echo $offering_id;?>"><button class="btn  btn-success" >Edit this Offering</button></a>
           <a href="?delete=<?php echo $offering_id;?>"><button class="btn btn-danger" >Delete Offering</button></a> <?php } else {?>
-          <a href="../orders/?order=<?php echo $offering_id;?>"><button class="btn btn-block btn-warning  " align="center" >Order now</button></a> <?php } ?>
+          <a href="../orders/?order=<?php echo $offering_id;?>"><button class="btn  btn-warning  " align="center" >Order now</button></a> <?php } ?>
           <hr>
-        </h1>
+      
         
               <img src="../<?php echo $userdata[4]; ?>" class="img-circle center" width="100px">
               <h3 class="text-center"><?php echo $userdata[0]; ?></h3>

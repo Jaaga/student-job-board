@@ -57,19 +57,20 @@
 
 
     <div class="container movedown">
+    <div class="row-fluid">
+    <div class="span12">
     <h2 class="text-center">Search for Offerings</h2>
-        <div class="span6 offset1">
-      
-      
-      <form action="." method="post" >
-   
-        <input type="text" name="searchquery" class="form-control" placeholder="Search for services"></input>
-        <input type="submit" name="searchq" class="btn btn-primary"></input>
+    </div>
+    <div class="span12">
+        <div class="span6  ">
+        <form action="." method="post" >
+        <input type="text" name="searchquery" class="form-control pull-left offset2" placeholder="Search for services"></input>
+        <input type="submit" name="searchq" class="btn btn-primary  "></input>
         </form>
         </div>
-    <div class="span4">
+    <div class="span6">
       <form action="." method="post">  
-        <select name="categoy" id="" class="form-control" >
+        <select name="categoy" id="" class="form-control pull" >
           <option value=""><strong>In Category</strong></option>
         <option value="1">.NET</option>
         <option value="2">C++</option>
@@ -93,42 +94,43 @@
       </form>
       </div>
       </div>
+      </div>
   </div>
   </div>
   
 
    <!-- Cards for the jobs
     ================================================== -->
-  
-    <div class="row" id="offerings">
+    
     <?php for ($row=0; $row < 8; $row++) { 
           if($row==0 || $row%4==0)
             { ?>
-    <div class="span13 moveleft ">
+    <div class="row-fluid moveleft" id="offerings">
+    
+   
     <?php }
         $userdata=$user->get_user_by_offer_id($offerdata[$row][2]);
 
        ?>
     <div class="span3">
-          <div class="card hovercard">
-            <img src="<?php echo $offerdata[$row][0]; ?>"/>
-            <div class="avatar">
+      <div class="card hovercard">
+          <img src="<?php echo $offerdata[$row][0]; ?>"/>
+          <div class="avatar">
               <img src="../<?php echo $userdata[4]; ?>" alt="" />
-            </div>
+          </div>
           <div class="info">
-          <div class="title">
+            <div class="title">
          <?php echo $offerdata[$row][1]; ?>
-      </div>
-      <div class="desc">By-<?php echo $userdata[0];?></div>
-      
-   </div>
-   <div class="bottom">
+            </div>
+            <div class="desc">By-<?php echo $userdata[0];?></div>
+          </div>
+        <div class="bottom">
       <a class="btn" href="../offering?offeringid= <?php echo $offerdata[$row][2]; ?>">Order</a>
-   </div>
-</div>
+       </div>
+    </div>
 
 <?php
-  if( ($row+1)%4==0 && $row!=0)
+  if( ($row+1)%4==0 )
   { ?> 
     </div>
     </div>
@@ -145,13 +147,13 @@
 }
   ?>
 
-    </div>
-    </div>
+
+  
 
 
 
 
-
+<div class="container">
 
 
       <!-- FOOTER -->
