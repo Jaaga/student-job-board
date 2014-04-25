@@ -19,22 +19,26 @@
 
               <?php if(isset ($_SESSION['userid'])){ ?><li <?php if (isset($offeringpage)){echo "class='active'";} ?>><a href="<?php echo "/student-job-board/public/offering" ; ?>">Create Offering</a></li> <?php } ?>
 
-              <?php 
+
+            </ul>
+                          <?php 
               if(!isset($_SESSION['userid'])){
              
                ?> 
-              <li><a class="btn  btn-success pull-right"  href="/student-job-board/public/login/">Signin</a></li>
-              <li>
-                  <a class="btn  btn-success pull-right" href="/student-job-board/public/signup/" style="color:white;">Sign Up</a> 
-              </li> <?php } if(isset($_SESSION['userid'])){ ?>
-                <li>
+                                 <a class="btn btn-danger pull-right  " href="/student-job-board/public/signup/" ">Sign Up</a> 
+
+              <a class="btn  btn-success pull-right "  href="/student-job-board/public/login/">Sign in</a>
+              
+               <?php } if(isset($_SESSION['userid'])){ ?>
+               
                   <a class="btn  btn-warning pull-right" href="/student-job-board/public/logout/" style="color:white;">Logout</a> 
-              </li>
+              
              <?php } ?> 
 
-            </ul>
           </div>
         </div>
       </div>  
     </div> <!-- container -->
   </div> <!-- navbar div -->
+
+

@@ -48,8 +48,8 @@
     
     <div class="container movedown">
     
-    <div class="row ">
-    <div class="card span12">
+    <div class="row-fluid ">
+    <div class="well span12">
       <div class="span6 offset3" >
         <h2>Signup now to get all the goodness!</h2>
         <hr>

@@ -140,7 +140,7 @@ $rowcount=count($commentdata);
            $userid= $users->get_user_by_offer_id($offeringid);
            if(isset($_SESSION['userid'])==false)
            {?>
-              <a href="../login"   ><button class="btn btn-block btn-warning " >Order</button></a>
+              <a href="../login"   ><button class="btn btn btn-warning " >Ordernow</button></a>
               <?php
            }
           elseif($_SESSION['userid']==$userid[6]){ ?>
