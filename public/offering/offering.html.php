@@ -154,7 +154,7 @@ if($commentdata==0){
           <hr>
       
         
-              <img src="../<?php echo $userdata[4]; ?>" class="img-circle center" width="100px">
+              <img src="<?php echo $userdata[4]; ?>" class="img-circle center" width="100px">
               <h3 class="text-center"><?php echo $userdata[0]; ?></h3>
     <h4 class="text-center"><?php echo  $userdata[3]; ?></h4>
 
