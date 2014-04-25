@@ -26,7 +26,7 @@ $rowcount=count($commentdata);
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>in3hrs.com&middot; Bootstrap</title>
+    <title>in3hrs.com</title>
       <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -140,13 +140,13 @@ $rowcount=count($commentdata);
            $userid= $users->get_user_by_offer_id($offeringid);
            if(isset($_SESSION['userid'])==false)
            {?>
-              <a href="../login"   ><button class="btn btn-block btn-warning " >Order</button></a>
+              <a href="../login?referral=<?php echo $offering_id; ?> "><button class="btn btn-block btn-warning " >Order</button></a>
               <?php
            }
           elseif($_SESSION['userid']==$userid[6]){ ?>
           <a href="?edit=<?php echo $offering_id;?>"><button class="btn  btn-success" >Edit this Offering</button></a>
           <a href="?delete=<?php echo $offering_id;?>"><button class="btn btn-danger" >Delete Offering</button></a> <?php } else {?>
-          <a href="../orders/?order=<?php echo $offering_id;?>"><button class="btn  btn-warning  " align="center" >Order now</button></a> <?php } ?>
+          <a href="../orders/?order=<?php echo $offering_id; ?>"><button class="btn  btn-warning  " align="center" >Order now</button></a> <?php } ?>
           <hr>
       
         
