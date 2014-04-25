@@ -146,7 +146,7 @@ $offer_length=count($offers);
 <?php  } ?>
 
 
-<div class="span12 ">
+<div class="row-fluid ">
 
 
   <h1>
@@ -172,9 +172,15 @@ $offer_length=count($offers);
   </h1>
   <hr>
 </div>
+</div>
+
 <?php 
         if($offers ==0)
-          {echo "You have nothing to offer right now. Make one.";}
+          {?>
+        <h2 class="text-center">There are currently no offerings.</h2> 
+        
+
+<?php }
         else{
         ?>
 <div class="row">

@@ -59,7 +59,8 @@ $Order_length=count($orderslist);
    <table class="table table-hover">
     <?php
     if($orderslist==0){
-            echo "no Orders To you";
+            ?>        <h2 class="text-center">You have no orders.</h2> 
+ <?php
           } else{
         ?><thead>
           <tr>

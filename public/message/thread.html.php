@@ -54,7 +54,7 @@ $sender=new users; ?>
   <div class="container movedown" >
     <div class="row-fluid ">
       <div class="span8 well offset2">
-      <div class="span7">
+      
       <!-- Display Messages -->
       
       <?php  $counting =0;
@@ -84,9 +84,10 @@ $sender=new users; ?>
 
 	</form>
 
-  
+<hr>  
+<h3>Submit finished project. </h3>
   <form action="." method="POST" enctype="multipart/form-data">
-    <input type="file" name="delivery"></input>
+    <input type="file"  name="delivery"></input>
     <input type="hidden" name="orderid" value="19"></input>
      <input type="hidden" name="thread" value="<?php echo $thread['thread'];  ?>">
           <?php if($thread['userid']==$_SESSION['userid'])
@@ -96,14 +97,14 @@ $sender=new users; ?>
       ?>
       <input type="hidden" name="to" value="<?php echo $thread['userid'];  ?>">
 
-    <input type="submit" name="deliver"></input>
+    <input type="submit" class="btn" name="deliver"></input>
 
   </form>
 
       </div>
     </div>
   </div>
-  </div>
+  
 
 
 </body>

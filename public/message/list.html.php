@@ -64,12 +64,13 @@
   <div class="container movedown" >
     <div class="row-fluid">
       <div class="span8 well offset2">
-      <div class="span7">
       <!-- Display Latest Messages -->
-      <h4>Latest Messages</h4>
+      <h1>Latest Messages</h1>
+      <hr>
       <?php if($threads==0)
       {
-        echo "No Message";
+        ?>        <h2 class="text-center">There are currently no messages.</h2> 
+ <?php
       }
       else{
       foreach($threads as $thread){
@@ -81,7 +82,6 @@
             <span><?php echo $thread['msg']; ?>
         </div>
         <?php }} ?>
-       </div>
     </div>
   </div>
   </div>

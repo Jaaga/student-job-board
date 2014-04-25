@@ -98,17 +98,17 @@ $categoryoffering = new category;
    <!-- Cards for the jobs
     ================================================== -->
   
-    <div class="row" id="offerings">
-    <div class="span13  ">
+    <div class="row-fluid" id="offerings">
+    
      <?php     
       if (isset($noSearchFound)){
-        echo "no results in this category";
+        ?><div class="container"><h3 class="text-center">Sorry!! No results found.</h3> </div> <?php
       }
       else{
         $rowcount=count($data);
      
       for($row=0;$row<$rowcount;$row++)
-        { 
+        {
           $userdata= $user->get_user_by_offer_id($data[$row][2]);
        ?>
     <div class="span3">
@@ -131,7 +131,7 @@ $categoryoffering = new category;
 </div>
 <?php } }?>
 
-</div>
+
 </div>
 
 
