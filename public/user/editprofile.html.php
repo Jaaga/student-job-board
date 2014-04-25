@@ -13,9 +13,7 @@
       <!-- Le styles -->
       <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="css/font-awesome.min.css">
-      <!--[if IE 7]>
-      <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
-      <![endif]-->
+      
       <link href="../css/bootplus.css" rel="stylesheet">
       <link href="../css/bootplus-responsive.css" rel="stylesheet">
       <link href="../css/custom.css" rel="stylesheet">
@@ -24,10 +22,7 @@
 
     
     
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-    <![endif]-->
+    
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
