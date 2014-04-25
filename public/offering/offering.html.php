@@ -9,7 +9,7 @@ $offering=new offering;
 $cat= new category;
 $comment=new comments;
 
-echo $offering_id;
+
 $categoryname= $cat->find_category_by_offerid($offering_id);
 //$user_id=1;
 //$item_num=2;
@@ -98,7 +98,9 @@ $rowcount=count($commentdata);
         <a  data-target="#c1-comments" href="#c1-comments"><?php $no=$comment->no_of_comments($offeringid); echo $no[0]; ?> comments </a><hr>
         </div>
 <?php 
-
+if($commentdata==0){
+  echo "No Comments";
+}else{
           for($row=0;$row<$rowcount;$row++)
           { 
               $commentuser=$users->get_user_by_id($commentdata[$row][1]);
@@ -117,14 +119,14 @@ $rowcount=count($commentdata);
       </div>
     </div>
 
-    <?php } ?>
+    <?php } } if(isset($_SESSION['userid'])){ ?>
       <form class="form" action="." method="POST">
             <textarea  name="comments" value="" ></textarea>
             <input type="hidden" name="offerid" value="<?php echo $offeringid; ?>">
             <input type="hidden" name="userid" value="<?php echo $_SESSION['userid']; ?>">
             <button type="submit" name="comment" class="btn ">Post Comment</button>
 
-            </form>
+            </form> <?php } ?>
     </div>
 
     </div>
