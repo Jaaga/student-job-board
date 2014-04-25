@@ -75,7 +75,9 @@ $Order_length=count($orderslist);
           
           for($row=0;$row<$Order_length;$row++)
           { ?>
+        	
           <tr>
+            
             <td><?php echo $orderslist[$row][5]+1000; echo "b"; ?></td>
             <td><?php echo $orderslist[$row][1]; ?></td>
             <td><?php echo $orderslist[$row][6]; ?></td>
@@ -98,7 +100,7 @@ $Order_length=count($orderslist);
             <a class="btn" href=?accept=<?php echo $orderslist[$row][5]; ?>>Accept</a>
             <a class="btn btn-warning" href=?decline=<?php echo $orderslist[$row][5]; ?>>Decline</a> <?php } ?></td>
 
-          </tr>
+          </tr> 
           <?php }} ?>
         </tbody>
       </table>
