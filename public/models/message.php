@@ -84,10 +84,10 @@
 		return ($data['num']);
 		}
 
-	public function first_message($user_id,$sender_id,$msg,$offertitle,$read_status){
+	public function first_message($user_id,$sender_id,$order_id,$msg,$offertitle,$read_status){
 	$con = create_connection();
 	//selecting offering table for particular user
-	$sql_query1 = "INSERT INTO thread(title) VALUES ('$offertitle')";
+	$sql_query1 = "INSERT INTO thread(title,order_id) VALUES ('$offertitle','$order_id')";
 	$sql_result1 = mysqli_query($con,$sql_query1) or die("Couldn't Execute Query");
 
 	$thread=mysqli_insert_id($con);
