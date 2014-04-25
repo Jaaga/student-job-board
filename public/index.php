@@ -65,7 +65,7 @@
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="images/cover1.png" alt="">
+          <img src="images/cover1.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>Sign up today!!!</h1>
@@ -75,7 +75,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="img/slide-02.jpg" alt="">
+          <img src="images/cover2.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>Find Offered services</h1>
@@ -153,13 +153,20 @@
 
 
 
-     
+    
+    
+<div class="container">
+
+
       <!-- FOOTER -->
       <footer>
-       <img src="images/fotter.png" width="1365" height="184">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
 
-    
+    </div><!-- /.container -->
+
+
 
 
 
