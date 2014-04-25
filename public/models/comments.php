@@ -11,6 +11,9 @@ class comments{
 
 		$comment=mysqli_fetch_array($sql_result);
 
+		if($rowcount==0)
+		{return 0;}
+
 
 					for($row=0;$row<$rowcount;$row++)
 					{
