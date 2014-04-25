@@ -15,7 +15,8 @@ if(isset($_POST['submit']))
 {
 	$email=$_POST['email'];
 	$password=$_POST['password'];
-	$ref=$_POST['ref'];
+	if(isset($_POST['ref']))
+		$ref=$_POST['ref'];
 	
 
 	$userLogIn=new logIn();
