@@ -118,10 +118,11 @@
             <div class="avatar">
               <img src="<?php echo "./categories/".$userdata[4]; ?>" alt="" />
             </div>
-                   <?php echo $data[$row][1]; ?>
-
+            <div class="info">
           <div class="title">
-          <div class="info">
+                             <?php echo $data[$row][1]; ?>
+
+          
       </div>
       <div class="desc">By-<?php echo $userdata[0];?></div>
       
